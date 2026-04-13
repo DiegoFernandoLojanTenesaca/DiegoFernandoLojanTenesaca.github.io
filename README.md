@@ -5,7 +5,7 @@ Portfolio personal construido con [Astro](https://astro.build/) y [Tailwind CSS]
 ## Tech Stack
 
 - **Astro** v6 - Framework web
-- **Tailwind CSS** v4 - Estilos
+- **Tailwind CSS** v4 - Estilo
 - **TypeScript** - Tipado
 
 ## Estructura
