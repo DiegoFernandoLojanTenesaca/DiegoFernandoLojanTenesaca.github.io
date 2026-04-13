@@ -1,0 +1,76 @@
+---
+const links = [
+  { href: "#inicio", label: "Inicio", key: "nav.inicio" },
+  { href: "#tecnologias", label: "Tecnologías", key: "nav.tecnologias" },
+  { href: "#sobre-mi", label: "Sobre Mí", key: "nav.sobre" },
+  { href: "#experiencia", label: "Experiencia", key: "nav.experiencia" },
+  { href: "#proyectos", label: "Proyectos", key: "nav.proyectos" },
+  { href: "#contacto", label: "Contacto", key: "nav.contacto" },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-lg border-b border-border/50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-2 group">
+        <img
+          src={`${import.meta.env.BASE_URL}avatar-head.png`}
+          alt="Diego Lojan"
+          class="w-8 h-8 rounded-lg group-hover:scale-110 transition-transform"
+          style="image-rendering: pixelated;"
+        />
+        <span class="text-sm font-semibold text-text hidden sm:block">
+          Diego <span class="text-accent">Lojan</span>
+        </span>
+      </a>
+
+      <!-- Desktop links -->
+      <div class="hidden md:flex items-center gap-1">
+        {links.map((link) => (
+          <a
+            href={link.href}
+            data-i18n={link.key}
+            class="px-3 py-2 text-sm text-text-muted hover:text-accent transition-colors duration-200 rounded-md hover:bg-accent-soft"
+          >
+            {link.label}
+          </a>
+        ))}
+      </div>
+
+      <!-- Language toggle + Mobile hamburger -->
+      <div class="flex items-center gap-2">
+        <button id="lang-toggle" class="px-2 py-1 text-xs font-mono text-text-muted border border-border rounded hover:border-accent hover:text-accent transition-colors" aria-label="Cambiar idioma">
+          ES
+        </button>
+        <label for="mobile-menu" class="md:hidden cursor-pointer p-2 text-text-muted hover:text-accent transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu (CSS-only toggle) -->
+  <input type="checkbox" id="mobile-menu" class="hidden peer" />
+  <div class="md:hidden max-h-0 overflow-hidden peer-checked:max-h-96 transition-all duration-300 bg-surface/95 backdrop-blur-lg border-t border-border/50">
+    <div class="px-4 py-3 space-y-1">
+      {links.map((link) => (
+        <a
+          href={link.href}
+          data-i18n={link.key}
+          class="block px-3 py-2 text-sm text-text-muted hover:text-accent hover:bg-accent-soft rounded-md transition-colors"
+          onclick="document.getElementById('mobile-menu').checked = false"
+        >
+          {link.label}
+        </a>
+      ))}
+      <div class="pt-2 px-3">
+        <button id="lang-toggle-mobile" class="px-2 py-1 text-xs font-mono text-text-muted border border-border rounded hover:border-accent hover:text-accent transition-colors" aria-label="Cambiar idioma">
+          ES
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

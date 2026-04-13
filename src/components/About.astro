@@ -1,0 +1,147 @@
+---
+
+---
+
+<section id="sobre-mi" class="py-16 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold">
+        <span class="gradient-text" data-i18n="about.title">Sobre Mí</span>
+      </h2>
+    </div>
+
+    <div class="reveal grid md:grid-cols-5 gap-12 items-start">
+      <!-- Left: About text -->
+      <div class="md:col-span-3 space-y-5">
+        <p class="text-text-muted leading-relaxed" data-i18n="about.p1">
+          Ingeniero en Ciencias de la Computación con experiencia construyendo sistemas en producción. Trabajo en la intersección entre el desarrollo full stack y la ingeniería de datos e IA, transformando problemas complejos en soluciones eficientes y escalables.
+        </p>
+        <p class="text-text-muted leading-relaxed" data-i18n="about.p2">
+          Actualmente en DataGlov S.A.S., donde desarrollo microservicios de IA, pipelines de datos y sistemas de búsqueda semántica. Previamente construí Sudial, una plataforma SaaS de comunicación empresarial vía WhatsApp con frontend, backend, base de datos y aplicación móvil.
+        </p>
+        <p class="text-text-muted leading-relaxed" data-i18n="about.p3">
+          Mi enfoque combina ingeniería de software con análisis de datos, buscando construir soluciones que generen valor real a partir de la información. Interesado en seguir creciendo en Data Science e AI Engineering.
+        </p>
+
+        <!-- Educación -->
+        <div class="flex items-center gap-3 pt-2">
+          <div class="w-8 h-8 rounded-lg bg-accent-soft flex items-center justify-center shrink-0">
+            <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342" />
+            </svg>
+          </div>
+          <div>
+            <p class="text-sm text-text font-medium" data-i18n="about.edu.title">Ing. en Ciencias de la Computación</p>
+            <p class="text-xs text-text-muted" data-i18n="about.edu.school">Universidad Nacional de Loja · 2020 - 2025</p>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <a
+            href="https://www.linkedin.com/in/diego-fernando-lojan-37b54623b"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium border border-accent text-accent rounded-lg hover:bg-accent hover:text-white transition-all duration-300"
+          >
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            <span data-i18n="about.linkedin">Ver LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Status card -->
+      <div class="md:col-span-2 relative">
+        <!-- Avatar sitting -->
+        <img
+          src={`${import.meta.env.BASE_URL}avatar-sitting.png`}
+          alt=""
+          class="absolute -top-16 -right-4 w-20 h-20 hidden lg:block opacity-80 hover:opacity-100 transition-opacity"
+          style="image-rendering: pixelated;"
+        />
+        <div class="glow-hover bg-surface border border-border rounded-xl overflow-hidden">
+          <!-- Card header -->
+          <div class="px-5 py-3 border-b border-border bg-surface-light">
+            <h3 class="text-sm font-semibold text-text flex items-center gap-2">
+              <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+              <span data-i18n="status.title">Estado actual</span>
+            </h3>
+          </div>
+
+          <!-- Card body -->
+          <div class="p-5 space-y-4">
+            <!-- Role -->
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-accent-soft flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs text-text-muted" data-i18n="status.role.label">Rol actual</p>
+                <p class="text-sm text-text font-medium">Data & AI Engineer</p>
+                <p class="text-xs text-accent">@ DataGlov S.A.S.</p>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-accent-soft flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs text-text-muted" data-i18n="status.location.label">Ubicación</p>
+                <p class="text-sm text-text font-medium">Loja, Ecuador</p>
+              </div>
+            </div>
+
+            <!-- Availability -->
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 rounded-lg bg-accent-soft flex items-center justify-center shrink-0 mt-0.5">
+                <svg class="w-4 h-4 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.636 18.364a9 9 0 010-12.728m12.728 0a9 9 0 010 12.728m-9.9-2.829a5 5 0 010-7.07m7.072 0a5 5 0 010 7.07M13 12a1 1 0 11-2 0 1 1 0 012 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-xs text-text-muted" data-i18n="status.availability.label">Disponibilidad</p>
+                <p class="text-sm text-text font-medium flex items-center gap-2">
+                  <span class="status-dot w-2 h-2 rounded-full bg-[#28c840] inline-block"></span>
+                  <span data-i18n="status.availability.value">Disponible para proyectos remotos</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-border pt-4">
+              <p class="text-xs text-text-muted mb-3" data-i18n="status.working">Actualmente trabajando con:</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-surface-light border border-border text-text-muted">Python</span>
+                <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-surface-light border border-border text-text-muted">FastAPI</span>
+                <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-surface-light border border-border text-text-muted">LangChain</span>
+                <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-surface-light border border-border text-text-muted">PostgreSQL</span>
+                <span class="px-2.5 py-1 text-xs font-mono rounded-md bg-surface-light border border-border text-text-muted">React</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes status-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(40, 200, 64, 0.4); }
+    50% { box-shadow: 0 0 0 4px rgba(40, 200, 64, 0); }
+  }
+
+  .status-dot {
+    animation: status-pulse 2s ease-in-out infinite;
+  }
+</style>

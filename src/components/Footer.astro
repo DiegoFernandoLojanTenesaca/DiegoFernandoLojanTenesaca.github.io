@@ -1,0 +1,14 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-border py-8 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="text-sm text-text-muted">
+      &copy; {year} <a href="https://github.com/DiegoFernandoLojanTenesaca" target="_blank" rel="noopener noreferrer" class="text-text hover:text-accent transition-colors">Diego Fernando Lojan</a>. <span data-i18n="footer.rights">Todos los derechos reservados.</span>
+    </p>
+    <p class="text-xs text-text-muted/50 font-mono">
+      <span data-i18n="footer.made">Hecho con</span> <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="text-accent/60 hover:text-accent transition-colors">Astro</a> + <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="text-accent/60 hover:text-accent transition-colors">Tailwind</a>
+    </p>
+  </div>
+</footer>

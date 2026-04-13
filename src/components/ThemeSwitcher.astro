@@ -1,0 +1,112 @@
+---
+const themes = [
+  { id: "indigo", color: "#6366f1", label: "Indigo" },
+  { id: "emerald", color: "#10b981", label: "Esmeralda" },
+  { id: "cyan", color: "#06b6d4", label: "Cian" },
+  { id: "rose", color: "#f43f5e", label: "Rosa" },
+  { id: "amber", color: "#f59e0b", label: "Ambar" },
+  { id: "violet", color: "#8b5cf6", label: "Violeta" },
+  { id: "sky", color: "#0ea5e9", label: "Cielo" },
+  { id: "lime", color: "#84cc16", label: "Lima" },
+];
+---
+
+<div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+  <!-- Theme palette (hidden by default) -->
+  <div
+    id="theme-palette"
+    class="bg-surface/95 backdrop-blur-xl border border-border rounded-2xl px-4 py-3.5 shadow-2xl shadow-black/40 opacity-0 scale-95 pointer-events-none transition-all duration-300 origin-bottom-right"
+  >
+    <div class="flex items-center gap-2 mb-3">
+      <svg class="w-3.5 h-3.5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
+      </svg>
+      <span class="text-[11px] font-semibold text-text-muted uppercase tracking-wider">Color</span>
+    </div>
+    <div class="flex items-center gap-2.5">
+      {themes.map((theme) => (
+        <button
+          class="theme-dot w-7 h-7 rounded-full cursor-pointer ring-2 ring-transparent ring-offset-2 ring-offset-surface hover:scale-110 transition-all duration-200"
+          style={`background-color: ${theme.color};`}
+          data-theme-id={theme.id}
+          aria-label={`Tema ${theme.label}`}
+          title={theme.label}
+        />
+      ))}
+    </div>
+  </div>
+
+  <!-- Toggle button -->
+  <button
+    id="theme-toggle-btn"
+    class="w-12 h-12 rounded-full bg-surface/95 backdrop-blur-xl border border-border flex items-center justify-center shadow-xl shadow-black/30 hover:border-accent/50 hover:shadow-accent/15 transition-all duration-300 group"
+    aria-label="Cambiar tema de color"
+  >
+    <svg class="w-5 h-5 text-text-muted group-hover:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
+    </svg>
+  </button>
+</div>
+
+<script>
+  const toggleBtn = document.getElementById("theme-toggle-btn")!;
+  const palette = document.getElementById("theme-palette")!;
+  const dots = document.querySelectorAll<HTMLButtonElement>(".theme-dot");
+  let isOpen = false;
+
+  // Load saved theme
+  const saved = localStorage.getItem("portfolio-theme") || "indigo";
+  document.documentElement.setAttribute("data-theme", saved);
+  updateActiveDot(saved);
+
+  // Toggle palette
+  toggleBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    isOpen = !isOpen;
+    if (isOpen) {
+      palette.classList.remove("opacity-0", "scale-95", "pointer-events-none");
+      palette.classList.add("opacity-100", "scale-100", "pointer-events-auto");
+    } else {
+      closePalette();
+    }
+  });
+
+  // Theme selection
+  dots.forEach((dot) => {
+    dot.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const themeId = dot.dataset.themeId!;
+      document.documentElement.setAttribute("data-theme", themeId);
+      localStorage.setItem("portfolio-theme", themeId);
+      updateActiveDot(themeId);
+    });
+  });
+
+  // Close on click outside
+  document.addEventListener("click", (e) => {
+    const target = e.target as HTMLElement;
+    if (isOpen && !target.closest("#theme-toggle-btn") && !target.closest("#theme-palette")) {
+      closePalette();
+    }
+  });
+
+  function closePalette() {
+    isOpen = false;
+    palette.classList.add("opacity-0", "scale-95", "pointer-events-none");
+    palette.classList.remove("opacity-100", "scale-100", "pointer-events-auto");
+  }
+
+  function updateActiveDot(themeId: string) {
+    dots.forEach((d) => {
+      if (d.dataset.themeId === themeId) {
+        d.style.setProperty("--tw-ring-color", d.style.backgroundColor);
+        d.classList.add("ring-current");
+        d.style.boxShadow = `0 0 10px ${d.style.backgroundColor}40`;
+      } else {
+        d.classList.remove("ring-current");
+        d.style.boxShadow = "none";
+        d.style.removeProperty("--tw-ring-color");
+      }
+    });
+  }
+</script>

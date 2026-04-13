@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Technologies from "../components/Technologies.astro";
+import About from "../components/About.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
+import ThemeSwitcher from "../components/ThemeSwitcher.astro";
+import "../styles/global.css";
+---
+
+<Layout>
+  <Navbar />
+  <ThemeSwitcher />
+  <main>
+    <Hero />
+    <Technologies />
+    <About />
+    <Experience />
+    <Projects />
+    <Contact />
+  </main>
+  <Footer />
+</Layout>
