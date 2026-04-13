@@ -162,7 +162,7 @@ export const translations: Record<string, Record<string, string>> = {
   // Connections
   "conn.jahir": { es: "Developer", en: "Developer" },
   "conn.xavier": { es: "Ingeniero de Software", en: "Software Engineer" },
-  "conn.maria": { es: "Ing. Software & Docente", en: "Software Eng. & Lecturer" },
+  "conn.maria": { es: "Ing. Computación & Docente", en: "Computer Science Eng. & Lecturer" },
 
   // Footer
   "footer.rights": { es: "Todos los derechos reservados.", en: "All rights reserved." },
