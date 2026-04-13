@@ -1,0 +1,86 @@
+---
+import { experiences } from "../data/experience";
+
+const expPrefixes = ["exp.dg", "exp.sv", "exp.fr"];
+---
+
+<section id="experiencia" class="py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+  <!-- Avatar decorativo -->
+  <img
+    src={`${import.meta.env.BASE_URL}avatar-front.png`}
+    alt=""
+    class="absolute top-8 right-8 w-24 h-24 hidden xl:block opacity-60 hover:opacity-100 transition-opacity pointer-events-none"
+    style="image-rendering: pixelated;"
+  />
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal text-center mb-16">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-4">
+        <span class="gradient-text" data-i18n="exp.title">Experiencia</span>
+      </h2>
+      <p class="text-text-muted max-w-xl mx-auto" data-i18n="exp.subtitle">
+        Mi trayectoria profesional en desarrollo de software e IA.
+      </p>
+    </div>
+
+    <div class="relative">
+      <!-- Vertical line -->
+      <div class="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-border"></div>
+
+      <div class="space-y-12">
+        {experiences.map((exp, index) => (
+          <div class="reveal relative pl-12 md:pl-20">
+            <!-- Timeline dot -->
+            <div
+              class:list={[
+                "absolute left-2.5 md:left-6.5 w-3 h-3 rounded-full border-2 border-accent bg-bg",
+                exp.current && "timeline-dot-active",
+              ]}
+            />
+
+            <!-- Card -->
+            <div class="bg-surface border border-border rounded-xl p-6 hover:border-accent/30 transition-colors duration-300">
+              <!-- Header -->
+              <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
+                <div>
+                  <h3 class="text-lg font-semibold text-text">{exp.role}</h3>
+                  <p class="text-accent font-medium text-sm">{exp.company}</p>
+                </div>
+                <div class="flex items-center gap-2 mt-2 sm:mt-0">
+                  {exp.current && (
+                    <span class="px-2 py-0.5 text-[10px] font-mono font-medium bg-accent/15 text-accent rounded-full" data-i18n="exp.current">
+                      ACTUAL
+                    </span>
+                  )}
+                  <span class="text-xs text-text-muted font-mono">{exp.period}</span>
+                </div>
+              </div>
+
+              <!-- Description -->
+              <ul class="space-y-2 mb-4">
+                {exp.description.map((item, i) => (
+                  <li class="flex items-start gap-2 text-sm text-text-muted">
+                    <span class="text-accent mt-1.5 flex-shrink-0">
+                      <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 8 8">
+                        <circle cx="4" cy="4" r="3" />
+                      </svg>
+                    </span>
+                    <span data-i18n={`${expPrefixes[index]}.${i + 1}`}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <!-- Tags -->
+              <div class="flex flex-wrap gap-2">
+                {exp.tags.map((tag) => (
+                  <span class="px-2.5 py-1 text-[11px] font-mono bg-accent-soft text-accent-light rounded-md">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

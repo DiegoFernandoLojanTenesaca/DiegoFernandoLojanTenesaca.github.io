@@ -1,0 +1,97 @@
+---
+import { skillCategories } from "../data/skills";
+
+const catKeys: Record<string, string> = {
+  "Frontend": "tech.cat.frontend",
+  "Backend": "tech.cat.backend",
+  "Data & AI": "tech.cat.dataai",
+  "Bases de Datos & DevOps": "tech.cat.dbdevops",
+  "Tiempo Real": "tech.cat.realtime",
+  "Herramientas": "tech.cat.tools",
+};
+
+const techIcons: Record<string, string> = {
+  react: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+  nextjs: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+  typescript: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+  tailwindcss: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  python: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+  fastapi: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
+  pyramid: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjU4OTBhIiBzdHJva2Utd2lkdGg9IjEuNSI+PHBhdGggZD0iTTEyIDJMMiAyMmgyMEwxMiAyeiIvPjxwYXRoIGQ9Ik0xMiAydjIwTTEyIDhsLTUgMTRNMTIgOGw1IDE0IiBzdHJva2Utb3BhY2l0eT0iMC41Ii8+PC9zdmc+",
+  sqlalchemy: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg",
+  api: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openapi/openapi-original.svg",
+  langchain: "https://cdn.simpleicons.org/langchain/ffffff",
+  langgraph: "https://cdn.simpleicons.org/langchain/ffffff",
+  scikitlearn: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg",
+  nlp: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
+  groq: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjU1MDM2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTEzIDJMMyAxNGg5bC0xIDggMTAtMTJoLTlsMS04eiIvPjwvc3ZnPg==",
+  embeddings: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg",
+  postgresql: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
+  redis: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
+  docker: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
+  git: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
+  linux: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+  cloudflare: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg",
+  websocket: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg",
+  webhook: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjODhjMGQwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSI1IiByPSIyLjUiLz48Y2lyY2xlIGN4PSI1IiBjeT0iMTgiIHI9IjIuNSIvPjxjaXJjbGUgY3g9IjE5IiBjeT0iMTgiIHI9IjIuNSIvPjxwYXRoIGQ9Ik0xMiA3LjV2NWwtNS41IDRNMTIgMTIuNWw1LjUgNCIvPjwvc3ZnPg==",
+  // Herramientas
+  claudecode: "https://cdn.simpleicons.org/anthropic/ffffff",
+  codex: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYTc4YmZhIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iOSIvPjxwYXRoIGQ9Ik04IDEyaDhNMTIgOHY4Ii8+PC9zdmc+",
+  pycharm: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg",
+  vscode: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
+  datagrip: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datagrip/datagrip-original.svg",
+  antigravity: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjJkM2VlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTEyIDJsMyA3aDdsLTUuNSA0LjUgMiA3TDEyIDE2bC02LjUgNC41IDItN0wyIDloN3oiLz48L3N2Zz4=",
+};
+---
+
+<section id="tecnologias" class="py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+  <!-- Avatar de lado -->
+  <img
+    src={`${import.meta.env.BASE_URL}avatar-side.png`}
+    alt=""
+    class="absolute bottom-6 left-6 w-20 h-20 hidden xl:block opacity-50 hover:opacity-90 transition-opacity pointer-events-none"
+    style="image-rendering: pixelated;"
+  />
+  <div class="max-w-6xl mx-auto">
+    <div class="reveal mb-10">
+      <h2 class="text-3xl sm:text-4xl font-bold mb-3">
+        <span class="gradient-text" data-i18n="tech.title">Tecnologías</span>
+      </h2>
+      <p class="text-text-muted text-lg" data-i18n="tech.subtitle">
+        Mi stack tecnológico en constante evolución
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+      {skillCategories.map((category) => (
+        <div class="reveal">
+          <h3 class="text-xs font-mono text-accent mb-3 uppercase tracking-wider" data-i18n={catKeys[category.name]}>
+            {category.name}
+          </h3>
+          <div class="flex flex-wrap gap-1.5">
+            {category.skills.map((skill) => {
+              const iconUrl = techIcons[skill.icon];
+              return (
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface border border-border rounded text-xs text-text-muted hover:text-text hover:border-accent/50 transition-colors cursor-default">
+                  {iconUrl ? (
+                    <img
+                      src={iconUrl}
+                      alt=""
+                      class="w-3.5 h-3.5"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span class="w-3.5 h-3.5 rounded-sm bg-accent/20 flex items-center justify-center text-[8px] font-bold text-accent leading-none">
+                      {skill.name.charAt(0)}
+                    </span>
+                  )}
+                  {skill.name}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
