@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="kbg" x1="0" y1="0" x2="800" y2="450">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="kaccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="kgreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#kbg)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.04">
+    <line x1="100" y1="0" x2="100" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="500" y1="0" x2="500" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="700" y1="0" x2="700" y2="450" stroke="#fff" stroke-width="1"/>
+  </g>
+
+  <!-- Left: PDF document -->
+  <rect x="80" y="55" width="280" height="340" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+
+  <!-- PDF header -->
+  <rect x="80" y="55" width="280" height="38" rx="8" fill="#1e293b"/>
+  <rect x="80" y="88" width="280" height="1" fill="#334155"/>
+  <!-- PDF icon -->
+  <rect x="98" y="64" width="22" height="22" rx="3" fill="#ef4444" opacity="0.2"/>
+  <text x="109" y="80" fill="#ef4444" font-family="monospace" font-size="8" text-anchor="middle" font-weight="bold">PDF</text>
+  <text x="135" y="79" fill="#94a3b8" font-family="monospace" font-size="10" opacity="0.7">presupuesto_APU.pdf</text>
+
+  <!-- PDF content - table mockup -->
+  <text x="98" y="112" fill="#f59e0b" font-family="monospace" font-size="9" opacity="0.7">ANÁLISIS DE PRECIOS UNITARIOS</text>
+
+  <!-- Table header -->
+  <rect x="98" y="120" width="244" height="18" rx="3" fill="#f59e0b" opacity="0.08"/>
+  <text x="108" y="133" fill="#94a3b8" font-family="monospace" font-size="7.5" opacity="0.6">Código</text>
+  <text x="165" y="133" fill="#94a3b8" font-family="monospace" font-size="7.5" opacity="0.6">Descripción</text>
+  <text x="278" y="133" fill="#94a3b8" font-family="monospace" font-size="7.5" opacity="0.6">P.Total</text>
+
+  <!-- Table rows -->
+  <rect x="98" y="140" width="244" height="16" rx="0" fill="#fff" opacity="0.02"/>
+  <text x="108" y="152" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">001</text>
+  <text x="165" y="152" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">Hormigón f'c=210</text>
+  <text x="278" y="152" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">$148.50</text>
+
+  <rect x="98" y="158" width="244" height="16" rx="0" fill="#fff" opacity="0.01"/>
+  <text x="108" y="170" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">002</text>
+  <text x="165" y="170" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">Acero de refuerzo</text>
+  <text x="278" y="170" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">$1.85/kg</text>
+
+  <rect x="98" y="176" width="244" height="16" rx="0" fill="#fff" opacity="0.02"/>
+  <text x="108" y="188" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">003</text>
+  <text x="165" y="188" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">Encofrado madera</text>
+  <text x="278" y="188" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">$12.30</text>
+
+  <rect x="98" y="194" width="244" height="16" rx="0" fill="#fff" opacity="0.01"/>
+  <text x="108" y="206" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">004</text>
+  <text x="165" y="206" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">Excavación manual</text>
+  <text x="278" y="206" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">$8.75</text>
+
+  <rect x="98" y="212" width="244" height="16" rx="0" fill="#fff" opacity="0.02"/>
+  <text x="108" y="224" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">005</text>
+  <text x="165" y="224" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">Mampostería bloque</text>
+  <text x="278" y="224" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">$15.20</text>
+
+  <!-- More rows indicator -->
+  <text x="220" y="250" fill="#94a3b8" font-family="monospace" font-size="9" opacity="0.3" text-anchor="middle">· · ·</text>
+
+  <!-- Fuzzy matching highlight -->
+  <rect x="98" y="260" width="244" height="40" rx="6" fill="#f59e0b" opacity="0.05" stroke="#f59e0b" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="108" y="276" fill="#f59e0b" font-family="monospace" font-size="8" opacity="0.6">fuzzy match: "Hormigon" → "Hormigón"</text>
+  <text x="108" y="292" fill="#f59e0b" font-family="monospace" font-size="8" opacity="0.4">confidence: 0.96</text>
+
+  <!-- Processing status -->
+  <rect x="98" y="315" width="244" height="28" rx="6" fill="#22c55e" opacity="0.06" stroke="#22c55e" stroke-width="0.5" stroke-opacity="0.2"/>
+  <circle cx="114" cy="329" r="4" fill="#22c55e" opacity="0.6"/>
+  <text x="126" y="333" fill="#22c55e" font-family="monospace" font-size="9" opacity="0.6">Parsing completo — 47 rubros</text>
+
+  <!-- Arrow -->
+  <g transform="translate(385, 200)">
+    <rect x="-8" y="-15" width="46" height="30" rx="15" fill="url(#kaccent)" opacity="0.15"/>
+    <path d="M0 0 L18 0 L12 -6 M18 0 L12 6" stroke="url(#kaccent)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.7"/>
+  </g>
+
+  <!-- Right: Excel output -->
+  <rect x="440" y="55" width="280" height="340" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+
+  <!-- Excel header -->
+  <rect x="440" y="55" width="280" height="38" rx="8" fill="#1e293b"/>
+  <rect x="440" y="88" width="280" height="1" fill="#334155"/>
+  <rect x="458" y="64" width="22" height="22" rx="3" fill="#22c55e" opacity="0.2"/>
+  <text x="469" y="79" fill="#22c55e" font-family="monospace" font-size="7" text-anchor="middle" font-weight="bold">XLS</text>
+  <text x="495" y="79" fill="#94a3b8" font-family="monospace" font-size="10" opacity="0.7">resultado_kumbre.xlsx</text>
+
+  <!-- Excel grid -->
+  <!-- Column headers -->
+  <rect x="458" y="98" width="30" height="16" rx="2" fill="#22c55e" opacity="0.1"/>
+  <text x="473" y="110" fill="#22c55e" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.7">A</text>
+  <rect x="492" y="98" width="80" height="16" rx="2" fill="#22c55e" opacity="0.1"/>
+  <text x="532" y="110" fill="#22c55e" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.7">B</text>
+  <rect x="576" y="98" width="50" height="16" rx="2" fill="#22c55e" opacity="0.1"/>
+  <text x="601" y="110" fill="#22c55e" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.7">C</text>
+  <rect x="630" y="98" width="55" height="16" rx="2" fill="#22c55e" opacity="0.1"/>
+  <text x="658" y="110" fill="#22c55e" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.7">D</text>
+
+  <!-- Row headers + data -->
+  <g opacity="0.5">
+    <!-- Row 1 -->
+    <text x="463" y="132" fill="#64748b" font-family="monospace" font-size="7">001</text>
+    <text x="497" y="132" fill="#94a3b8" font-family="monospace" font-size="7">Hormigón f'c=210</text>
+    <text x="581" y="132" fill="#94a3b8" font-family="monospace" font-size="7">m³</text>
+    <text x="635" y="132" fill="#22c55e" font-family="monospace" font-size="7">$148.50</text>
+
+    <!-- Row 2 -->
+    <rect x="458" y="138" width="246" height="16" fill="#fff" opacity="0.02"/>
+    <text x="463" y="150" fill="#64748b" font-family="monospace" font-size="7">002</text>
+    <text x="497" y="150" fill="#94a3b8" font-family="monospace" font-size="7">Acero de refuerzo</text>
+    <text x="581" y="150" fill="#94a3b8" font-family="monospace" font-size="7">kg</text>
+    <text x="635" y="150" fill="#22c55e" font-family="monospace" font-size="7">$1.85</text>
+
+    <!-- Row 3 -->
+    <text x="463" y="168" fill="#64748b" font-family="monospace" font-size="7">003</text>
+    <text x="497" y="168" fill="#94a3b8" font-family="monospace" font-size="7">Encofrado madera</text>
+    <text x="581" y="168" fill="#94a3b8" font-family="monospace" font-size="7">m²</text>
+    <text x="635" y="168" fill="#22c55e" font-family="monospace" font-size="7">$12.30</text>
+
+    <!-- Row 4 -->
+    <rect x="458" y="174" width="246" height="16" fill="#fff" opacity="0.02"/>
+    <text x="463" y="186" fill="#64748b" font-family="monospace" font-size="7">004</text>
+    <text x="497" y="186" fill="#94a3b8" font-family="monospace" font-size="7">Excavación manual</text>
+    <text x="581" y="186" fill="#94a3b8" font-family="monospace" font-size="7">m³</text>
+    <text x="635" y="186" fill="#22c55e" font-family="monospace" font-size="7">$8.75</text>
+
+    <!-- Row 5 -->
+    <text x="463" y="204" fill="#64748b" font-family="monospace" font-size="7">005</text>
+    <text x="497" y="204" fill="#94a3b8" font-family="monospace" font-size="7">Mampostería bloque</text>
+    <text x="581" y="204" fill="#94a3b8" font-family="monospace" font-size="7">m²</text>
+    <text x="635" y="204" fill="#22c55e" font-family="monospace" font-size="7">$15.20</text>
+  </g>
+
+  <!-- More rows dots -->
+  <text x="580" y="230" fill="#94a3b8" font-family="monospace" font-size="9" opacity="0.3" text-anchor="middle">· · ·</text>
+
+  <!-- Plans section -->
+  <rect x="458" y="248" width="246" height="60" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <text x="468" y="266" fill="#94a3b8" font-family="monospace" font-size="8" opacity="0.5">Planes</text>
+  <rect x="468" y="274" width="40" height="18" rx="4" fill="#94a3b8" opacity="0.08"/>
+  <text x="488" y="287" fill="#94a3b8" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.5">Free</text>
+  <rect x="514" y="274" width="45" height="18" rx="4" fill="#94a3b8" opacity="0.1"/>
+  <text x="537" y="287" fill="#94a3b8" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.6">Silver</text>
+  <rect x="565" y="274" width="40" height="18" rx="4" fill="#f59e0b" opacity="0.15" stroke="#f59e0b" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="585" y="287" fill="#f59e0b" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.7">Gold</text>
+  <rect x="611" y="274" width="55" height="18" rx="4" fill="#94a3b8" opacity="0.1"/>
+  <text x="639" y="287" fill="#94a3b8" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.6">Platinum</text>
+
+  <!-- Watermark badge -->
+  <rect x="458" y="320" width="246" height="28" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <text x="468" y="338" fill="#64748b" font-family="monospace" font-size="8" opacity="0.5">Cloudflare R2 + Watermarks</text>
+  <circle cx="688" cy="334" r="8" fill="#f59e0b" opacity="0.2"/>
+  <text x="688" y="337" fill="#f59e0b" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.6">K</text>
+
+  <!-- Title -->
+  <text x="400" y="425" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" letter-spacing="2" opacity="0.5">KUMBRE — Construction SaaS</text>
+</svg>
