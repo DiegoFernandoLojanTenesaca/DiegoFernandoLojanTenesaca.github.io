@@ -11,36 +11,48 @@ const catKeys: Record<string, string> = {
 };
 
 const techIcons: Record<string, string> = {
+  // Frontend
   react: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
   nextjs: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
   typescript: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
   tailwindcss: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+  astro: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg",
+  // Backend
   python: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
   fastapi: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg",
   pyramid: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYjU4OTBhIiBzdHJva2Utd2lkdGg9IjEuNSI+PHBhdGggZD0iTTEyIDJMMiAyMmgyMEwxMiAyeiIvPjxwYXRoIGQ9Ik0xMiAydjIwTTEyIDhsLTUgMTRNMTIgOGw1IDE0IiBzdHJva2Utb3BhY2l0eT0iMC41Ii8+PC9zdmc+",
   sqlalchemy: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg",
   api: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openapi/openapi-original.svg",
+  microservices: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYTc4YmZhIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHJlY3QgeD0iMyIgeT0iMyIgd2lkdGg9IjciIGhlaWdodD0iNyIgcng9IjEuNSIvPjxyZWN0IHg9IjE0IiB5PSIzIiB3aWR0aD0iNyIgaGVpZ2h0PSI3IiByeD0iMS41Ii8+PHJlY3QgeD0iMyIgeT0iMTQiIHdpZHRoPSI3IiBoZWlnaHQ9IjciIHJ4PSIxLjUiLz48cmVjdCB4PSIxNCIgeT0iMTQiIHdpZHRoPSI3IiBoZWlnaHQ9IjciIHJ4PSIxLjUiLz48cGF0aCBkPSJNMTAgNi41aDRNNi41IDEwdjRNMTcuNSAxMHY0TTEwIDE3LjVoNCIvPjwvc3ZnPg==",
+  // Data & AI
   langchain: "https://cdn.simpleicons.org/langchain/ffffff",
   langgraph: "https://cdn.simpleicons.org/langchain/ffffff",
   scikitlearn: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg",
-  nlp: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
+  pandas: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg",
+  rag: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzRkMzk5IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTQgNmgxNk00IDEyaDEwTTQgMThoN00yMCA4bC0zIDQgMyA0Ii8+PC9zdmc+",
   groq: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZjU1MDM2IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTEzIDJMMyAxNGg5bC0xIDggMTAtMTJoLTlsMS04eiIvPjwvc3ZnPg==",
   embeddings: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg",
+  nlp: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg",
+  optuna: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzk5OGZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTMgMjBsMy04IDQgNCA0LTEwIDQgNiAzLTEwIi8+PGNpcmNsZSBjeD0iNiIgY3k9IjEyIiByPSIxLjUiIGZpbGw9IiMzOTk4ZmYiLz48Y2lyY2xlIGN4PSIxMCIgY3k9IjE2IiByPSIxLjUiIGZpbGw9IiMzOTk4ZmYiLz48Y2lyY2xlIGN4PSIxNCIgY3k9IjYiIHI9IjEuNSIgZmlsbD0iIzM5OThmZiIvPjxjaXJjbGUgY3g9IjE4IiBjeT0iMTIiIHI9IjEuNSIgZmlsbD0iIzM5OThmZiIvPjxjaXJjbGUgY3g9IjIxIiBjeT0iMiIgcj0iMS41IiBmaWxsPSIjMzk5OGZmIi8+PC9zdmc+",
+  // Bases de Datos & DevOps
   postgresql: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
   redis: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg",
   docker: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg",
   git: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
   linux: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
   cloudflare: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cloudflare/cloudflare-original.svg",
+  gitlab: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg",
+  vercel: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
+  // Tiempo Real
   websocket: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg",
   webhook: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjODhjMGQwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSI1IiByPSIyLjUiLz48Y2lyY2xlIGN4PSI1IiBjeT0iMTgiIHI9IjIuNSIvPjxjaXJjbGUgY3g9IjE5IiBjeT0iMTgiIHI9IjIuNSIvPjxwYXRoIGQ9Ik0xMiA3LjV2NWwtNS41IDRNMTIgMTIuNWw1LjUgNCIvPjwvc3ZnPg==",
   // Herramientas
   claudecode: "https://cdn.simpleicons.org/anthropic/ffffff",
-  codex: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYTc4YmZhIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iOSIvPjxwYXRoIGQ9Ik04IDEyaDhNMTIgOHY4Ii8+PC9zdmc+",
+  codex: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTIyLjQxOCAxMC40MjJhNS43NyA1Ljc3IDAgMCAwLS41Mi0xLjA4NiA0LjA2IDQuMDYgMCAwIDAtMi4wMTYtMS44NDcgNC4wNiA0LjA2IDAgMCAwLTIuODA5LS4yNzIgNS43NyA1Ljc3IDAgMCAwLS44NTYuNDk4IDUuMDcgNS4wNyAwIDAgMC0zLjY4OC0xLjU4OCA1LjA3IDUuMDcgMCAwIDAtMy41NSAxLjI2NSA1LjA3IDUuMDcgMCAwIDAtMS44OSAzLjI1NiA0LjA2IDQuMDYgMCAwIDAtMS44OTcgMi4wODcgNC4wNiA0LjA2IDAgMCAwLS40MjQgMi43OCA1Ljc3IDUuNzcgMCAwIDAgLjUyIDEuMDg2IDQuMDYgNC4wNiAwIDAgMCAyLjAxNiAxLjg0NyA0LjA2IDQuMDYgMCAwIDAgMi44MDkuMjcyIDUuNzcgNS43NyAwIDAgMCAuODU2LS40OTggNS4wNyA1LjA3IDAgMCAwIDMuNjg4IDEuNTg4IDUuMDcgNS4wNyAwIDAgMCAzLjU1LTEuMjY1IDUuMDcgNS4wNyAwIDAgMCAxLjg5LTMuMjU2IDQuMDYgNC4wNiAwIDAgMCAxLjg5Ny0yLjA4NyA0LjA2IDQuMDYgMCAwIDAgLjQyNC0yLjc4em0tOC4wOTggOS4xNDFhMy44MSAzLjgxIDAgMCAxLTIuNDQyLjg4NGMtLjQ1OCAwLS45MTItLjA4Mi0xLjM0NS0uMjQyYTMuOCAzLjggMCAwIDEtMS4yODItLjgzNWMuMTk1LS4xMTguNTMzLS4zMzQuNzU2LS40ODZsMi41MDMtMS40NDVhLjQwOC40MDggMCAwIDAgLjIwNy0uMzU1di0zLjUzbDEuMDU4LjYxMWEuMDM4LjAzOCAwIDAgMSAuMDIuMDI5djIuOTIxYTMuODMgMy44MyAwIDAgMS0xLjQ3NSAzLjQ0OHptLTguMTMtNC4yNjFhMy44IDMuOCAwIDAgMS0uNDU4LTEuMzEzYzAtLjQ2Ny4xMTItLjkzLjMyNi0xLjM1NC4xOTIuMTE4LjUyNy4zNDEuNzU2LjQ5M2wyLjUwMyAxLjQ0NWEuNDEuNDEgMCAwIDAgLjQxIDBsMy4wNTYtMS43NjR2MS4yMjJhLjA0LjA0IDAgMCAxLS4wMTUuMDM2bC0yLjUzMiAxLjQ2MmEzLjgyIDMuODIgMCAwIDEtMi44MTcuNTk4IDMuODIgMy44MiAwIDAgMS0yLjIzLTEuODI1ek00LjE5OSA4LjY1YTMuOCAzLjggMCAwIDEgMi0xLjY3MWMwIC4yMjktLjAxMy42Mi0uMDEzLjg4NnYyLjg5YS40MS40MSAwIDAgMCAuMjA3LjM1NWwzLjA1NiAxLjc2NC0xLjA1OC42MTFhLjA0LjA0IDAgMCAxLS4wMzcuMDA3TDUuODIyIDEyLjAzYTMuODIgMy44MiAwIDAgMS0xLjgyMi0yLjIzNSAzLjgyIDMuODIgMCAwIDEgLjE5OS0yLjk0NVptMTMuOTgyIDMuMjU0LTMuMDU2LTEuNzY0IDEuMDU4LS42MTFhLjA0LjA0IDAgMCAxIC4wMzctLjAwN2wyLjUzMi0xLjQ2MmEzLjgyIDMuODIgMCAwIDEgNC41MDcgMS41NiAzLjgyIDMuODIgMCAwIDEtMS42ODcgMy40NDZjMC0uMjI5LjAxMy0uNjIuMDEzLS44ODZ2LTIuODlhLjQxLjQxIDAgMCAwLS4yMDctLjM1NWwtLjAwMS0uMDAxaC0uMDAxbC0zLjE5NS0xLjAzem0xLjA1My0xLjg1NmMtLjE5NS0uMTE4LS41MjctLjM0MS0uNzU2LS40OTNsLTIuNTAzLTEuNDQ1YS40MS40MSAwIDAgMC0uNDEgMGwtMy4wNTYgMS43NjR2LTEuMjIyYS4wNC4wNCAwIDAgMSAuMDE1LS4wMzZsMi41MzItMS40NjJhMy44MjUgMy44MjUgMCAwIDEgNS42NDMgMS45NjggMy44MiAzLjgyIDAgMCAxLS42NjIgMi40MDdoLS4wMDJjLS4xMDEuMTIyLS4yMjEuMjUtLjM3OS4zNjItLjE1My4xMS0uMjkuMTkyLS40MjIuMTU3em0tNi42MjEgMi4xNzMtMS4wNTgtLjYxMWEuMDQuMDQgMCAwIDEtLjAyLS4wMjlWOC42NmEzLjgyIDMuODIgMCAwIDEgMS41NDQtMy4wNzQgMy44MiAzLjgyIDAgMCAxIDQuMjA0LjM1MyAzLjgyIDMuODIgMCAwIDEgMS4yMDMgMS4wMmMtLjE5NS4xMTgtLjUzMy4zMzQtLjc1Ni40ODZsLTIuNTAzIDEuNDQ1YS40MDguNDA4IDAgMCAwLS4yMDcuMzU1djMuNTNsLTEuMDU4LS42MTEtMS4zNDktLjc0M3ptMS4zNDktMi4yMjEgMS4zNjEtLjc4NiAxLjM2MS43ODZ2MS41NzFsLTEuMzYxLjc4Ni0xLjM2MS0uNzg2di0xLjU3MXoiLz48L3N2Zz4=",
   pycharm: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pycharm/pycharm-original.svg",
   vscode: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",
   datagrip: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/datagrip/datagrip-original.svg",
-  antigravity: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMjJkM2VlIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTEyIDJsMyA3aDdsLTUuNSA0LjUgMiA3TDEyIDE2bC02LjUgNC41IDItN0wyIDloN3oiLz48L3N2Zz4=",
+  jupyter: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg",
 };
 ---
 
@@ -62,7 +74,7 @@ const techIcons: Record<string, string> = {
       </p>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {skillCategories.map((category) => (
         <div class="reveal">
           <h3 class="text-xs font-mono text-accent mb-3 uppercase tracking-wider" data-i18n={catKeys[category.name]}>

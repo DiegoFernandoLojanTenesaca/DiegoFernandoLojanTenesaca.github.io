@@ -151,6 +151,23 @@
               <div class="terminal-line tl-12">    db.session.<span class="text-accent-light">bulk_save_objects</span>(embeddings)</div>
               <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
             </div>
+
+            <!-- Snippet 5: consensus.py (Energy Anomalies) -->
+            <div class="snippet-panel p-5 font-mono text-[13px] leading-relaxed" data-file="consensus.py">
+              <div class="terminal-line tl-1"><span class="text-accent">from</span> sklearn.ensemble <span class="text-accent">import</span> IsolationForest</div>
+              <div class="terminal-line tl-2"><span class="text-accent">from</span> statsmodels.tsa.seasonal <span class="text-accent">import</span> STL</div>
+              <div class="terminal-line tl-3">&nbsp;</div>
+              <div class="terminal-line tl-4"><span class="text-accent">def</span> <span class="text-accent-light">detect_anomalies</span>(data, country):</div>
+              <div class="terminal-line tl-5">    if_flags = <span class="text-accent-light">IsolationForest</span>(</div>
+              <div class="terminal-line tl-6">        n_estimators=<span class="text-text-muted">300</span></div>
+              <div class="terminal-line tl-7">    ).fit_predict(data)</div>
+              <div class="terminal-line tl-8">    stl_flags = <span class="text-accent-light">stl_detect</span>(data.hydro)</div>
+              <div class="terminal-line tl-9">    cusum_flags = <span class="text-accent-light">cusum_bilateral</span>(data.hydro)</div>
+              <div class="terminal-line tl-10">&nbsp;</div>
+              <div class="terminal-line tl-11">    consensus = (if_flags + stl_flags + cusum_flags)</div>
+              <div class="terminal-line tl-12">    <span class="text-accent">return</span> consensus >= <span class="text-text-muted">2</span>  <span class="text-text-muted/50"># F1=0.750</span></div>
+              <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
+            </div>
           </div>
         </div>
       </div>

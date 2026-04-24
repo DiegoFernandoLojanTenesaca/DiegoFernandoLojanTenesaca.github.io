@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="800" y2="450">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1a0f2e"/>
+    </linearGradient>
+    <linearGradient id="ai" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="neural" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#ec4899" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg2)"/>
+
+  <!-- Neural network decoration -->
+  <g opacity="0.08">
+    <circle cx="650" cy="80" r="60" stroke="#8b5cf6" stroke-width="1"/>
+    <circle cx="650" cy="80" r="100" stroke="#8b5cf6" stroke-width="0.5"/>
+    <circle cx="650" cy="80" r="140" stroke="#8b5cf6" stroke-width="0.3"/>
+    <circle cx="150" cy="380" r="50" stroke="#ec4899" stroke-width="1"/>
+    <circle cx="150" cy="380" r="90" stroke="#ec4899" stroke-width="0.5"/>
+  </g>
+
+  <!-- Main panel -->
+  <rect x="60" y="50" width="680" height="350" rx="12" fill="#1e1b2e" stroke="#2d2545" stroke-width="1"/>
+
+  <!-- Top bar -->
+  <rect x="60" y="50" width="680" height="40" rx="12" fill="#1e1b2e"/>
+  <rect x="60" y="85" width="680" height="1" fill="#2d2545"/>
+  <circle cx="88" cy="70" r="5" fill="#ef4444" opacity="0.5"/>
+  <circle cx="106" cy="70" r="5" fill="#eab308" opacity="0.5"/>
+  <circle cx="124" cy="70" r="5" fill="#22c55e" opacity="0.5"/>
+  <text x="400" y="74" fill="#6366f1" font-family="monospace" font-size="11" text-anchor="middle" opacity="0.7">sudial-ai / semantic-search</text>
+
+  <!-- Left: Search/embedding panel -->
+  <rect x="80" y="100" width="300" height="280" rx="8" fill="#151225" stroke="#2d2545" stroke-width="0.5"/>
+
+  <!-- Search bar -->
+  <rect x="95" y="115" width="270" height="32" rx="8" fill="#0f0d1a" stroke="#8b5cf6" stroke-width="0.5"/>
+  <text x="110" y="135" fill="#8b5cf6" font-family="monospace" font-size="11" opacity="0.5">Search query...</text>
+  <rect x="330" y="121" width="22" height="20" rx="4" fill="url(#ai)" opacity="0.4"/>
+
+  <!-- Embedding vectors visualization -->
+  <text x="95" y="172" fill="#94a3b8" font-family="monospace" font-size="9" opacity="0.6">BGE-M3 Embeddings</text>
+  <g transform="translate(95, 180)">
+    <rect x="0" y="0" width="16" height="80" rx="2" fill="#8b5cf6" opacity="0.15"/>
+    <rect x="0" y="20" width="16" height="40" rx="2" fill="#8b5cf6" opacity="0.4"/>
+    <rect x="20" y="0" width="16" height="80" rx="2" fill="#8b5cf6" opacity="0.15"/>
+    <rect x="20" y="10" width="16" height="55" rx="2" fill="#8b5cf6" opacity="0.3"/>
+    <rect x="40" y="0" width="16" height="80" rx="2" fill="#8b5cf6" opacity="0.15"/>
+    <rect x="40" y="30" width="16" height="50" rx="2" fill="#8b5cf6" opacity="0.5"/>
+    <rect x="60" y="0" width="16" height="80" rx="2" fill="#8b5cf6" opacity="0.15"/>
+    <rect x="60" y="5" width="16" height="65" rx="2" fill="#8b5cf6" opacity="0.35"/>
+    <rect x="80" y="0" width="16" height="80" rx="2" fill="#8b5cf6" opacity="0.15"/>
+    <rect x="80" y="25" width="16" height="45" rx="2" fill="#8b5cf6" opacity="0.45"/>
+    <rect x="100" y="0" width="16" height="80" rx="2" fill="#ec4899" opacity="0.15"/>
+    <rect x="100" y="15" width="16" height="50" rx="2" fill="#ec4899" opacity="0.3"/>
+    <rect x="120" y="0" width="16" height="80" rx="2" fill="#ec4899" opacity="0.15"/>
+    <rect x="120" y="35" width="16" height="40" rx="2" fill="#ec4899" opacity="0.4"/>
+    <rect x="140" y="0" width="16" height="80" rx="2" fill="#ec4899" opacity="0.15"/>
+    <rect x="140" y="8" width="16" height="60" rx="2" fill="#ec4899" opacity="0.35"/>
+  </g>
+
+  <!-- Similarity scores -->
+  <text x="95" y="280" fill="#94a3b8" font-family="monospace" font-size="9" opacity="0.6">pgvector cosine similarity</text>
+  <rect x="95" y="288" width="200" height="6" rx="3" fill="#1a0f2e"/>
+  <rect x="95" y="288" width="180" height="6" rx="3" fill="url(#ai)" opacity="0.5"/>
+  <text x="300" y="294" fill="#8b5cf6" font-family="monospace" font-size="9" opacity="0.7">0.94</text>
+
+  <rect x="95" y="302" width="200" height="6" rx="3" fill="#1a0f2e"/>
+  <rect x="95" y="302" width="150" height="6" rx="3" fill="url(#ai)" opacity="0.4"/>
+  <text x="300" y="308" fill="#8b5cf6" font-family="monospace" font-size="9" opacity="0.7">0.87</text>
+
+  <rect x="95" y="316" width="200" height="6" rx="3" fill="#1a0f2e"/>
+  <rect x="95" y="316" width="120" height="6" rx="3" fill="url(#ai)" opacity="0.3"/>
+  <text x="300" y="322" fill="#8b5cf6" font-family="monospace" font-size="9" opacity="0.7">0.78</text>
+
+  <rect x="95" y="330" width="200" height="6" rx="3" fill="#1a0f2e"/>
+  <rect x="95" y="330" width="85" height="6" rx="3" fill="url(#ai)" opacity="0.2"/>
+  <text x="300" y="336" fill="#8b5cf6" font-family="monospace" font-size="9" opacity="0.7">0.62</text>
+
+  <!-- Right: LLM Response panel -->
+  <rect x="400" y="100" width="320" height="280" rx="8" fill="#151225" stroke="#2d2545" stroke-width="0.5"/>
+
+  <!-- LLM header -->
+  <rect x="415" y="112" width="70" height="20" rx="10" fill="url(#ai)" opacity="0.2"/>
+  <text x="450" y="126" fill="#c084fc" font-family="monospace" font-size="9" text-anchor="middle">LangChain</text>
+  <rect x="495" y="112" width="70" height="20" rx="10" fill="url(#ai)" opacity="0.15"/>
+  <text x="530" y="126" fill="#c084fc" font-family="monospace" font-size="9" text-anchor="middle">LangGraph</text>
+  <rect x="575" y="112" width="50" height="20" rx="10" fill="url(#ai)" opacity="0.1"/>
+  <text x="600" y="126" fill="#c084fc" font-family="monospace" font-size="9" text-anchor="middle">Groq</text>
+
+  <!-- Response text lines -->
+  <rect x="415" y="148" width="280" height="6" rx="3" fill="#94a3b8" opacity="0.15"/>
+  <rect x="415" y="162" width="250" height="6" rx="3" fill="#94a3b8" opacity="0.12"/>
+  <rect x="415" y="176" width="270" height="6" rx="3" fill="#94a3b8" opacity="0.15"/>
+  <rect x="415" y="190" width="200" height="6" rx="3" fill="#94a3b8" opacity="0.1"/>
+
+  <!-- Separator -->
+  <rect x="415" y="210" width="290" height="1" fill="#2d2545"/>
+
+  <!-- Zero-shot classification -->
+  <text x="415" y="232" fill="#94a3b8" font-family="monospace" font-size="9" opacity="0.6">Zero-shot classification</text>
+  <rect x="415" y="242" width="140" height="22" rx="6" fill="#22c55e" opacity="0.12" stroke="#22c55e" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="425" y="257" fill="#22c55e" font-family="monospace" font-size="9" opacity="0.7">soporte_tecnico 0.91</text>
+  <rect x="565" y="242" width="100" height="22" rx="6" fill="#eab308" opacity="0.08" stroke="#eab308" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="575" y="257" fill="#eab308" font-family="monospace" font-size="9" opacity="0.5">ventas 0.34</text>
+
+  <!-- Agent tools -->
+  <text x="415" y="288" fill="#94a3b8" font-family="monospace" font-size="9" opacity="0.6">AI Agent tools</text>
+  <rect x="415" y="296" width="65" height="18" rx="4" fill="#3b82f6" opacity="0.12"/>
+  <text x="448" y="309" fill="#3b82f6" font-family="monospace" font-size="8" text-anchor="middle" opacity="0.7">search</text>
+  <rect x="488" y="296" width="52" height="18" rx="4" fill="#3b82f6" opacity="0.12"/>
+  <text x="514" y="309" fill="#3b82f6" font-family="monospace" font-size="8" text-anchor="middle" opacity="0.7">OCR</text>
+  <rect x="548" y="296" width="70" height="18" rx="4" fill="#3b82f6" opacity="0.12"/>
+  <text x="583" y="309" fill="#3b82f6" font-family="monospace" font-size="8" text-anchor="middle" opacity="0.7">classify</text>
+  <rect x="626" y="296" width="70" height="18" rx="4" fill="#3b82f6" opacity="0.12"/>
+  <text x="661" y="309" fill="#3b82f6" font-family="monospace" font-size="8" text-anchor="middle" opacity="0.7">suggest</text>
+
+  <!-- Docker badge -->
+  <rect x="415" y="330" width="290" height="30" rx="6" fill="#0f0d1a" stroke="#2d2545" stroke-width="0.5"/>
+  <text x="425" y="349" fill="#94a3b8" font-family="monospace" font-size="9" opacity="0.4">$ docker compose up -d  </text>
+  <text x="640" y="349" fill="#22c55e" font-family="monospace" font-size="9" opacity="0.4">OK</text>
+
+  <!-- Title -->
+  <text x="400" y="425" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" letter-spacing="2" opacity="0.5">SUDIAL AI — Intelligence Layer</text>
+</svg>

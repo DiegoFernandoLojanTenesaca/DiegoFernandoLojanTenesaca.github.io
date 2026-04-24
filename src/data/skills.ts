@@ -16,6 +16,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Next.js", icon: "nextjs" },
       { name: "TypeScript", icon: "typescript" },
       { name: "Tailwind CSS", icon: "tailwindcss" },
+      { name: "Astro", icon: "astro" },
       { name: "React Native", icon: "react" },
     ],
   },
@@ -27,6 +28,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Pyramid", icon: "pyramid" },
       { name: "SQLAlchemy", icon: "sqlalchemy" },
       { name: "REST APIs", icon: "api" },
+      { name: "Microservicios", icon: "microservices" },
     ],
   },
   {
@@ -35,9 +37,12 @@ export const skillCategories: SkillCategory[] = [
       { name: "LangChain", icon: "langchain" },
       { name: "LangGraph", icon: "langgraph" },
       { name: "Scikit-learn", icon: "scikitlearn" },
-      { name: "NLP", icon: "nlp" },
+      { name: "Pandas", icon: "pandas" },
+      { name: "RAG", icon: "rag" },
       { name: "Groq", icon: "groq" },
       { name: "Embeddings", icon: "embeddings" },
+      { name: "NLP", icon: "nlp" },
+      { name: "Optuna", icon: "optuna" },
     ],
   },
   {
@@ -49,6 +54,8 @@ export const skillCategories: SkillCategory[] = [
       { name: "Git", icon: "git" },
       { name: "Linux", icon: "linux" },
       { name: "Cloudflare", icon: "cloudflare" },
+      { name: "GitLab CI/CD", icon: "gitlab" },
+      { name: "Vercel", icon: "vercel" },
     ],
   },
   {
@@ -67,7 +74,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "PyCharm", icon: "pycharm" },
       { name: "VS Code", icon: "vscode" },
       { name: "DataGrip", icon: "datagrip" },
-      { name: "Antigravity", icon: "antigravity" },
+      { name: "Jupyter", icon: "jupyter" },
     ],
   },
 ];
