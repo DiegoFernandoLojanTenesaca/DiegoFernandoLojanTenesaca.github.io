@@ -11,6 +11,7 @@ const projKeys: Record<string, string> = {
   "Análisis Electoral Ecuador 2025": "proj.electoral.desc",
   "Detección de Estrés en Redes Sociales": "proj.stress.desc",
   "Vosk - Reconocimiento de Voz": "proj.vosk.desc",
+  "Aisladores Sísmicos Elastoméricos": "proj.aisladores.desc",
 };
 
 const featured = projects.filter((p) => p.featured);
@@ -22,7 +23,7 @@ const other = projects.filter((p) => !p.featured);
   <img
     src={`${import.meta.env.BASE_URL}avatar-sword.png`}
     alt=""
-    class="absolute bottom-4 right-2 sm:bottom-12 sm:right-6 w-14 h-14 sm:w-20 sm:h-20 xl:w-28 xl:h-28 opacity-50 sm:opacity-60 hover:opacity-95 transition-opacity pointer-events-none"
+    class="absolute bottom-4 right-2 sm:bottom-12 sm:right-6 w-20 h-20 sm:w-28 sm:h-28 xl:w-36 xl:h-36 opacity-50 sm:opacity-60 hover:opacity-95 transition-opacity pointer-events-none"
     style="image-rendering: pixelated;"
   />
   <div class="max-w-6xl mx-auto">

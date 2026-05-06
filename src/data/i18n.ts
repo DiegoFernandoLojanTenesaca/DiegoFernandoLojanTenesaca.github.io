@@ -16,6 +16,7 @@ export const translations: Record<string, Record<string, string>> = {
   },
   "hero.cta.projects": { es: "Ver Proyectos", en: "View Projects" },
   "hero.cta.contact": { es: "Contáctame", en: "Contact Me" },
+  "hero.cta.cv": { es: "Descargar CV", en: "Download CV" },
 
   // Technologies
   "tech.title": { es: "Tecnologías", en: "Technologies" },
@@ -34,8 +35,8 @@ export const translations: Record<string, Record<string, string>> = {
     en: "Computer Science Engineer with international academic experience (Ecuador and Peru) and teaching methodology training. I work at the intersection of full stack development and data & AI engineering, turning complex problems into efficient, scalable solutions.",
   },
   "about.p2": {
-    es: "Actualmente en DataGlov S.A.S., donde desarrollo microservicios de IA, pipelines de datos y sistemas de búsqueda semántica. Previamente construí Sudial, una plataforma SaaS con 190+ componentes, 90+ endpoints y app móvil. También creo productos propios como Kumbre (SaaS para construcción).",
-    en: "Currently at DataGlov S.A.S., where I build AI microservices, data pipelines, and semantic search systems. Previously built Sudial, a SaaS platform with 190+ components, 90+ endpoints and mobile app. I also create my own products like Kumbre (construction SaaS).",
+    es: "Actualmente en DataGlov S.A.S., donde desarrollo microservicios de IA, pipelines de datos y sistemas de búsqueda semántica en producción. Previamente construí Sudial, una plataforma SaaS multi-tenant con backoffice web y app móvil. También creo productos propios como Kumbre (SaaS para construcción).",
+    en: "Currently at DataGlov S.A.S., where I build AI microservices, data pipelines and semantic search systems in production. Previously built Sudial, a multi-tenant SaaS platform with web backoffice and mobile app. I also create my own products like Kumbre (construction SaaS).",
   },
   "about.p3": {
     es: "Mi enfoque combina ingeniería de software con análisis de datos, buscando construir soluciones que generen valor real. Desde plataformas SaaS hasta detección de anomalías energéticas con ML — diseño, construyo y despliego.",
@@ -64,62 +65,66 @@ export const translations: Record<string, Record<string, string>> = {
 
   // Experience - DataGlov
   "exp.dg.1": {
-    es: "Desarrollo microservicios backend con FastAPI para procesamiento de datos con IA en producción",
-    en: "I build backend microservices with FastAPI for AI data processing in production",
+    es: "Desarrollo microservicios backend con FastAPI con diseño por dominios (router/service/repository) y arquitectura multi-tenant aislada por esquemas en PostgreSQL",
+    en: "I build backend microservices with FastAPI using domain-driven design (router/service/repository) and multi-tenant architecture with schema isolation in PostgreSQL",
   },
   "exp.dg.2": {
-    es: "Implementé pipelines ETL para ingestión, limpieza y transformación de datos conversacionales a gran escala",
-    en: "Implemented ETL pipelines for large-scale conversational data ingestion, cleaning and transformation",
+    es: "Pipelines ETL para ingestión, limpieza y enriquecimiento de datos conversacionales a gran escala, con jobs asíncronos y workers en background",
+    en: "ETL pipelines for large-scale conversational data ingestion, cleaning and enrichment, with async jobs and background workers",
   },
   "exp.dg.3": {
-    es: "Construí búsqueda semántica con embeddings BGE-M3 y pgvector en producción",
-    en: "Built semantic search with BGE-M3 embeddings and pgvector in production",
+    es: "Búsqueda semántica e indexación vectorial con embeddings BGE-M3 y pgvector (HNSW) sobre cientos de miles de registros",
+    en: "Semantic search and vector indexing with BGE-M3 embeddings and pgvector (HNSW) over hundreds of thousands of records",
   },
   "exp.dg.4": {
-    es: "Integré LLMs (Groq API, Qwen) con LangChain y LangGraph para generación de respuestas inteligentes",
-    en: "Integrated LLMs (Groq API, Qwen) with LangChain and LangGraph for intelligent response generation",
+    es: "18 dominios funcionales y un agente conversacional con +15 herramientas, control de bucles, caché normalizado y enmascaramiento de PII",
+    en: "18 functional domains and a conversational agent with 15+ tools, loop control, normalized cache and PII masking",
   },
   "exp.dg.5": {
-    es: "Desarrollé clasificador zero-shot y agente de IA con múltiples herramientas",
-    en: "Built zero-shot classifier and AI agent with multiple tools",
+    es: "Orquestación de LLMs con LangChain y LangGraph; servicios complementarios: clasificación zero-shot, OCR + extracción estructurada, transcripción local de audio, traducción offline y moderación de contenido",
+    en: "LLM orchestration with LangChain and LangGraph; complementary services: zero-shot classification, OCR + structured extraction, local audio transcription, offline translation and content moderation",
   },
   "exp.dg.6": {
-    es: "Diseñé arquitectura multi-tenant con aislamiento por esquemas en PostgreSQL",
-    en: "Designed multi-tenant architecture with schema isolation in PostgreSQL",
+    es: "Pipelines de Vision-Language Models (Qwen-VL, InternVL) self-hosted en GPU NVIDIA A6000 con batch processing, checkpoints y retries para extracción y análisis de documentos a gran escala",
+    en: "Self-hosted Vision-Language Model pipelines (Qwen-VL, InternVL) on NVIDIA A6000 GPU with batch processing, checkpoints and retries for large-scale document extraction and analysis",
   },
   "exp.dg.7": {
-    es: "Configuré CI/CD con GitLab y despliegue con Docker Compose",
-    en: "Configured CI/CD with GitLab and deployment with Docker Compose",
+    es: "Sistema de migraciones reversibles con checksums, observabilidad de modelos (tracing de tokens y latencia) y rate limiting por tenant",
+    en: "Reversible migration system with checksums, model observability (token and latency tracing) and per-tenant rate limiting",
+  },
+  "exp.dg.8": {
+    es: "CI/CD con GitLab y despliegue contenerizado con Docker Compose",
+    en: "CI/CD with GitLab and containerized deployment with Docker Compose",
   },
 
   // Experience - Serviestudios
   "exp.sv.1": {
-    es: "Desarrollé más de 190 componentes React con TypeScript en Next.js: chatbot builder visual, calendario, sistema de citas y panel administrativo multi-organización",
-    en: "Built 190+ React components with TypeScript in Next.js: visual chatbot builder, calendar, appointment system and multi-org admin panel",
+    es: "Construí interfaces web con React y Next.js (App Router): chatbot builder visual, calendario, sistema de citas y panel administrativo multi-organización",
+    en: "Built web interfaces with React and Next.js (App Router): visual chatbot builder, calendar, appointment system and multi-org admin panel",
   },
   "exp.sv.2": {
-    es: "Construí una API REST con Python (Pyramid) con más de 90 endpoints, autenticación JWT y arquitectura multi-tenant",
-    en: "Built a REST API with Python (Pyramid) with 90+ endpoints, JWT authentication and multi-tenant architecture",
+    es: "API REST con Python (Pyramid), autenticación JWT y arquitectura multi-tenant con control granular de roles y permisos",
+    en: "REST API with Python (Pyramid), JWT authentication and multi-tenant architecture with granular role and permission control",
   },
   "exp.sv.3": {
-    es: "Administré una base de datos PostgreSQL con más de 80 modelos SQLAlchemy y 70 migraciones",
-    en: "Managed a PostgreSQL database with 80+ SQLAlchemy models and 70 migrations",
+    es: "Modelado de datos en PostgreSQL con SQLAlchemy y sistema de migraciones",
+    en: "Data modeling in PostgreSQL with SQLAlchemy and a migrations system",
   },
   "exp.sv.4": {
-    es: "Implementé comunicación en tiempo real con WebSockets (Twisted/Autobahn) y Redis Pub/Sub",
-    en: "Implemented real-time communication with WebSockets (Twisted/Autobahn) and Redis Pub/Sub",
+    es: "Comunicación en tiempo real con WebSockets (Twisted/Autobahn) y Redis Pub/Sub",
+    en: "Real-time communication with WebSockets (Twisted/Autobahn) and Redis Pub/Sub",
   },
   "exp.sv.5": {
-    es: "Integré WhatsApp Business API, Google Calendar con OAuth 2.0 y Stripe para pagos",
-    en: "Integrated WhatsApp Business API, Google Calendar with OAuth 2.0 and Stripe for payments",
+    es: "Integración con WhatsApp Business API, Google Calendar (OAuth 2.0) y pasarelas de pago",
+    en: "Integration with WhatsApp Business API, Google Calendar (OAuth 2.0) and payment gateways",
   },
   "exp.sv.6": {
-    es: "Implementé pipeline OCR + Groq (LLM) para clasificación y extracción automática de datos",
-    en: "Implemented OCR + Groq (LLM) pipeline for automatic data classification and extraction",
+    es: "Pipeline OCR + LLM para clasificación y extracción automática de datos de documentos",
+    en: "OCR + LLM pipeline for automatic document data classification and extraction",
   },
   "exp.sv.7": {
-    es: "Desarrollé app móvil Android con React Native: 45 pantallas, chat en tiempo real y push notifications",
-    en: "Built Android mobile app with React Native: 45 screens, real-time chat and push notifications",
+    es: "App móvil multiplataforma con React Native: chat en tiempo real, notificaciones push y almacenamiento local de alto desempeño",
+    en: "Cross-platform mobile app with React Native: real-time chat, push notifications and high-performance local storage",
   },
 
   // Experience - Freelance
@@ -150,8 +155,8 @@ export const translations: Record<string, Record<string, string>> = {
   "proj.private": { es: "Privado", en: "Private" },
   "proj.other": { es: "Otros proyectos", en: "Other projects" },
   "proj.sudial.desc": {
-    es: "Plataforma SaaS multi-tenant para gestión de comunicaciones empresariales vía WhatsApp. 190+ componentes React, 90+ endpoints API, 80+ modelos de BD. Incluye chatbot builder visual, sistema de citas, CRM, inventario y app móvil de 45 pantallas.",
-    en: "Multi-tenant SaaS platform for business communication via WhatsApp. 190+ React components, 90+ API endpoints, 80+ DB models. Includes visual chatbot builder, appointments, CRM, inventory and 45-screen mobile app.",
+    es: "Plataforma SaaS multi-tenant para gestión de comunicaciones empresariales vía WhatsApp. Incluye chatbot builder visual, sistema de citas, CRM, inventario y app móvil multiplataforma con chat en tiempo real y notificaciones push.",
+    en: "Multi-tenant SaaS platform for business communication via WhatsApp. Includes visual chatbot builder, appointments, CRM, inventory and a cross-platform mobile app with real-time chat and push notifications.",
   },
   "proj.sudialai.desc": {
     es: "Plataforma de IA para atención al cliente con búsqueda semántica (BGE-M3 + pgvector), clasificación zero-shot, sugerencias de respuestas, OCR inteligente y agente de IA con múltiples herramientas. Arquitectura multi-tenant en producción.",
@@ -184,6 +189,10 @@ export const translations: Record<string, Record<string, string>> = {
   "proj.vosk.desc": {
     es: "Sistema de reconocimiento de voz utilizando el modelo VOSK para transcripción automática en aplicaciones de campo. Exportación a PDF, Word y Excel.",
     en: "Voice recognition system using the VOSK model for automatic transcription in field applications. Export to PDF, Word and Excel.",
+  },
+  "proj.aisladores.desc": {
+    es: "Pipeline numérico para tesis de Ingeniería Civil: análisis modal-espectral, integración de Newmark-β, diseño de aisladores NRB y verificaciones de estabilidad y volcamiento. Comparativa de 3 edificios (2/5/10 pisos), tests unitarios y portabilidad a MATLAB.",
+    en: "Numerical pipeline for a Civil Engineering thesis: modal-spectral analysis, Newmark-β integration, NRB isolator design and stability/overturning checks. Comparison of 3 buildings (2/5/10 stories), unit tests and MATLAB portability.",
   },
 
   // Certifications

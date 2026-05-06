@@ -13,12 +13,12 @@ export const projects: Project[] = [
   {
     title: "Sudial",
     description:
-      "Plataforma SaaS multi-tenant para gestión de comunicaciones empresariales vía WhatsApp. 190+ componentes React, 90+ endpoints API, 80+ modelos de BD. Incluye chatbot builder visual, sistema de citas, CRM, inventario y app móvil de 45 pantallas.",
+      "Plataforma SaaS multi-tenant para gestión de comunicaciones empresariales vía WhatsApp. Incluye chatbot builder visual, sistema de citas, CRM, inventario y app móvil multiplataforma con chat en tiempo real y notificaciones push.",
     tags: ["React", "Next.js", "TypeScript", "Tailwind", "Python", "Pyramid", "PostgreSQL", "Redis", "WebSockets", "React Native"],
     github: null,
     demo: null,
     kaggle: null,
-    image: "projects/sudial.svg",
+    image: "projects/sudial.jpg",
     featured: true,
   },
   {
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     github: null,
     demo: null,
     kaggle: null,
-    image: "projects/sudial-ai.svg",
+    image: "projects/sudial-ai.jpg",
     featured: true,
   },
   {
@@ -107,6 +107,17 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/vosk.png",
+    featured: false,
+  },
+  {
+    title: "Aisladores Sísmicos Elastoméricos",
+    description:
+      "Pipeline numérico para tesis de Ingeniería Civil: análisis modal-espectral, integración de Newmark-β, diseño de aisladores NRB (Natural Rubber Bearing) y verificaciones de estabilidad y volcamiento. Comparativa de 3 edificios (2/5/10 pisos), tests unitarios y portabilidad a MATLAB.",
+    tags: ["Python", "NumPy", "SciPy", "MATLAB", "Pytest", "PyYAML"],
+    github: null,
+    demo: null,
+    kaggle: null,
+    image: "projects/aisladores.jpg",
     featured: false,
   },
 ];

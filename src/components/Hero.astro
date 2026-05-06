@@ -16,9 +16,10 @@
       <div class="text-left">
         <div class="hero-animate hero-delay-1 flex items-end gap-3 mb-4">
           <img
+            id="hero-avatar"
             src={`${import.meta.env.BASE_URL}avatar-body.png`}
             alt=""
-            class="w-12 h-12 sm:w-16 sm:h-16"
+            class="w-16 h-16 sm:w-20 sm:h-20 cursor-pointer select-none transition-transform"
             style="image-rendering: pixelated;"
           />
           <p class="text-accent font-mono text-sm tracking-wider">
@@ -58,15 +59,17 @@
             Contáctame
           </a>
           <a
-            href={`${import.meta.env.BASE_URL}CV_DiegoLojan.pdf`}
+            href={`${import.meta.env.BASE_URL}cv-diego-lojan.pdf`}
             target="_blank"
             rel="noopener noreferrer"
+            download
             class="inline-flex items-center gap-2 px-6 py-3 text-text-muted font-medium hover:text-accent transition-colors duration-300"
+            data-i18n="hero.cta.cv"
           >
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            CV
+            Descargar CV
           </a>
         </div>
       </div>
@@ -185,6 +188,78 @@
             panels[current].classList.add("snippet-active");
             filenameEl.textContent = panels[current].getAttribute("data-file") || "";
           }, 6000);
+        })();
+      </script>
+
+      <!-- Easter egg: clicks en el avatar -->
+      <script is:inline>
+        (function () {
+          var avatar = document.getElementById("hero-avatar");
+          if (!avatar) return;
+          var clicks = 0;
+          var resetTimer = null;
+          var messages = [
+            "👋 ¡Hola! Tienes buen ojo.",
+            "🔍 Sigues curioso, eh.",
+            "🚀 Casi lo tienes...",
+            "⚡ Una más...",
+            "🎮 Si juegas LoL o quieres charlar, escríbeme: \"lautish\" — mi nick. ¡GLHF!"
+          ];
+
+          function showToast(msg) {
+            var t = document.createElement("div");
+            t.textContent = msg;
+            t.style.cssText = "position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(20px);background:rgba(16,185,129,0.95);color:#0a0e13;padding:12px 24px;border-radius:12px;font-family:monospace;font-size:14px;font-weight:600;z-index:9999;box-shadow:0 10px 40px rgba(0,0,0,0.4);opacity:0;transition:all 0.3s ease;backdrop-filter:blur(10px);";
+            document.body.appendChild(t);
+            requestAnimationFrame(function () {
+              t.style.opacity = "1";
+              t.style.transform = "translateX(-50%) translateY(0)";
+            });
+            setTimeout(function () {
+              t.style.opacity = "0";
+              t.style.transform = "translateX(-50%) translateY(20px)";
+              setTimeout(function () { t.remove(); }, 300);
+            }, 2500);
+          }
+
+          avatar.addEventListener("click", function () {
+            clicks++;
+            avatar.style.transform = "scale(1.15) rotate(" + (clicks * 7) + "deg)";
+            setTimeout(function () { avatar.style.transform = ""; }, 200);
+
+            if (clicks >= 1 && clicks <= messages.length) {
+              showToast(messages[clicks - 1]);
+            }
+
+            if (clicks === messages.length) {
+              // Confetti barato 🎊
+              for (var i = 0; i < 24; i++) {
+                (function (i) {
+                  setTimeout(function () {
+                    var c = document.createElement("div");
+                    var colors = ["#10b981", "#34d399", "#fbbf24", "#f43f5e", "#8b5cf6"];
+                    var color = colors[Math.floor(Math.random() * colors.length)];
+                    c.style.cssText = "position:fixed;top:50%;left:50%;width:10px;height:10px;background:" + color + ";border-radius:2px;pointer-events:none;z-index:9998;";
+                    document.body.appendChild(c);
+                    var dx = (Math.random() - 0.5) * 600;
+                    var dy = (Math.random() - 0.5) * 600;
+                    c.animate(
+                      [
+                        { transform: "translate(0,0) rotate(0deg)", opacity: 1 },
+                        { transform: "translate(" + dx + "px," + dy + "px) rotate(720deg)", opacity: 0 }
+                      ],
+                      { duration: 1200, easing: "cubic-bezier(0.2,0.6,0.3,1)" }
+                    );
+                    setTimeout(function () { c.remove(); }, 1300);
+                  }, i * 30);
+                })(i);
+              }
+              clicks = 0;
+            }
+
+            clearTimeout(resetTimer);
+            resetTimer = setTimeout(function () { clicks = 0; }, 3000);
+          });
         })();
       </script>
 
