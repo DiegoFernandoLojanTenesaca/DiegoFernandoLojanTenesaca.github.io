@@ -6,6 +6,7 @@ export interface Project {
   demo: string | null;
   kaggle: string | null;
   image: string | null;
+  imageFit?: "cover" | "contain";
   featured: boolean;
 }
 
@@ -85,6 +86,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/orbyn.png",
+    imageFit: "contain",
     featured: true,
   },
   {
