@@ -18,7 +18,7 @@ export const projects: Project[] = [
     github: null,
     demo: "https://www.indagalab.com",
     kaggle: null,
-    image: null,
+    image: "projects/indagalab.png",
     featured: true,
   },
   {
@@ -84,7 +84,7 @@ export const projects: Project[] = [
     github: "https://github.com/DiegoFernandoLojanTenesaca/orbyn-lead-qualifier",
     demo: null,
     kaggle: null,
-    image: null,
+    image: "projects/orbyn.png",
     featured: true,
   },
   {

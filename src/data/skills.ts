@@ -29,7 +29,7 @@ export const skillCategories: SkillCategory[] = [
       { name: "Optuna", icon: "optuna" },
       { name: "SHAP", icon: "shap" },
       { name: "Plotly", icon: "plotly" },
-      { name: "Matplotlib", icon: "python" },
+      { name: "Matplotlib", icon: "matplotlib" },
       { name: "Streamlit", icon: "streamlit" },
       { name: "MATLAB", icon: "matlab" },
     ],

@@ -236,7 +236,6 @@ export const translations: Record<string, Record<string, string>> = {
   "contact.subtitle": { es: "¿Tienes un proyecto en mente o quieres colaborar? Hablemos.", en: "Have a project in mind or want to collaborate? Let's talk." },
   "contact.location": { es: "Loja, Ecuador · Disponible para trabajo remoto", en: "Loja, Ecuador · Available for remote work" },
   "contact.connections": { es: "Conexiones", en: "Connections" },
-  "contact.linkedin": { es: "Insignia LinkedIn", en: "LinkedIn Badge" },
 
   // Connections
   "conn.jahir": { es: "Developer", en: "Developer" },
