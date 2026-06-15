@@ -101,6 +101,28 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Óptica Martínez",
+    description:
+      "Landing page para una óptica real en Loja, Ecuador. Hero 3D interactivo con gafas que siguen el cursor (React Three Fiber), reels de TikTok con lazy loading, reseñas reales de Google, animación de carta optométrica al hacer scroll y SEO local con datos estructurados Schema.org. SSR con TanStack Start y React 19.",
+    tags: ["TanStack Start", "React 19", "Three.js", "React Three Fiber", "Tailwind CSS v4", "Framer Motion"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/optica-martinez",
+    demo: "https://optica-martinez.vercel.app",
+    kaggle: null,
+    image: "projects/optica.png",
+    featured: true,
+  },
+  {
+    title: "ADBox",
+    description:
+      "Consola ADB libre y multiplataforma (Windows, Linux, macOS) para mantenimiento y reparación de Android. +80 acciones en 15 categorías: debloating por marca (Samsung, Xiaomi, Motorola, OPPO), análisis real de salud de batería, logcat en vivo, diagnóstico de crashes/ANR y mantenimiento automático en un clic. App de escritorio de ~10MB sin necesidad de la terminal.",
+    tags: ["Tauri 2", "Rust", "React", "TypeScript", "Zustand", "GitHub Actions"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/ADBox",
+    demo: "https://github.com/DiegoFernandoLojanTenesaca/ADBox/releases",
+    kaggle: null,
+    image: "projects/adbox-banner.png",
+    featured: true,
+  },
+  {
     title: "Machine Learning Hub",
     description:
       "Portafolio de proyectos aplicados de ML: detección de phishing, clasificación de spam, detección de fraude financiero, visión por computadora y predicción deportiva. Demos interactivos con Jupyter.",

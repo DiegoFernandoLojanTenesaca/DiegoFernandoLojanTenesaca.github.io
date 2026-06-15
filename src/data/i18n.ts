@@ -194,6 +194,14 @@ export const translations: Record<string, Record<string, string>> = {
     es: "Landing page profesional para gimnasio real en Loja, Ecuador. Diseño mobile-first con animaciones scroll, carrusel de servicios, horarios interactivos, planes de membresía y WhatsApp Business. SEO optimizado.",
     en: "Professional landing page for a real gym in Loja, Ecuador. Mobile-first design with scroll animations, service carousel, interactive schedules, membership plans and WhatsApp Business. SEO optimized.",
   },
+  "proj.optica.desc": {
+    es: "Landing page para una óptica real en Loja, Ecuador. Hero 3D interactivo con gafas que siguen el cursor (React Three Fiber), reels de TikTok con lazy loading, reseñas reales de Google, animación de carta optométrica al hacer scroll y SEO local con datos estructurados Schema.org. SSR con TanStack Start y React 19.",
+    en: "Landing page for a real optometry shop in Loja, Ecuador. Interactive 3D hero with cursor-following glasses (React Three Fiber), lazy-loaded TikTok reels, real Google reviews, an optical-chart scroll animation and local SEO with Schema.org structured data. SSR with TanStack Start and React 19.",
+  },
+  "proj.adbox.desc": {
+    es: "Consola ADB libre y multiplataforma (Windows, Linux, macOS) para mantenimiento y reparación de Android. +80 acciones en 15 categorías: debloating por marca (Samsung, Xiaomi, Motorola, OPPO), análisis real de salud de batería, logcat en vivo, diagnóstico de crashes/ANR y mantenimiento automático en un clic. App de escritorio de ~10MB sin necesidad de la terminal.",
+    en: "Free, cross-platform ADB console (Windows, Linux, macOS) for Android maintenance and repair. 80+ actions across 15 categories: brand-specific debloating (Samsung, Xiaomi, Motorola, OPPO), real battery health analysis, live logcat, crash/ANR diagnostics and one-click automatic maintenance. A ~10MB desktop app — no terminal required.",
+  },
   "proj.mlhub.desc": {
     es: "Portafolio de proyectos aplicados de ML: detección de phishing, clasificación de spam, detección de fraude financiero, visión por computadora y predicción deportiva. Demos interactivos con Jupyter.",
     en: "Applied ML project portfolio: phishing detection, spam classification, financial fraud detection, computer vision and sports prediction. Interactive Jupyter demos.",
