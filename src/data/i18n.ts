@@ -36,10 +36,14 @@ export const translations: Record<string, Record<string, string>> = {
     en: "Computer Science Engineer with international academic experience (Ecuador and Peru) and teaching methodology training. I work at the intersection of full stack development, Data & AI engineering and applied research, turning complex problems into efficient, scalable solutions.",
   },
   "about.p2": {
-    es: "Actualmente en Dataglov S.A.S., donde construyo microservicios de IA, pipelines de datos y sistemas de búsqueda semántica en producción. En paralelo opero Indaga Lab, mi marca paraguas freelance, bajo la que cuelgan productos verticales como Kumbre (construcción) y la submarca de chatbots empresariales Wauto. Anteriormente construí Sudial, una plataforma SaaS multi-tenant con backoffice web y app móvil.",
-    en: "Currently at Dataglov S.A.S., where I build AI microservices, data pipelines and semantic search systems in production. In parallel I run Indaga Lab, my umbrella freelance brand, with vertical products like Kumbre (construction) and the Wauto chatbot sub-brand. Previously I built Sudial, a multi-tenant SaaS platform with web backoffice and mobile app.",
+    es: "Actualmente en Dataglov S.A.S., donde construyo microservicios de IA, pipelines de datos y sistemas de búsqueda semántica en producción. En paralelo opero Indaga Lab, mi marca paraguas freelance, bajo la que cuelgan productos verticales como Kumbre (construcción) y Wauto, el CRM multicanal con IA. Anteriormente construí Sudial, una plataforma SaaS multi-tenant con backoffice web y app móvil.",
+    en: "Currently at Dataglov S.A.S., where I build AI microservices, data pipelines and semantic search systems in production. In parallel I run Indaga Lab, my umbrella freelance brand, with vertical products like Kumbre (construction) and Wauto, an AI-powered multichannel CRM. Previously I built Sudial, a multi-tenant SaaS platform with web backoffice and mobile app.",
   },
   "about.p3": {
+    es: "Últimamente el trabajo se corrió hacia lo nativo y lo multiplataforma: apps Android en Kotlin y una sola base de código que compila a móvil, escritorio y navegador. Lo que construyo para mí lo publico como open source, con releases automatizados para Windows, Linux, macOS y Android.",
+    en: "Lately my work has shifted toward native and cross-platform: Android apps in Kotlin and a single codebase that compiles to mobile, desktop and the browser. Whatever I build for myself I publish as open source, with automated releases for Windows, Linux, macOS and Android.",
+  },
+  "about.p4": {
     es: "Combino ingeniería de software con análisis de datos e investigación. Desde plataformas SaaS multi-tenant y agentes LLM en producción hasta detección de anomalías con ML y NLP en español — con un paper aceptado en Springer / CIT 2026. Investigo, trabajo y entrego.",
     en: "I combine software engineering with data analysis and research. From multi-tenant SaaS platforms and production LLM agents to ML anomaly detection and Spanish NLP — with a paper accepted at Springer / CIT 2026. I research, build and deliver.",
   },
