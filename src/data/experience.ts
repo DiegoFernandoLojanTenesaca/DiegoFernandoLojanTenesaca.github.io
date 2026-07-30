@@ -57,8 +57,11 @@ export const experiences: Experience[] = [
       "Prototipos de detección de anomalías sobre series temporales multi-país con consenso de múltiples técnicas y dashboards interactivos",
       "Automatizaciones con n8n y workflows propios para ingestión, transformación y entrega de datos",
       "Apoyo computacional a tesis e investigación académica: simulación numérica end-to-end, portabilidad a MATLAB y experimentos reproducibles en NLP",
+      "CRM multicanal (WhatsApp, Telegram, Meta) con bandeja compartida multiagente, embudos de venta, difusiones, automatizaciones no-code, base de conocimiento con recuperación híbrida, API pública con API keys y servidor MCP",
+      "Aplicaciones móviles y de escritorio multiplataforma desde una sola base de código (Kotlin, Jetpack Compose, Compose Multiplatform a Android, escritorio y WebAssembly)",
+      "Herramientas propias publicadas como open source, con releases multiplataforma automatizados en GitHub Actions y documentación bilingüe",
     ],
-    tags: ["Python", "FastAPI", "Astro", "Next.js", "LangGraph", "n8n", "Docker"],
+    tags: ["Python", "FastAPI", "Astro", "Next.js", "Kotlin", "Compose Multiplatform", "LangGraph", "MCP", "n8n", "Docker"],
     current: true,
   },
 ];

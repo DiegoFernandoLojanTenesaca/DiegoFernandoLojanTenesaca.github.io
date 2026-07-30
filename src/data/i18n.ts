@@ -22,6 +22,7 @@ export const translations: Record<string, Record<string, string>> = {
   "tech.title": { es: "Tecnologías", en: "Technologies" },
   "tech.subtitle": { es: "Mi stack tecnológico en constante evolución", en: "My ever-evolving tech stack" },
   "tech.cat.frontend": { es: "Frontend", en: "Frontend" },
+  "tech.cat.mobile": { es: "Móvil & Multiplataforma", en: "Mobile & Cross-platform" },
   "tech.cat.backend": { es: "Backend", en: "Backend" },
   "tech.cat.dataai": { es: "Data & AI", en: "Data & AI" },
   "tech.cat.dbdevops": { es: "Bases de Datos & DevOps", en: "Databases & DevOps" },
