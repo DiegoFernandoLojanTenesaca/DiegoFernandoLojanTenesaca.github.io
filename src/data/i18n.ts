@@ -163,6 +163,42 @@ export const translations: Record<string, Record<string, string>> = {
   "proj.subtitle": { es: "Proyectos profesionales, productos propios e investigación", en: "Professional projects, own products and research" },
   "proj.private": { es: "Privado", en: "Private" },
   "proj.other": { es: "Otros proyectos", en: "Other projects" },
+  "proj.cconnect.desc": {
+    es: "Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Puente FastAPI sobre el Agent SDK con HTTP/WebSocket, sesiones y edición de archivos en vivo, permisos interactivos y acceso remoto seguro por Tailscale. Una sola base Compose Multiplatform compila a Android, escritorio (Windows/Linux/macOS) y web con WebAssembly.",
+    en: "Mobile, desktop and web client to drive a coding agent running on your PC. FastAPI bridge over the Agent SDK with HTTP/WebSocket, live sessions and file edits, interactive permission prompts and secure remote access over Tailscale. A single Compose Multiplatform codebase compiles to Android, desktop (Windows/Linux/macOS) and the web via WebAssembly.",
+  },
+  "proj.wauto.desc": {
+    es: "CRM y automatización de mensajería con IA para WhatsApp, Telegram y Meta. Bandeja compartida multiagente, embudos Kanban, difusiones con plantillas, builder visual de automatizaciones no-code, base de conocimiento con recuperación híbrida (full-text + pgvector), cascada de modelos con failover, API pública versionada con API keys y servidor MCP para asistentes de código.",
+    en: "AI-powered CRM and messaging automation for WhatsApp, Telegram and Meta. Shared multi-agent inbox, Kanban sales pipelines, broadcasts with templates, visual no-code automation builder, knowledge base with hybrid retrieval (full-text + pgvector), model cascade with failover, versioned public API with API keys and an MCP server for coding assistants.",
+  },
+  "proj.reps.desc": {
+    es: "SaaS multi-tenant para gimnasios y academias. Cada negocio es un espacio aislado con roles personalizados y permisos CRUD por módulo, planes por niveles, reservas, asistencia, cobros y rutinas de entrenamiento. Panel web de gestión y portal del alumno en móvil sobre la misma API, con tema por negocio.",
+    en: "Multi-tenant SaaS for gyms and academies. Each business is an isolated space with custom roles and per-module CRUD permissions, tiered plans, bookings, attendance, payments and training routines. Web management panel and a mobile member portal on the same API, with per-business theming.",
+  },
+  "proj.agentos.desc": {
+    es: "App Android nativa que convierte teléfonos sin servicios de Google en un agente de IA 24/7 controlado por Telegram: Python embebido en el dispositivo, multi-proveedor de LLMs con failover automático, control de hardware vía bridge HTTP local y servicio persistente con watchdog.",
+    en: "Native Android app that turns Google-less phones into a 24/7 AI agent driven from Telegram: Python embedded on the device, multi-provider LLMs with automatic failover, hardware control through a local HTTP bridge and a persistent service with watchdog.",
+  },
+  "proj.officego.desc": {
+    es: "Instalador de Microsoft Office para Windows con interfaz gráfica, hecho junto a M. Salazar. Perfila el equipo (versión de Windows, RAM, disco) para recomendar la edición viable, genera el configuration.xml de la Office Deployment Tool y admite modo desatendido por parámetros. Dos interfaces sobre un mismo motor (PowerShell/WinForms y Tauri), con 44 pruebas y un validador de layout que corre en cada compilación.",
+    en: "Graphical Microsoft Office installer for Windows, built with M. Salazar. Profiles the machine (Windows version, RAM, disk) to recommend a viable edition, generates the Office Deployment Tool configuration.xml and supports unattended mode via parameters. Two front-ends over one shared engine (PowerShell/WinForms and Tauri), with 44 tests and a layout validator running on every build.",
+  },
+  "proj.sessionguard.desc": {
+    es: "Utilidad que respalda, vigila y mantiene viva la sesión OAuth de Claude Code: snapshot en cada rotación de token, restauración segura que nunca sobrescribe un respaldo bueno con uno roto, y renovación headless antes de que expire. Python sin dependencias, con CI en Linux, macOS y Windows.",
+    en: "Utility that backs up, watches and keeps a Claude Code OAuth session alive: a snapshot on every token rotation, safe restore that never overwrites a good backup with a broken one, and headless renewal before expiry. Dependency-free Python, with CI on Linux, macOS and Windows.",
+  },
+  "proj.cuadrekit.desc": {
+    es: "El kit del micronegocio: más de 20 herramientas gratuitas para micronegocios y freelancers de Ecuador (proformas, recibos, contratos, pagarés, liquidaciones, rol de pagos y horas extra según el Código del Trabajo). PWA instalable que funciona sin internet, sin registro y sin que los datos salgan del equipo.",
+    en: "The micro-business kit: 20+ free tools for Ecuadorian micro-businesses and freelancers (quotes, receipts, contracts, promissory notes, severance calculations, payroll and overtime under the Labor Code). Installable PWA that works offline, with no sign-up and no data leaving your device.",
+  },
+  "proj.directorio.desc": {
+    es: "Plataforma de perfiles con reservas y disponibilidad en tiempo real, contenido comunitario anónimo y moderación administrativa, para 20 países y más de 100 ciudades. PWA instalable más APK Android de distribución directa, con registro anónimo y wizard de publicación por pasos.",
+    en: "Profile platform with real-time bookings and availability, anonymous community content and admin moderation, covering 20 countries and 100+ cities. Installable PWA plus a directly distributed Android APK, with anonymous sign-up and a step-by-step publishing wizard.",
+  },
+  "proj.bugopoly.desc": {
+    es: "Juego de mesa digital en 3D con temática de QA de software: comprás módulos, construís cobertura de tests hacia CI/CD, cazás bugs y esquivás la deuda técnica. Tablero de 40 casillas con fichas animadas, multijugador local hot-seat con bots y modo autoplay.",
+    en: "3D digital board game themed around software QA: buy modules, build test coverage toward CI/CD, hunt bugs and dodge technical debt. A 40-tile board with animated tokens, local hot-seat multiplayer with bots and an autoplay mode.",
+  },
   "proj.indagalab.desc": {
     es: "Mi marca paraguas freelance: portal de servicios técnicos y de IA (consultoría, tesis, sistemas a medida) en indagalab.com y submarca de chatbots empresariales con cotizador IA y backoffice en wauto.indagalab.com.",
     en: "My umbrella freelance brand: a portal for technical and AI services (consulting, theses, custom systems) at indagalab.com and a sub-brand for business chatbots with AI quoting and admin panel at wauto.indagalab.com.",

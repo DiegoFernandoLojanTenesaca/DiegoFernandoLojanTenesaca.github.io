@@ -70,18 +70,6 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    title: "ADBox",
-    description:
-      "Consola ADB libre y multiplataforma para mantenimiento y reparación de Android: más de 80 acciones en 15 categorías (debloat por marca, salud real de batería, diagnóstico de red por capas, logcat en vivo, backups y optimización). Pesa ~10 MB y publica binarios para Windows, Linux y macOS con GitHub Actions.",
-    tags: ["Tauri 2", "Rust", "React", "TypeScript", "GitHub Actions"],
-    github: "https://github.com/DiegoFernandoLojanTenesaca/ADBox",
-    demo: null,
-    kaggle: null,
-    image: "projects/adbox.png",
-    imageFit: "contain",
-    featured: false,
-  },
-  {
     title: "Claude Session Guard",
     description:
       "Utilidad que respalda, vigila y mantiene viva la sesión OAuth de Claude Code: snapshot en cada rotación de token, restauración segura que nunca sobrescribe un respaldo bueno con uno roto, y renovación headless antes de que expire. Python sin dependencias, con CI en Linux, macOS y Windows.",
