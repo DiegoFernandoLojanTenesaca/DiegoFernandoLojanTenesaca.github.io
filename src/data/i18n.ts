@@ -11,8 +11,8 @@ export const translations: Record<string, Record<string, string>> = {
   "hero.greeting": { es: "<developer />", en: "<developer />" },
   "hero.subtitle": { es: "Full Stack Developer | Data & AI Engineer", en: "Full Stack Developer | Data & AI Engineer" },
   "hero.tagline": {
-    es: "Investigo, trabajo y entrego. Ciencia y producto, sin atajos.",
-    en: "I research, build and deliver. Science and product, no shortcuts.",
+    es: "De la arquitectura de software a los modelos de IA. Diseño, construyo y despliego sistemas completos que resuelven problemas reales en producción.",
+    en: "From software architecture to AI models. I design, build and ship complete systems that solve real problems in production.",
   },
   "hero.cta.projects": { es: "Ver Proyectos", en: "View Projects" },
   "hero.cta.contact": { es: "Contáctame", en: "Contact Me" },
