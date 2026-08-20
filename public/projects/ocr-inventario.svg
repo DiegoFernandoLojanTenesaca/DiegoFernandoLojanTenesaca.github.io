@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="obg" x1="0" y1="0" x2="800" y2="450">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="oarrow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#obg)"/>
+
+  <g opacity="0.04">
+    <line x1="100" y1="0" x2="100" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="500" y1="0" x2="500" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="700" y1="0" x2="700" y2="450" stroke="#fff" stroke-width="1"/>
+  </g>
+
+  <!-- Left: photo of a printed sheet -->
+  <rect x="80" y="55" width="280" height="340" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="80" y="55" width="280" height="38" rx="8" fill="#1e293b"/>
+  <rect x="80" y="88" width="280" height="1" fill="#334155"/>
+  <rect x="98" y="64" width="22" height="22" rx="3" fill="#f59e0b" opacity="0.2"/>
+  <text x="109" y="79" fill="#f59e0b" font-family="monospace" font-size="7" text-anchor="middle" font-weight="bold">JPG</text>
+  <text x="135" y="79" fill="#94a3b8" font-family="monospace" font-size="10" opacity="0.7">inventario_bodega.jpg</text>
+
+  <!-- Paper, slightly rotated like a real photo -->
+  <g transform="rotate(-1.6 220 240)">
+    <rect x="106" y="106" width="228" height="196" rx="3" fill="#e2e8f0" opacity="0.09" stroke="#475569" stroke-width="0.5"/>
+    <text x="120" y="126" fill="#cbd5e1" font-family="monospace" font-size="8" opacity="0.5">REPORTE DE INVENTARIO</text>
+    <line x1="120" y1="132" x2="320" y2="132" stroke="#64748b" stroke-width="0.5" opacity="0.4"/>
+
+    <g font-family="monospace" font-size="7.5" fill="#cbd5e1" opacity="0.45">
+      <text x="120" y="150">A-1042   Tornillo 3/8         120</text>
+      <text x="120" y="168">A-1043   Arandela plana       340</text>
+      <text x="120" y="186">B-2210   Cable AWG 12          58</text>
+      <text x="120" y="204">B-2211   Breaker 20A           16</text>
+      <text x="120" y="222">C-3001   Tuberia PVC 1"        92</text>
+      <text x="120" y="240">C-3002   Codo PVC 90            77</text>
+      <text x="120" y="258">D-4100   Pintura latex          24</text>
+    </g>
+    <text x="220" y="284" fill="#cbd5e1" font-family="monospace" font-size="9" opacity="0.3" text-anchor="middle">· · ·</text>
+  </g>
+
+  <!-- OCR boxes over some rows -->
+  <g stroke="#f59e0b" stroke-width="0.8" fill="none" opacity="0.55">
+    <rect x="116" y="140" width="206" height="13" rx="2"/>
+    <rect x="116" y="158" width="206" height="13" rx="2"/>
+    <rect x="116" y="176" width="206" height="13" rx="2"/>
+  </g>
+  <rect x="116" y="140" width="206" height="13" fill="#f59e0b" opacity="0.06"/>
+
+  <!-- OCR status -->
+  <rect x="98" y="316" width="244" height="28" rx="6" fill="#f59e0b" opacity="0.06" stroke="#f59e0b" stroke-width="0.5" stroke-opacity="0.2"/>
+  <circle cx="114" cy="330" r="4" fill="#f59e0b" opacity="0.6"/>
+  <text x="126" y="334" fill="#f59e0b" font-family="monospace" font-size="9" opacity="0.7">RapidOCR · 7 filas detectadas</text>
+
+  <rect x="98" y="352" width="244" height="26" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <text x="108" y="369" fill="#64748b" font-family="monospace" font-size="8">ONNX en CPU · sin GPU</text>
+
+  <!-- Arrow -->
+  <g transform="translate(385, 200)">
+    <rect x="-8" y="-15" width="46" height="30" rx="15" fill="url(#oarrow)" opacity="0.15"/>
+    <path d="M0 0 L18 0 L12 -6 M18 0 L12 6" stroke="url(#oarrow)" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.8"/>
+  </g>
+
+  <!-- Right: Excel output -->
+  <rect x="440" y="55" width="280" height="340" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="440" y="55" width="280" height="38" rx="8" fill="#1e293b"/>
+  <rect x="440" y="88" width="280" height="1" fill="#334155"/>
+  <rect x="458" y="64" width="22" height="22" rx="3" fill="#22c55e" opacity="0.2"/>
+  <text x="469" y="79" fill="#22c55e" font-family="monospace" font-size="7" text-anchor="middle" font-weight="bold">XLS</text>
+  <text x="495" y="79" fill="#94a3b8" font-family="monospace" font-size="10" opacity="0.7">inventario.xlsx</text>
+
+  <!-- Column headers -->
+  <rect x="458" y="100" width="60" height="16" rx="2" fill="#22c55e" opacity="0.1"/>
+  <text x="488" y="112" fill="#22c55e" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.7">CÓDIGO</text>
+  <rect x="522" y="100" width="122" height="16" rx="2" fill="#22c55e" opacity="0.1"/>
+  <text x="583" y="112" fill="#22c55e" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.7">ITEM</text>
+  <rect x="648" y="100" width="54" height="16" rx="2" fill="#22c55e" opacity="0.1"/>
+  <text x="675" y="112" fill="#22c55e" font-family="monospace" font-size="7" text-anchor="middle" opacity="0.7">STOCK</text>
+
+  <g font-family="monospace" font-size="7" opacity="0.55">
+    <text x="463" y="134" fill="#64748b">A-1042</text>
+    <text x="527" y="134" fill="#94a3b8">Tornillo 3/8</text>
+    <text x="675" y="134" fill="#22c55e" text-anchor="middle">120</text>
+
+    <rect x="458" y="140" width="244" height="16" fill="#fff" opacity="0.02"/>
+    <text x="463" y="152" fill="#64748b">A-1043</text>
+    <text x="527" y="152" fill="#94a3b8">Arandela plana</text>
+    <text x="675" y="152" fill="#22c55e" text-anchor="middle">340</text>
+
+    <text x="463" y="170" fill="#64748b">B-2210</text>
+    <text x="527" y="170" fill="#94a3b8">Cable AWG 12</text>
+    <text x="675" y="170" fill="#22c55e" text-anchor="middle">58</text>
+
+    <rect x="458" y="176" width="244" height="16" fill="#fff" opacity="0.02"/>
+    <text x="463" y="188" fill="#64748b">B-2211</text>
+    <text x="527" y="188" fill="#94a3b8">Breaker 20A</text>
+    <text x="675" y="188" fill="#22c55e" text-anchor="middle">16</text>
+
+    <text x="463" y="206" fill="#64748b">C-3001</text>
+    <text x="527" y="206" fill="#94a3b8">Tuberia PVC 1"</text>
+    <text x="675" y="206" fill="#22c55e" text-anchor="middle">92</text>
+
+    <rect x="458" y="212" width="244" height="16" fill="#fff" opacity="0.02"/>
+    <text x="463" y="224" fill="#64748b">C-3002</text>
+    <text x="527" y="224" fill="#94a3b8">Codo PVC 90</text>
+    <text x="675" y="224" fill="#22c55e" text-anchor="middle">77</text>
+  </g>
+  <text x="580" y="248" fill="#94a3b8" font-family="monospace" font-size="9" opacity="0.3" text-anchor="middle">· · ·</text>
+
+  <!-- Editable preview -->
+  <rect x="458" y="262" width="244" height="46" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <text x="468" y="280" fill="#94a3b8" font-family="monospace" font-size="8" opacity="0.5">vista previa editable</text>
+  <rect x="468" y="286" width="120" height="16" rx="3" fill="#22c55e" opacity="0.08" stroke="#22c55e" stroke-width="0.5" stroke-opacity="0.3"/>
+  <text x="474" y="298" fill="#22c55e" font-family="monospace" font-size="7" opacity="0.75">Arandela plana|</text>
+  <text x="600" y="298" fill="#64748b" font-family="monospace" font-size="7">corregir antes</text>
+
+  <!-- Batch upload -->
+  <rect x="458" y="318" width="244" height="26" rx="6" fill="#f59e0b" opacity="0.06" stroke="#f59e0b" stroke-width="0.5" stroke-opacity="0.2"/>
+  <text x="468" y="335" fill="#f59e0b" font-family="monospace" font-size="8" opacity="0.7">12 fotos → 1 solo archivo</text>
+
+  <rect x="458" y="352" width="244" height="26" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <text x="468" y="369" fill="#64748b" font-family="monospace" font-size="8">Flask · RapidOCR · openpyxl</text>
+
+  <text x="400" y="425" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" letter-spacing="2" opacity="0.5">OCR DE INVENTARIO — Foto a Excel</text>
+</svg>

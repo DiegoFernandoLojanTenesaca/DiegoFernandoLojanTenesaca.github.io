@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="abg" x1="0" y1="0" x2="800" y2="450">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#abg)"/>
+
+  <g opacity="0.04">
+    <line x1="100" y1="0" x2="100" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="500" y1="0" x2="500" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="700" y1="0" x2="700" y2="450" stroke="#fff" stroke-width="1"/>
+  </g>
+
+  <!-- CAD window -->
+  <rect x="60" y="48" width="680" height="350" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="60" y="48" width="680" height="34" rx="10" fill="#1e293b"/>
+  <rect x="60" y="77" width="680" height="1" fill="#334155"/>
+  <rect x="78" y="57" width="22" height="16" rx="3" fill="#f97316" opacity="0.2"/>
+  <text x="89" y="69" fill="#f97316" font-family="monospace" font-size="7" text-anchor="middle" font-weight="bold">DWG</text>
+  <text x="112" y="69" fill="#94a3b8" font-family="monospace" font-size="9" opacity="0.7">AutoCAD — despiece_losa.dwg</text>
+
+  <!-- Drawing canvas -->
+  <rect x="60" y="82" width="440" height="316" fill="#0f172a" opacity="0.55"/>
+
+  <!-- CAD grid -->
+  <g opacity="0.07" stroke="#94a3b8" stroke-width="0.5">
+    <line x1="100" y1="82" x2="100" y2="398"/>
+    <line x1="140" y1="82" x2="140" y2="398"/>
+    <line x1="180" y1="82" x2="180" y2="398"/>
+    <line x1="220" y1="82" x2="220" y2="398"/>
+    <line x1="260" y1="82" x2="260" y2="398"/>
+    <line x1="300" y1="82" x2="300" y2="398"/>
+    <line x1="340" y1="82" x2="340" y2="398"/>
+    <line x1="380" y1="82" x2="380" y2="398"/>
+    <line x1="420" y1="82" x2="420" y2="398"/>
+    <line x1="460" y1="82" x2="460" y2="398"/>
+    <line x1="60" y1="122" x2="500" y2="122"/>
+    <line x1="60" y1="162" x2="500" y2="162"/>
+    <line x1="60" y1="202" x2="500" y2="202"/>
+    <line x1="60" y1="242" x2="500" y2="242"/>
+    <line x1="60" y1="282" x2="500" y2="282"/>
+    <line x1="60" y1="322" x2="500" y2="322"/>
+    <line x1="60" y1="362" x2="500" y2="362"/>
+  </g>
+
+  <!-- Rebar layout: slab outline -->
+  <rect x="120" y="130" width="320" height="200" fill="none" stroke="#94a3b8" stroke-width="1.2" opacity="0.5"/>
+
+  <!-- Longitudinal bars -->
+  <g stroke="#f97316" stroke-width="1.6" opacity="0.75">
+    <line x1="136" y1="150" x2="424" y2="150"/>
+    <line x1="136" y1="180" x2="424" y2="180"/>
+    <line x1="136" y1="210" x2="424" y2="210"/>
+    <line x1="136" y1="240" x2="424" y2="240"/>
+    <line x1="136" y1="270" x2="424" y2="270"/>
+    <line x1="136" y1="300" x2="424" y2="300"/>
+  </g>
+  <!-- Hooks at bar ends -->
+  <g stroke="#f97316" stroke-width="1.6" opacity="0.75" fill="none" stroke-linecap="round">
+    <path d="M136 150 L136 141"/><path d="M424 150 L424 159"/>
+    <path d="M136 210 L136 201"/><path d="M424 210 L424 219"/>
+    <path d="M136 270 L136 261"/><path d="M424 270 L424 279"/>
+  </g>
+
+  <!-- Transverse bars -->
+  <g stroke="#38bdf8" stroke-width="1.1" opacity="0.5">
+    <line x1="170" y1="140" x2="170" y2="320"/>
+    <line x1="230" y1="140" x2="230" y2="320"/>
+    <line x1="290" y1="140" x2="290" y2="320"/>
+    <line x1="350" y1="140" x2="350" y2="320"/>
+    <line x1="410" y1="140" x2="410" y2="320"/>
+  </g>
+
+  <!-- Dimension line -->
+  <g stroke="#94a3b8" stroke-width="0.8" opacity="0.45">
+    <line x1="120" y1="348" x2="440" y2="348"/>
+    <line x1="120" y1="343" x2="120" y2="353"/>
+    <line x1="440" y1="343" x2="440" y2="353"/>
+  </g>
+  <rect x="252" y="340" width="56" height="15" rx="2" fill="#0f172a"/>
+  <text x="280" y="351" fill="#94a3b8" font-family="monospace" font-size="8" text-anchor="middle" opacity="0.6">6.40 m</text>
+
+  <!-- Bar callout -->
+  <g opacity="0.7">
+    <line x1="290" y1="210" x2="330" y2="112" stroke="#f97316" stroke-width="0.8" opacity="0.5"/>
+    <rect x="316" y="96" width="92" height="18" rx="4" fill="#f97316" opacity="0.15"/>
+    <text x="362" y="109" fill="#f97316" font-family="monospace" font-size="8" text-anchor="middle">12 Ø16 @ 30</text>
+  </g>
+
+  <!-- Command line -->
+  <rect x="72" y="366" width="416" height="22" rx="4" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <text x="82" y="380" fill="#22c55e" font-family="monospace" font-size="8" opacity="0.8">Comando: ACERNOVA</text>
+
+  <!-- Right: WebView2 panel -->
+  <rect x="500" y="82" width="240" height="316" fill="#1e293b"/>
+  <rect x="500" y="82" width="1" height="316" fill="#334155"/>
+  <rect x="512" y="94" width="216" height="26" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <circle cx="526" cy="107" r="4" fill="#f97316" opacity="0.7"/>
+  <text x="538" y="111" fill="#94a3b8" font-family="monospace" font-size="8.5" opacity="0.8">AcerNova · panel .NET</text>
+
+  <text x="512" y="140" fill="#64748b" font-family="monospace" font-size="7.5">interfaz nueva sobre WebView2</text>
+
+  <!-- Panel form -->
+  <g font-family="monospace" font-size="7.5">
+    <rect x="512" y="150" width="216" height="20" rx="4" fill="#fff" opacity="0.03"/>
+    <text x="520" y="163" fill="#64748b">Elemento</text>
+    <text x="700" y="163" fill="#94a3b8" text-anchor="end" opacity="0.7">Losa</text>
+
+    <rect x="512" y="174" width="216" height="20" rx="4" fill="#fff" opacity="0.03"/>
+    <text x="520" y="187" fill="#64748b">Diámetro</text>
+    <text x="700" y="187" fill="#94a3b8" text-anchor="end" opacity="0.7">Ø16 mm</text>
+
+    <rect x="512" y="198" width="216" height="20" rx="4" fill="#fff" opacity="0.03"/>
+    <text x="520" y="211" fill="#64748b">Separación</text>
+    <text x="700" y="211" fill="#94a3b8" text-anchor="end" opacity="0.7">30 cm</text>
+
+    <rect x="512" y="222" width="216" height="20" rx="4" fill="#fff" opacity="0.03"/>
+    <text x="520" y="235" fill="#64748b">Recubrimiento</text>
+    <text x="700" y="235" fill="#94a3b8" text-anchor="end" opacity="0.7">2.5 cm</text>
+  </g>
+
+  <!-- Result -->
+  <rect x="512" y="254" width="216" height="52" rx="6" fill="#f97316" opacity="0.06" stroke="#f97316" stroke-width="0.5" stroke-opacity="0.25"/>
+  <text x="522" y="272" fill="#f97316" font-family="monospace" font-size="8" opacity="0.75">Despiece generado</text>
+  <text x="522" y="288" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">48 varillas · 312.6 kg de acero</text>
+  <text x="522" y="300" fill="#94a3b8" font-family="monospace" font-size="7" opacity="0.5">lista de corte lista para taller</text>
+
+  <!-- Legacy note -->
+  <rect x="512" y="318" width="216" height="34" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <text x="522" y="333" fill="#64748b" font-family="monospace" font-size="7">motor heredado en AutoLISP</text>
+  <text x="522" y="345" fill="#64748b" font-family="monospace" font-size="7">recuperado y saneado</text>
+
+  <!-- Stack chips -->
+  <g font-family="monospace" font-size="7">
+    <rect x="512" y="362" width="46" height="18" rx="4" fill="#38bdf8" opacity="0.12"/>
+    <text x="535" y="374" fill="#38bdf8" text-anchor="middle" opacity="0.8">C#</text>
+    <rect x="564" y="362" width="72" height="18" rx="4" fill="#38bdf8" opacity="0.12"/>
+    <text x="600" y="374" fill="#38bdf8" text-anchor="middle" opacity="0.8">WebView2</text>
+    <rect x="642" y="362" width="86" height="18" rx="4" fill="#f97316" opacity="0.12"/>
+    <text x="685" y="374" fill="#f97316" text-anchor="middle" opacity="0.8">AutoLISP</text>
+  </g>
+
+  <text x="400" y="425" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" letter-spacing="2" opacity="0.5">ACERNOVA — Despiece de acero en AutoCAD</text>
+</svg>

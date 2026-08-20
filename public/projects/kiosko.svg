@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" fill="none">
+  <defs>
+    <linearGradient id="fbg" x1="0" y1="0" x2="800" y2="450">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="fscan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#06b6d4" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#fbg)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.04">
+    <line x1="100" y1="0" x2="100" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="500" y1="0" x2="500" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="450" stroke="#fff" stroke-width="1"/>
+    <line x1="700" y1="0" x2="700" y2="450" stroke="#fff" stroke-width="1"/>
+  </g>
+
+  <!-- Left: camera feed -->
+  <rect x="80" y="55" width="300" height="340" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="80" y="55" width="300" height="34" rx="8" fill="#1e293b"/>
+  <rect x="80" y="84" width="300" height="1" fill="#334155"/>
+  <circle cx="98" cy="72" r="4" fill="#ef4444" opacity="0.6"/>
+  <text x="112" y="76" fill="#94a3b8" font-family="monospace" font-size="9" opacity="0.7">cam0 · 640x480 · 30 fps</text>
+
+  <!-- Camera viewport -->
+  <rect x="98" y="100" width="264" height="200" rx="6" fill="#0f172a"/>
+
+  <!-- Head silhouette -->
+  <ellipse cx="230" cy="205" rx="52" ry="64" fill="#334155" opacity="0.45"/>
+  <ellipse cx="230" cy="288" rx="76" ry="34" fill="#334155" opacity="0.3"/>
+
+  <!-- Landmarks -->
+  <g fill="#06b6d4" opacity="0.75">
+    <circle cx="212" cy="192" r="2.5"/>
+    <circle cx="248" cy="192" r="2.5"/>
+    <circle cx="230" cy="212" r="2.5"/>
+    <circle cx="214" cy="232" r="2.5"/>
+    <circle cx="246" cy="232" r="2.5"/>
+  </g>
+  <g stroke="#06b6d4" stroke-width="0.7" opacity="0.3">
+    <line x1="212" y1="192" x2="248" y2="192"/>
+    <line x1="212" y1="192" x2="230" y2="212"/>
+    <line x1="248" y1="192" x2="230" y2="212"/>
+    <line x1="230" y1="212" x2="214" y2="232"/>
+    <line x1="230" y1="212" x2="246" y2="232"/>
+    <line x1="214" y1="232" x2="246" y2="232"/>
+  </g>
+
+  <!-- Detection box corners -->
+  <g stroke="#22c55e" stroke-width="2" stroke-linecap="round" opacity="0.85">
+    <path d="M168 140 L168 128 L180 128"/>
+    <path d="M292 128 L304 128 L304 140"/>
+    <path d="M168 262 L168 274 L180 274"/>
+    <path d="M292 274 L304 274 L304 262"/>
+  </g>
+  <rect x="168" y="128" width="136" height="146" fill="none" stroke="#22c55e" stroke-width="0.5" opacity="0.2"/>
+
+  <!-- Scan line -->
+  <rect x="168" y="186" width="136" height="26" fill="url(#fscan)"/>
+
+  <!-- Confidence badge -->
+  <rect x="168" y="112" width="86" height="14" rx="3" fill="#22c55e" opacity="0.15"/>
+  <text x="174" y="122" fill="#22c55e" font-family="monospace" font-size="8" opacity="0.85">YuNet 0.98</text>
+
+  <!-- Status under viewport -->
+  <rect x="98" y="312" width="264" height="30" rx="6" fill="#22c55e" opacity="0.06" stroke="#22c55e" stroke-width="0.5" stroke-opacity="0.2"/>
+  <circle cx="114" cy="327" r="4" fill="#22c55e" opacity="0.6"/>
+  <text x="126" y="331" fill="#22c55e" font-family="monospace" font-size="9" opacity="0.7">Identidad verificada · 128 ms</text>
+
+  <!-- Offline badge -->
+  <rect x="98" y="352" width="126" height="26" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <circle cx="112" cy="365" r="3.5" fill="#06b6d4" opacity="0.7"/>
+  <text x="124" y="369" fill="#64748b" font-family="monospace" font-size="8">sin internet</text>
+  <rect x="232" y="352" width="130" height="26" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <circle cx="246" cy="365" r="3.5" fill="#06b6d4" opacity="0.7"/>
+  <text x="258" y="369" fill="#64748b" font-family="monospace" font-size="8">sin servidor</text>
+
+  <!-- Right: attendance log -->
+  <rect x="420" y="55" width="300" height="340" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <rect x="420" y="55" width="300" height="34" rx="8" fill="#1e293b"/>
+  <rect x="420" y="84" width="300" height="1" fill="#334155"/>
+  <rect x="438" y="63" width="22" height="18" rx="3" fill="#06b6d4" opacity="0.2"/>
+  <text x="449" y="76" fill="#06b6d4" font-family="monospace" font-size="7" text-anchor="middle" font-weight="bold">LOG</text>
+  <text x="470" y="76" fill="#94a3b8" font-family="monospace" font-size="10" opacity="0.7">asistencia_hoy.db</text>
+
+  <!-- Table header -->
+  <rect x="438" y="100" width="264" height="18" rx="3" fill="#06b6d4" opacity="0.08"/>
+  <text x="448" y="113" fill="#94a3b8" font-family="monospace" font-size="7.5" opacity="0.6">Persona</text>
+  <text x="596" y="113" fill="#94a3b8" font-family="monospace" font-size="7.5" opacity="0.6">Hora</text>
+  <text x="656" y="113" fill="#94a3b8" font-family="monospace" font-size="7.5" opacity="0.6">Estado</text>
+
+  <g font-family="monospace" font-size="7" opacity="0.55">
+    <rect x="438" y="120" width="264" height="18" fill="#fff" opacity="0.02"/>
+    <text x="448" y="133" fill="#94a3b8">Registro #0142</text>
+    <text x="596" y="133" fill="#94a3b8">07:58</text>
+    <text x="656" y="133" fill="#22c55e">OK</text>
+
+    <rect x="438" y="140" width="264" height="18" fill="#fff" opacity="0.01"/>
+    <text x="448" y="153" fill="#94a3b8">Registro #0143</text>
+    <text x="596" y="153" fill="#94a3b8">08:01</text>
+    <text x="656" y="153" fill="#22c55e">OK</text>
+
+    <rect x="438" y="160" width="264" height="18" fill="#fff" opacity="0.02"/>
+    <text x="448" y="173" fill="#94a3b8">Registro #0144</text>
+    <text x="596" y="173" fill="#94a3b8">08:04</text>
+    <text x="656" y="173" fill="#eab308">TARDE</text>
+
+    <rect x="438" y="180" width="264" height="18" fill="#fff" opacity="0.01"/>
+    <text x="448" y="193" fill="#94a3b8">Registro #0145</text>
+    <text x="596" y="193" fill="#94a3b8">08:09</text>
+    <text x="656" y="193" fill="#22c55e">OK</text>
+
+    <rect x="438" y="200" width="264" height="18" fill="#fff" opacity="0.02"/>
+    <text x="448" y="213" fill="#94a3b8">Registro #0146</text>
+    <text x="596" y="213" fill="#94a3b8">08:12</text>
+    <text x="656" y="213" fill="#22c55e">OK</text>
+  </g>
+  <text x="570" y="238" fill="#94a3b8" font-family="monospace" font-size="9" opacity="0.3" text-anchor="middle">· · ·</text>
+
+  <!-- Pipeline panel -->
+  <rect x="438" y="252" width="264" height="90" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <text x="448" y="270" fill="#94a3b8" font-family="monospace" font-size="8" opacity="0.5">pipeline en el dispositivo</text>
+
+  <g font-family="monospace" font-size="7.5">
+    <rect x="448" y="280" width="72" height="20" rx="4" fill="#06b6d4" opacity="0.12"/>
+    <text x="484" y="294" fill="#06b6d4" text-anchor="middle" opacity="0.8">captura</text>
+    <path d="M524 290 L536 290 M532 286 L536 290 L532 294" stroke="#475569" stroke-width="1" fill="none"/>
+
+    <rect x="540" y="280" width="72" height="20" rx="4" fill="#06b6d4" opacity="0.12"/>
+    <text x="576" y="294" fill="#06b6d4" text-anchor="middle" opacity="0.8">YuNet</text>
+    <path d="M616 290 L628 290 M624 286 L628 290 L624 294" stroke="#475569" stroke-width="1" fill="none"/>
+
+    <rect x="630" y="280" width="72" height="20" rx="4" fill="#22c55e" opacity="0.12"/>
+    <text x="666" y="294" fill="#22c55e" text-anchor="middle" opacity="0.8">match</text>
+  </g>
+
+  <rect x="448" y="310" width="244" height="20" rx="4" fill="#fff" opacity="0.02"/>
+  <text x="458" y="324" fill="#64748b" font-family="monospace" font-size="7.5">OpenCV · ONNX Runtime · APK nativa</text>
+
+  <rect x="438" y="352" width="264" height="26" rx="6" fill="#0f172a" stroke="#334155" stroke-width="0.5"/>
+  <text x="448" y="369" fill="#64748b" font-family="monospace" font-size="8">los rostros nunca salen del equipo</text>
+
+  <text x="400" y="425" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle" letter-spacing="2" opacity="0.5">KIOSKO — Reconocimiento facial offline</text>
+</svg>

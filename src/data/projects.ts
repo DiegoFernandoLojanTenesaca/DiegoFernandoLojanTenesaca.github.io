@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     title: "CConnect",
     description:
-      "Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Puente FastAPI sobre el Agent SDK con HTTP/WebSocket, sesiones y edición de archivos en vivo, permisos interactivos y acceso remoto seguro por Tailscale. Una sola base Compose Multiplatform compila a Android, escritorio (Windows/Linux/macOS) y web con WebAssembly.",
+      "Proyecto en equipo, como colaborador. Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Puente FastAPI sobre el Agent SDK con HTTP/WebSocket, sesiones y edición de archivos en vivo, permisos interactivos y acceso remoto seguro por Tailscale. Una sola base Compose Multiplatform compila a Android, escritorio (Windows/Linux/macOS) y web con WebAssembly.",
     tags: ["Kotlin", "Jetpack Compose", "Compose Multiplatform", "WebAssembly", "Python", "FastAPI", "WebSockets"],
     github: "https://github.com/jahirxtrap/cconnect",
     demo: "https://cconnect.pages.dev/",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
   {
     title: "OfficeGo",
     description:
-      "Instalador de Microsoft Office para Windows con interfaz gráfica, hecho junto a M. Salazar. Perfila el equipo (versión de Windows, RAM, disco) para recomendar la edición viable, genera el configuration.xml de la Office Deployment Tool y admite modo desatendido por parámetros. Dos interfaces sobre un mismo motor (PowerShell/WinForms y Tauri), con 44 pruebas y un validador de layout que corre en cada compilación.",
+      "Instalador de Microsoft Office para Windows con interfaz gráfica, hecho junto a M. Salazar. Perfila el equipo (versión de Windows, RAM, disco) para recomendar la edición viable, genera el configuration.xml de la Office Deployment Tool y admite modo desatendido por parámetros. Dos interfaces sobre un mismo motor (PowerShell/WinForms y Tauri), con suite de pruebas automatizadas y un validador de layout que corre en cada compilación.",
     tags: ["PowerShell", "WinForms", "Tauri", "Rust", "C#", "CI"],
     github: "https://github.com/MariaDSalazar/officego",
     demo: null,
@@ -83,7 +83,7 @@ export const projects: Project[] = [
   {
     title: "CuadreKit",
     description:
-      "El kit del micronegocio: más de 20 herramientas gratuitas para micronegocios y freelancers de Ecuador (proformas, recibos, contratos, pagarés, liquidaciones, rol de pagos y horas extra según el Código del Trabajo). PWA instalable que funciona sin internet, sin registro y sin que los datos salgan del equipo.",
+      "El kit del micronegocio: herramientas gratuitas para micronegocios y freelancers de Ecuador (proformas, recibos, contratos, pagarés, liquidaciones, rol de pagos y horas extra según el Código del Trabajo). PWA instalable que funciona sin internet, sin registro y sin que los datos salgan del equipo.",
     tags: ["Nuxt", "Vue", "PWA", "TypeScript", "Offline-first"],
     github: null,
     demo: null,
@@ -99,7 +99,7 @@ export const projects: Project[] = [
     github: null,
     demo: null,
     kaggle: null,
-    image: null,
+    image: "projects/directorio.svg",
     featured: false,
   },
   {
@@ -138,7 +138,7 @@ export const projects: Project[] = [
   {
     title: "Sudial AI",
     description:
-      "Microservicio de IA en producción con arquitectura DDD multi-tenant. Búsqueda semántica con embeddings multilingües, agente conversacional con orquestación de herramientas, clasificación zero-shot, OCR estructurado, transcripción local y moderación.",
+      "Microservicio de IA en producción con arquitectura DDD multi-tenant y 18 dominios funcionales. Búsqueda semántica sobre 139.000 conversaciones vectorizadas con embeddings BGE-M3 e índice HNSW en pgvector, agente conversacional con 15 herramientas de tool calling, pipelines de Vision-Language Models self-hosted en GPU, clasificación zero-shot, OCR estructurado, transcripción local y moderación.",
     tags: ["Python", "FastAPI", "LangChain", "LangGraph", "pgvector", "Docker"],
     github: null,
     demo: null,
@@ -223,6 +223,50 @@ export const projects: Project[] = [
     kaggle: null,
     image: "projects/adbox-banner.png",
     featured: true,
+  },
+  {
+    title: "Kiosko de Reconocimiento Facial",
+    description:
+      "Control de asistencia por rostro que corre 100% en el dispositivo, sin servidor y sin conexión a internet. Detección con YuNet sobre OpenCV, registro y verificación de rostros en local, y empaquetado como APK Android nativa para operar como kiosko.",
+    tags: ["Python", "OpenCV", "YuNet", "ONNX", "Android", "Offline-first"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/Local-Face-Recognition-Kiosko",
+    demo: null,
+    kaggle: null,
+    image: "projects/kiosko.svg",
+    featured: false,
+  },
+  {
+    title: "OCR de Inventario",
+    description:
+      "Convierte fotos de reportes de inventario impresos en una hoja de Excel. OCR local sin GPU ni dependencias pesadas, carga múltiple de imágenes, vista previa editable de la tabla reconocida y descarga consolidada en un solo archivo.",
+    tags: ["Python", "Flask", "RapidOCR", "ONNX", "openpyxl"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/ocr-inventario",
+    demo: null,
+    kaggle: null,
+    image: "projects/ocr-inventario.svg",
+    featured: false,
+  },
+  {
+    title: "CRM de Asesoría Energética",
+    description:
+      "Encargo para una consultora del sector energético. Gestión de clientes y expedientes con formularios dinámicos, paginación, control de estados y componentes reutilizables sobre un backoffice a medida.",
+    tags: ["TypeScript", "Vue", "CRM", "Cliente privado"],
+    github: null,
+    demo: null,
+    kaggle: null,
+    image: "projects/crm-energia.svg",
+    featured: false,
+  },
+  {
+    title: "AcerNova",
+    description:
+      "Encargo de cliente sobre un código base heredado. Modernización de un add-on de despiece de acero para AutoCAD: recuperación y saneamiento del código entregado, y nueva interfaz gráfica embebida dentro de AutoCAD mediante un panel .NET con WebView2.",
+    tags: ["C#", ".NET", "WebView2", "AutoLISP", "AutoCAD"],
+    github: null,
+    demo: null,
+    kaggle: null,
+    image: "projects/acernova.svg",
+    featured: false,
   },
   {
     title: "Machine Learning Hub",

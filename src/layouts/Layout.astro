@@ -98,6 +98,13 @@ const ogImage = new URL("/portfolio/og-image.png", Astro.site).href;
           }
         });
 
+        // El CV es un PDF por idioma: se cambia el href, no el texto.
+        // Se reescribe el sufijo del propio href para no depender de BASE_URL.
+        const cvLink = document.getElementById("cv-link");
+        if (cvLink) {
+          cvLink.href = cvLink.href.replace(/_(es|en)\.pdf$/, "_" + lang + ".pdf");
+        }
+
         // Update toggle buttons
         document.querySelectorAll("#lang-toggle, #lang-toggle-mobile").forEach((btn) => {
           btn.textContent = lang.toUpperCase();
