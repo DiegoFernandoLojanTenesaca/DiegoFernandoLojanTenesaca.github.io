@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "./fonts.css";
 
 @theme {
   --color-bg: #0a0a0f;
@@ -438,7 +439,6 @@ body::before {
 .proj-count {
   font-family: var(--font-mono);
   font-size: 0.6875rem;
-  opacity: 0.75;
 }
 
 #proyectos:has(#pf-all:checked) label[for="pf-all"],
