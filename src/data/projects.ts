@@ -14,8 +14,8 @@ export const projects: Project[] = [
   {
     title: "CConnect",
     description:
-      "Proyecto en equipo, como colaborador. Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Puente FastAPI sobre el Agent SDK con HTTP/WebSocket, sesiones y edición de archivos en vivo, permisos interactivos y acceso remoto seguro por Tailscale. Una sola base Compose Multiplatform compila a Android, escritorio (Windows/Linux/macOS) y web con WebAssembly.",
-    tags: ["Kotlin", "Jetpack Compose", "Compose Multiplatform", "WebAssembly", "Python", "FastAPI", "WebSockets"],
+      "Proyecto en equipo, como colaborador. Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Puente FastAPI sobre el Agent SDK con HTTP/WebSocket, sesiones y edición de archivos en vivo, permisos interactivos, cola de mensajes y acceso remoto seguro por Tailscale. Una sola base Svelte + Tauri compila a Android, escritorio (Windows/Linux/macOS) y web.",
+    tags: ["Svelte", "Tauri", "TypeScript", "Rust", "Python", "FastAPI", "WebSockets"],
     github: "https://github.com/jahirxtrap/cconnect",
     demo: "https://cconnect.pages.dev/",
     kaggle: null,

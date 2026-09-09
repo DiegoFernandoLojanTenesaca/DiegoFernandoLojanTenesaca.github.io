@@ -202,8 +202,8 @@ export const translations: Record<string, Record<string, string>> = {
   "proj.private": { es: "Privado", en: "Private" },
   "proj.other": { es: "Otros proyectos", en: "Other projects" },
   "proj.cconnect.desc": {
-    es: "Proyecto en equipo, como colaborador. Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Puente FastAPI sobre el Agent SDK con HTTP/WebSocket, sesiones y edición de archivos en vivo, permisos interactivos y acceso remoto seguro por Tailscale. Una sola base Compose Multiplatform compila a Android, escritorio (Windows/Linux/macOS) y web con WebAssembly.",
-    en: "Team project, as a contributor. Mobile, desktop and web client to drive a coding agent running on your PC. FastAPI bridge over the Agent SDK with HTTP/WebSocket, live sessions and file edits, interactive permission prompts and secure remote access over Tailscale. A single Compose Multiplatform codebase compiles to Android, desktop (Windows/Linux/macOS) and the web via WebAssembly.",
+    es: "Proyecto en equipo, como colaborador. Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Puente FastAPI sobre el Agent SDK con HTTP/WebSocket, sesiones y edición de archivos en vivo, permisos interactivos, cola de mensajes y acceso remoto seguro por Tailscale. Una sola base Svelte + Tauri compila a Android, escritorio (Windows/Linux/macOS) y web.",
+    en: "Team project, as a contributor. Mobile, desktop and web client to drive a coding agent running on your PC. FastAPI bridge over the Agent SDK with HTTP/WebSocket, live sessions and file edits, interactive permission prompts, a message queue and secure remote access over Tailscale. A single Svelte + Tauri codebase compiles to Android, desktop (Windows/Linux/macOS) and the web.",
   },
   "proj.wauto.desc": {
     es: "CRM y automatización de mensajería con IA para WhatsApp, Telegram y Meta. Bandeja compartida multiagente, embudos Kanban, difusiones con plantillas, builder visual de automatizaciones no-code, base de conocimiento con recuperación híbrida (full-text + pgvector), cascada de modelos con failover, API pública versionada con API keys y servidor MCP para asistentes de código.",
@@ -315,6 +315,7 @@ export const translations: Record<string, Record<string, string>> = {
   "cert.subtitle": { es: "Formación continua en tecnología, datos e inteligencia artificial.", en: "Continuous learning in technology, data and artificial intelligence." },
 
   // Nav - Certifications
+  "nav.publicaciones": { es: "Publicaciones", en: "Publications" },
   "nav.certificaciones": { es: "Certificaciones", en: "Certifications" },
 
   // Publications
