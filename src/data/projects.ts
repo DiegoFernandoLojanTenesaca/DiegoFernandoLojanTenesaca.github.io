@@ -13,6 +13,54 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Riksi",
+    description:
+      "Identificador de fauna y flora del Ecuador que corre entero dentro del navegador, sin cuenta y sin internet: EfficientNet-Lite0 a 288 px con 100 especies, 3,8 MB cuantizado a 8 bits y validado sobre 1.000 imágenes que el modelo no vio al entrenar. Pensado para el páramo, Galápagos y el Yasuní, que es justo donde no hay señal y donde falla cualquier herramienta que dependa de un servidor. Incluye además 74 aves reconocibles por su canto.",
+    tags: ["Python", "EfficientNet-Lite0", "ONNX", "Cuantización int8", "Offline-first", "PWA"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/riski",
+    demo: "https://diegofernandolojantenesaca.github.io/riski/",
+    kaggle: null,
+    image: "projects/riksi.webp",
+    category: "ml",
+    featured: true,
+  },
+  {
+    title: "Yachaq",
+    description:
+      "Agente de herramientas montado sobre el modelo de Riksi: decide por su cuenta qué consultar entre el clasificador, GBIF en vivo y 691 fichas de especies, y recuerda con quién habla. Cada respuesta declara qué herramientas usó, que es la diferencia entre haber consultado los registros y habérselo inventado. Corre en Northflank con 0,2 vCPU y 512 MB, y se expone como API, contenedor Docker o servidor MCP.",
+    tags: ["Python", "Agentes", "RAG", "GBIF", "MCP", "Docker", "Northflank"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/yachaq",
+    demo: "https://diegofernandolojantenesaca.github.io/riski/",
+    kaggle: null,
+    image: null,
+    category: "agents",
+    featured: true,
+  },
+  {
+    title: "riksi-radar",
+    description:
+      "Pipeline que audita a GBIF: cada día toma observaciones de fauna del Ecuador, las pasa por el modelo de Riksi sin enseñarle la etiqueta y guarda las dos respuestas, la de la persona y la de la máquina. GBIF a Kafka a 6.000 registros diarios, clasificación, DuckDB y modelado con dbt. Sobre 400 observaciones reales, 337 coinciden y 63 no, y los desacuerdos tienen sentido biológico: el radar los ordena por confianza en lugar de arrogarse una autoridad que no tiene.",
+    tags: ["Python", "Kafka", "DuckDB", "dbt", "GBIF", "Data Quality"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/riksi-radar",
+    demo: null,
+    kaggle: null,
+    image: null,
+    category: "ml",
+    featured: true,
+  },
+  {
+    title: "Yapa",
+    description:
+      "Promociones y descuentos bancarios del Ecuador en un solo lugar. Un scraper recorre a diario las páginas públicas de beneficios, normaliza lo que encuentra y lo guarda; el sitio lo muestra y el panel lo administra. Tres tipos de visitante (anónimo, registrado con favoritas y sus bancos, y administrador con estado de fuentes) y un modo local sin Supabase que trabaja contra un JSON para desarrollar la interfaz con datos reales.",
+    tags: ["Next.js 16", "Supabase", "PostgreSQL", "Cheerio", "Scraping", "Auth"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/yapa",
+    demo: null,
+    kaggle: null,
+    image: null,
+    category: "saas",
+    featured: false,
+  },
+  {
     title: "CConnect",
     description:
       "Proyecto en equipo, como colaborador. Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Puente FastAPI sobre el Agent SDK con HTTP/WebSocket, sesiones y edición de archivos en vivo, permisos interactivos, cola de mensajes y acceso remoto seguro por Tailscale. Una sola base Svelte + Tauri compila a Android, escritorio (Windows/Linux/macOS) y web.",
