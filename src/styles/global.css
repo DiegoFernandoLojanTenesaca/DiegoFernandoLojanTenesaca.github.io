@@ -266,3 +266,95 @@ body::before {
   opacity: 0.04;
   pointer-events: none;
 }
+
+/* ===== AVATAR GESTURES ===== */
+
+.avatar-gesture {
+  transform-origin: bottom center;
+}
+
+@keyframes avatar-wave-hand {
+  0%, 100% { transform: rotate(0deg); }
+  15% { transform: rotate(-9deg); }
+  32% { transform: rotate(7deg); }
+  49% { transform: rotate(-6deg); }
+  66% { transform: rotate(4deg); }
+  83% { transform: rotate(-2deg); }
+}
+
+@keyframes avatar-slash {
+  0% { transform: rotate(0deg) translateX(0); }
+  28% { transform: rotate(-15deg) translateX(5px); }
+  58% { transform: rotate(10deg) translateX(-4px); }
+  100% { transform: rotate(0deg) translateX(0); }
+}
+
+@keyframes avatar-slash-hover {
+  0% { transform: rotate(0deg) translateX(0); }
+  30% { transform: rotate(-13deg) translateX(4px); }
+  62% { transform: rotate(9deg) translateX(-3px); }
+  100% { transform: rotate(0deg) translateX(0); }
+}
+
+@keyframes avatar-settle {
+  0% { transform: translateY(-12px); }
+  55% { transform: translateY(3px); }
+  78% { transform: translateY(-1px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes avatar-step {
+  0% { transform: translateX(-15px) translateY(0); }
+  30% { transform: translateX(-8px) translateY(-4px); }
+  60% { transform: translateX(3px) translateY(0); }
+  82% { transform: translateX(-1px) translateY(-2px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+@keyframes avatar-stand {
+  0% { transform: scale(0.86, 1.14) translateY(-8px); }
+  52% { transform: scale(1.07, 0.93) translateY(0); }
+  100% { transform: scale(1, 1) translateY(0); }
+}
+
+.avatar-wave.visible { animation: avatar-wave-hand 1.7s ease-in-out backwards; }
+.avatar-slash.visible { animation: avatar-slash 0.75s cubic-bezier(0.34, 1.5, 0.5, 1) backwards; }
+.avatar-settle.visible { animation: avatar-settle 0.7s cubic-bezier(0.34, 1.45, 0.5, 1) backwards; }
+.avatar-step.visible { animation: avatar-step 0.85s cubic-bezier(0.34, 1.4, 0.5, 1) backwards; }
+.avatar-stand.visible { animation: avatar-stand 0.7s cubic-bezier(0.34, 1.45, 0.5, 1) backwards; }
+
+#proyectos:has(.group:hover) .avatar-slash {
+  animation: avatar-slash-hover 0.55s cubic-bezier(0.34, 1.5, 0.5, 1);
+}
+
+@keyframes hero-walk-in {
+  0% { transform: translateX(-38px) translateY(0); }
+  22% { transform: translateX(-27px) translateY(-5px); }
+  44% { transform: translateX(-15px) translateY(0); }
+  66% { transform: translateX(-5px) translateY(-4px); }
+  88% { transform: translateX(0) translateY(0); }
+  94% { transform: translateX(0) translateY(-2px); }
+  100% { transform: translateX(0) translateY(0); }
+}
+
+#hero-avatar {
+  animation: hero-walk-in 1.15s cubic-bezier(0.22, 1, 0.36, 1) 0.15s backwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .reveal-stagger > *,
+  .hero-animate {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

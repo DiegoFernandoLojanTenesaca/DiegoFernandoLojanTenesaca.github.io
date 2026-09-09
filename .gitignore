@@ -31,3 +31,6 @@ Thumbs.db
 
 # lock files (optional - remove if you want to track)
 # package-lock.json
+
+# Claude Code skills (terceros)
+.claude/
