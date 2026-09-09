@@ -95,7 +95,7 @@ const filters = [
                 alt={project.title}
                 class:list={[
                   "w-full h-full group-hover:scale-105 transition-transform duration-500",
-                  project.imageFit === "contain" ? "object-contain" : "object-cover",
+                  project.imageFit === "contain" ? "object-contain" : "object-cover object-top",
                 ]}
                 loading="lazy"
               />
@@ -191,7 +191,7 @@ const filters = [
                     alt={project.title}
                     class:list={[
                       "w-full h-full group-hover:scale-105 transition-transform duration-500",
-                      project.imageFit === "contain" ? "object-contain" : "object-cover",
+                      project.imageFit === "contain" ? "object-contain" : "object-cover object-top",
                     ]}
                     loading="lazy"
                   />
