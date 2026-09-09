@@ -38,11 +38,12 @@ const projKeys: Record<string, string> = {
   "Aisladores Sísmicos Elastoméricos": "proj.aisladores.desc",
 };
 
-const featured = projects.filter((p) => p.featured);
-const other = projects.filter((p) => !p.featured);
+const listed = projects.filter((p) => !p.spotlight);
+const featured = listed.filter((p) => p.featured);
+const other = listed.filter((p) => !p.featured);
 
 const filters = [
-  { id: "all", key: "proj.filter.all", label: "Todos", count: projects.length },
+  { id: "all", key: "proj.filter.all", label: "Todos", count: listed.length },
   { id: "ml", key: "proj.filter.ml", label: "Machine Learning & Datos" },
   { id: "agents", key: "proj.filter.agents", label: "Agentes & LLM" },
   { id: "saas", key: "proj.filter.saas", label: "Plataformas & SaaS" },
@@ -50,7 +51,7 @@ const filters = [
   { id: "web", key: "proj.filter.web", label: "Web" },
 ].map((f) => ({
   ...f,
-  count: f.count ?? projects.filter((p) => p.category === f.id).length,
+  count: f.count ?? listed.filter((p) => p.category === f.id).length,
 }));
 ---
 

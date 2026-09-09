@@ -7,6 +7,7 @@ export interface Project {
   kaggle: string | null;
   image: string | null;
   imageFit?: "cover" | "contain";
+  spotlight?: boolean;
   category: "ml" | "agents" | "saas" | "apps" | "web";
   featured: boolean;
 }
@@ -15,19 +16,20 @@ export const projects: Project[] = [
   {
     title: "Riksi",
     description:
-      "Identificador de fauna y flora del Ecuador que corre entero dentro del navegador, sin cuenta y sin internet: EfficientNet-Lite0 a 288 px con 100 especies, 3,8 MB cuantizado a 8 bits y validado sobre 1.000 imágenes que el modelo no vio al entrenar. Pensado para el páramo, Galápagos y el Yasuní, que es justo donde no hay señal y donde falla cualquier herramienta que dependa de un servidor. Incluye además 74 aves reconocibles por su canto.",
+      "Identifica fauna y flora del Ecuador dentro del navegador, sin cuenta y sin internet. EfficientNet-Lite0 de 3,8 MB cuantizado a 8 bits sobre 100 especies.",
     tags: ["Python", "EfficientNet-Lite0", "ONNX", "Cuantización int8", "Offline-first", "PWA"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/riski",
     demo: "https://diegofernandolojantenesaca.github.io/riski/",
     kaggle: null,
     image: "projects/riksi.webp",
     category: "ml",
+    spotlight: true,
     featured: true,
   },
   {
     title: "Yachaq",
     description:
-      "Agente de herramientas montado sobre el modelo de Riksi: decide por su cuenta qué consultar entre el clasificador, GBIF en vivo y 691 fichas de especies, y recuerda con quién habla. Cada respuesta declara qué herramientas usó, que es la diferencia entre haber consultado los registros y habérselo inventado. Corre en Northflank con 0,2 vCPU y 512 MB, y se expone como API, contenedor Docker o servidor MCP.",
+      "Agente sobre el modelo de Riksi: elige qué consultar entre el clasificador, GBIF en vivo y 691 fichas, y declara las herramientas que usó. Corre con 0,2 vCPU y 512 MB.",
     tags: ["Python", "Agentes", "RAG", "GBIF", "MCP", "Docker", "Northflank"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/yachaq",
     demo: "https://diegofernandolojantenesaca.github.io/riski/",
@@ -39,7 +41,7 @@ export const projects: Project[] = [
   {
     title: "riksi-radar",
     description:
-      "Pipeline que audita a GBIF: cada día toma observaciones de fauna del Ecuador, las pasa por el modelo de Riksi sin enseñarle la etiqueta y guarda las dos respuestas, la de la persona y la de la máquina. GBIF a Kafka a 6.000 registros diarios, clasificación, DuckDB y modelado con dbt. Sobre 400 observaciones reales, 337 coinciden y 63 no, y los desacuerdos tienen sentido biológico: el radar los ordena por confianza en lugar de arrogarse una autoridad que no tiene.",
+      "Pipeline que audita a GBIF: clasifica las observaciones sin ver la etiqueta y guarda las dos versiones. Kafka, DuckDB y dbt; de 400 registros, 63 no coinciden.",
     tags: ["Python", "Kafka", "DuckDB", "dbt", "GBIF", "Data Quality"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/riksi-radar",
     demo: null,
@@ -51,7 +53,7 @@ export const projects: Project[] = [
   {
     title: "Yapa",
     description:
-      "Promociones y descuentos bancarios del Ecuador en un solo lugar. Un scraper recorre a diario las páginas públicas de beneficios, normaliza lo que encuentra y lo guarda; el sitio lo muestra y el panel lo administra. Tres tipos de visitante (anónimo, registrado con favoritas y sus bancos, y administrador con estado de fuentes) y un modo local sin Supabase que trabaja contra un JSON para desarrollar la interfaz con datos reales.",
+      "Promociones bancarias del Ecuador en un solo lugar. Un scraper recorre a diario las páginas públicas de beneficios; favoritas por usuario y filtrado por banco.",
     tags: ["Next.js 16", "Supabase", "PostgreSQL", "Cheerio", "Scraping", "Auth"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/yapa",
     demo: null,
@@ -63,7 +65,7 @@ export const projects: Project[] = [
   {
     title: "Claude Cookie Backup",
     description:
-      "Respalda únicamente la sesión de claude.ai en la carpeta que elijas, y en Google Drive si quieres. Cambias de equipo, viajas o se te daña la computadora y vuelves a entrar en segundos, sin contraseñas ni códigos de verificación. Complemento de Claude Session Guard, que cubre la sesión OAuth de la CLI.",
+      "Respalda la sesión de claude.ai en la carpeta que elijas y en Google Drive. Cambias de equipo y vuelves a entrar en segundos, sin contraseñas ni códigos.",
     tags: ["Python", "CLI", "Google Drive", "Automatización"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/claude_cookie",
     demo: null,
@@ -75,7 +77,7 @@ export const projects: Project[] = [
   {
     title: "Detección de Tablas en Imágenes",
     description:
-      "Detección y clasificación de tablas en documentos escaneados, distinguiendo las que tienen bordes de las que no. Aplicación de YOLOv8s sobre un modelo de detección de tablas publicado en Hugging Face, con el flujo de inferencia y evaluación en notebooks.",
+      "Detecta y clasifica tablas en documentos escaneados, distinguiendo las que tienen bordes de las que no. YOLOv8s sobre un modelo publicado en Hugging Face.",
     tags: ["Python", "YOLOv8", "Computer Vision", "Hugging Face", "Jupyter"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/ClasificacionTablas_Model",
     demo: null,
@@ -87,7 +89,7 @@ export const projects: Project[] = [
   {
     title: "Lion GYM",
     description:
-      "Plataforma full stack para descubrir, crear y organizar rutinas de gimnasio. Backend en Django REST con MySQL y autenticación JWT, frontend en Vue 3 con Vite: exploración de ejercicios por nombre y categoría, detalle por slug con grupos musculares y series, y armado de rutinas propias.",
+      "Plataforma para descubrir y armar rutinas de gimnasio. Django REST con MySQL y JWT, frontend en Vue 3 con Vite y exploración de ejercicios por categoría.",
     tags: ["Django REST", "Vue 3", "Vite", "MySQL", "JWT"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/rutinas-gym-django-vue",
     demo: null,
@@ -99,7 +101,7 @@ export const projects: Project[] = [
   {
     title: "CConnect",
     description:
-      "Proyecto en equipo, como colaborador. Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Puente FastAPI sobre el Agent SDK con HTTP/WebSocket, sesiones y edición de archivos en vivo, permisos interactivos, cola de mensajes y acceso remoto seguro por Tailscale. Una sola base Svelte + Tauri compila a Android, escritorio (Windows/Linux/macOS) y web.",
+      "Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Una base Svelte + Tauri para Android, escritorio y navegador.",
     tags: ["Svelte", "Tauri", "TypeScript", "Rust", "Python", "FastAPI", "WebSockets"],
     github: "https://github.com/jahirxtrap/cconnect",
     demo: "https://cconnect.pages.dev/",
@@ -112,7 +114,7 @@ export const projects: Project[] = [
   {
     title: "Wauto Indaga",
     description:
-      "CRM y automatización de mensajería con IA para WhatsApp, Telegram y Meta. Bandeja compartida multiagente, embudos Kanban, difusiones con plantillas, builder visual de automatizaciones no-code, base de conocimiento con recuperación híbrida (full-text + pgvector), cascada de modelos con failover, API pública versionada con API keys y servidor MCP para asistentes de código.",
+      "CRM y automatización de mensajería con IA para WhatsApp, Telegram y Meta. Bandeja multiagente, embudos Kanban y base de conocimiento con recuperación híbrida.",
     tags: ["Next.js 16", "React 19", "TypeScript", "Supabase", "PostgreSQL", "pgvector", "MCP", "i18n"],
     github: null,
     demo: "https://wauto.indagalab.com",
@@ -124,7 +126,7 @@ export const projects: Project[] = [
   {
     title: "Reps",
     description:
-      "SaaS multi-tenant para gimnasios y academias. Cada negocio es un espacio aislado con roles personalizados y permisos CRUD por módulo, planes por niveles, reservas, asistencia, cobros y rutinas de entrenamiento. Panel web de gestión y portal del alumno en móvil sobre la misma API, con tema por negocio.",
+      "SaaS multi-tenant para gimnasios: cada negocio es un espacio aislado con roles, planes, reservas, cobros y rutinas. Panel web y app del alumno sobre la misma API.",
     tags: ["FastAPI", "PostgreSQL", "Next.js", "Expo", "React Native", "Multi-tenant"],
     github: null,
     demo: null,
@@ -137,7 +139,7 @@ export const projects: Project[] = [
   {
     title: "AgentOS",
     description:
-      "App Android nativa que convierte teléfonos sin servicios de Google en un agente de IA 24/7 controlado por Telegram: Python embebido en el dispositivo, multi-proveedor de LLMs con failover automático, control de hardware vía bridge HTTP local y servicio persistente con watchdog.",
+      "Convierte teléfonos Android sin servicios de Google en un agente de IA operado por Telegram, con Python embebido y varios proveedores de LLM con failover.",
     tags: ["Kotlin", "Jetpack Compose", "Chaquopy", "Python", "Telegram", "LLMs"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/indaga-agentOS",
     demo: null,
@@ -150,7 +152,7 @@ export const projects: Project[] = [
   {
     title: "OfficeGo",
     description:
-      "Instalador de Microsoft Office para Windows con interfaz gráfica, hecho junto a M. Salazar. Perfila el equipo (versión de Windows, RAM, disco) para recomendar la edición viable, genera el configuration.xml de la Office Deployment Tool y admite modo desatendido por parámetros. Dos interfaces sobre un mismo motor (PowerShell/WinForms y Tauri), con suite de pruebas automatizadas y un validador de layout que corre en cada compilación.",
+      "Instalador de Microsoft Office con interfaz gráfica. Perfila el equipo, recomienda la edición viable y genera el XML de despliegue. PowerShell/WinForms y Tauri.",
     tags: ["PowerShell", "WinForms", "Tauri", "Rust", "C#", "CI"],
     github: "https://github.com/MariaDSalazar/officego",
     demo: null,
@@ -163,7 +165,7 @@ export const projects: Project[] = [
   {
     title: "Claude Session Guard",
     description:
-      "Utilidad que respalda, vigila y mantiene viva la sesión OAuth de Claude Code: snapshot en cada rotación de token, restauración segura que nunca sobrescribe un respaldo bueno con uno roto, y renovación headless antes de que expire. Python sin dependencias, con CI en Linux, macOS y Windows.",
+      "Respalda y mantiene viva la sesión OAuth de Claude Code: snapshot en cada rotación de token y renovación headless antes de que expire. Python sin dependencias.",
     tags: ["Python", "CLI", "OAuth", "GitHub Actions", "Cross-platform"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/claude-session-guard",
     demo: null,
@@ -176,7 +178,7 @@ export const projects: Project[] = [
   {
     title: "CuadreKit",
     description:
-      "El kit del micronegocio: herramientas gratuitas para micronegocios y freelancers de Ecuador (proformas, recibos, contratos, pagarés, liquidaciones, rol de pagos y horas extra según el Código del Trabajo). PWA instalable que funciona sin internet, sin registro y sin que los datos salgan del equipo.",
+      "Herramientas gratuitas para micronegocios de Ecuador: proformas, recibos, contratos y rol de pagos según el Código del Trabajo. PWA que funciona sin internet.",
     tags: ["Nuxt", "Vue", "PWA", "TypeScript", "Offline-first"],
     github: null,
     demo: null,
@@ -188,7 +190,7 @@ export const projects: Project[] = [
   {
     title: "Directorio y comunidad multi-país",
     description:
-      "Plataforma de perfiles con reservas y disponibilidad en tiempo real, contenido comunitario anónimo y moderación administrativa, para 20 países y más de 100 ciudades. PWA instalable más APK Android de distribución directa, con registro anónimo y wizard de publicación por pasos.",
+      "Plataforma de perfiles con reservas en tiempo real y contenido comunitario anónimo, para 20 países y más de 100 ciudades. PWA instalable mas APK de Android.",
     tags: ["Nuxt 4", "PrimeVue", "FastAPI", "Supabase", "PWA", "Android"],
     github: null,
     demo: null,
@@ -200,7 +202,7 @@ export const projects: Project[] = [
   {
     title: "BugOpoly",
     description:
-      "Juego de mesa digital en 3D con temática de QA de software: comprás módulos, construís cobertura de tests hacia CI/CD, cazás bugs y esquivás la deuda técnica. Tablero de 40 casillas con fichas animadas, multijugador local hot-seat con bots y modo autoplay.",
+      "Juego de mesa digital en 3D sobre QA de software: comprás módulos, construís cobertura de tests y esquivás la deuda técnica. 40 casillas y multijugador local.",
     tags: ["Godot 4.6", "GDScript", "3D", "Game Design"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/BugOpoly",
     demo: null,
@@ -236,7 +238,7 @@ export const projects: Project[] = [
   {
     title: "Sudial AI",
     description:
-      "Microservicio de IA en producción con arquitectura DDD multi-tenant y 18 dominios funcionales. Búsqueda semántica sobre 139.000 conversaciones vectorizadas con embeddings BGE-M3 e índice HNSW en pgvector, agente conversacional con 15 herramientas de tool calling, pipelines de Vision-Language Models self-hosted en GPU, clasificación zero-shot, OCR estructurado, transcripción local y moderación.",
+      "Microservicio de IA en producción, multi-tenant con 18 dominios. Búsqueda semántica sobre 139.000 conversaciones con BGE-M3 y un agente de 15 herramientas.",
     tags: ["Python", "FastAPI", "LangChain", "LangGraph", "pgvector", "Docker"],
     github: null,
     demo: null,
@@ -248,7 +250,7 @@ export const projects: Project[] = [
   {
     title: "Kumbre",
     description:
-      "Extensión de Indaga Lab. Herramienta vertical para constructoras enfocada en la gestión de APUs (Análisis de Precios Unitarios) en cotización y obra: convierte presupuestos PDF (formato SERCOP) a Excel editable mediante parsing inteligente, fuzzy matching y catálogo precargado, con cuentas, planes y panel administrativo.",
+      "Herramienta para constructoras que convierte presupuestos PDF del SERCOP a Excel editable, con parsing inteligente, fuzzy matching y catálogo precargado.",
     tags: ["Next.js", "FastAPI", "PostgreSQL"],
     github: null,
     demo: "https://kumbre.indagalab.com",
@@ -272,7 +274,7 @@ export const projects: Project[] = [
   {
     title: "Detección de Estrés en Redes Sociales",
     description:
-      "Investigación aplicada en NLP español: SVM optimizado vía TPE (Optuna) sobre tweets de la crisis energética 2024. Embeddings FastText, scraping con Playwright, metodología CRISP-DM. Paper aceptado en Springer / CIT 2026, en producción. Segundo estudio en preparación: comparación fastText vs. BETO con pruebas de McNemar e interpretabilidad SHAP.",
+      "Investigación en NLP español: SVM optimizado con TPE sobre tweets de la crisis energética 2024. Aceptado en Springer para el CIT 2026.",
     tags: ["Python", "SVM", "Optuna", "NLP", "FastText", "BETO", "SHAP", "CRISP-DM"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/TIC_Analisis_Sentimientos_SVM_OPTUNA",
     demo: null,
@@ -309,7 +311,7 @@ export const projects: Project[] = [
   {
     title: "Óptica Martínez",
     description:
-      "Landing page para una óptica real en Loja, Ecuador. Hero 3D interactivo con gafas que siguen el cursor (React Three Fiber), reels de TikTok con lazy loading, reseñas reales de Google, animación de carta optométrica al hacer scroll y SEO local con datos estructurados Schema.org. SSR con TanStack Start y React 19.",
+      "Landing para una óptica de Loja con hero 3D interactivo en React Three Fiber, reseñas reales de Google y SEO local con Schema.org. SSR con TanStack Start.",
     tags: ["TanStack Start", "React 19", "Three.js", "React Three Fiber", "Tailwind CSS v4", "Framer Motion"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/optica-martinez",
     demo: "https://optica-martinez.vercel.app",
@@ -321,7 +323,7 @@ export const projects: Project[] = [
   {
     title: "ADBox",
     description:
-      "Consola ADB libre y multiplataforma (Windows, Linux, macOS) para mantenimiento y reparación de Android. +80 acciones en 15 categorías: debloating por marca (Samsung, Xiaomi, Motorola, OPPO), análisis real de salud de batería, logcat en vivo, diagnóstico de crashes/ANR y mantenimiento automático en un clic. App de escritorio de ~10MB sin necesidad de la terminal.",
+      "Consola ADB libre para Windows, Linux y macOS: más de 80 acciones para mantener y reparar Android, con debloating por marca y salud real de batería.",
     tags: ["Tauri 2", "Rust", "React", "TypeScript", "Zustand", "GitHub Actions"],
     github: "https://github.com/DiegoFernandoLojanTenesaca/ADBox",
     demo: "https://github.com/DiegoFernandoLojanTenesaca/ADBox/releases",
