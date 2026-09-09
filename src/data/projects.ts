@@ -7,6 +7,7 @@ export interface Project {
   kaggle: string | null;
   image: string | null;
   imageFit?: "cover" | "contain";
+  category: "ml" | "agents" | "saas" | "apps" | "web";
   featured: boolean;
 }
 
@@ -21,6 +22,7 @@ export const projects: Project[] = [
     kaggle: null,
     image: "projects/cconnect.png",
     imageFit: "contain",
+    category: "agents",
     featured: true,
   },
   {
@@ -32,6 +34,7 @@ export const projects: Project[] = [
     demo: "https://wauto.indagalab.com",
     kaggle: null,
     image: "projects/wauto.png",
+    category: "agents",
     featured: true,
   },
   {
@@ -44,6 +47,7 @@ export const projects: Project[] = [
     kaggle: null,
     image: "projects/reps.jpg",
     imageFit: "contain",
+    category: "saas",
     featured: true,
   },
   {
@@ -56,6 +60,7 @@ export const projects: Project[] = [
     kaggle: null,
     image: "projects/agentos.png",
     imageFit: "contain",
+    category: "agents",
     featured: true,
   },
   {
@@ -67,6 +72,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/officego.png",
+    category: "apps",
     featured: false,
   },
   {
@@ -78,6 +84,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/session-guard.png",
+    category: "apps",
     featured: false,
   },
   {
@@ -89,6 +96,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/cuadrekit.png",
+    category: "apps",
     featured: false,
   },
   {
@@ -100,6 +108,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/directorio.svg",
+    category: "saas",
     featured: false,
   },
   {
@@ -111,6 +120,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/bugopoly.png",
+    category: "apps",
     featured: false,
   },
   {
@@ -122,6 +132,7 @@ export const projects: Project[] = [
     demo: "https://www.indagalab.com",
     kaggle: null,
     image: "projects/indagalab.png",
+    category: "saas",
     featured: true,
   },
   {
@@ -133,6 +144,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/sudial.jpg",
+    category: "saas",
     featured: true,
   },
   {
@@ -144,6 +156,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/sudial-ai.jpg",
+    category: "agents",
     featured: true,
   },
   {
@@ -155,6 +168,7 @@ export const projects: Project[] = [
     demo: "https://kumbre.onrender.com/",
     kaggle: null,
     image: "projects/kumbre.png",
+    category: "saas",
     featured: true,
   },
   {
@@ -166,6 +180,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/energy.png",
+    category: "ml",
     featured: true,
   },
   {
@@ -177,6 +192,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/sentimientos.png",
+    category: "ml",
     featured: true,
   },
   {
@@ -189,6 +205,7 @@ export const projects: Project[] = [
     kaggle: null,
     image: "projects/orbyn.png",
     imageFit: "contain",
+    category: "agents",
     featured: true,
   },
   {
@@ -200,6 +217,7 @@ export const projects: Project[] = [
     demo: "https://leader-gym.vercel.app",
     kaggle: null,
     image: "projects/leadergym.png",
+    category: "web",
     featured: true,
   },
   {
@@ -211,6 +229,7 @@ export const projects: Project[] = [
     demo: "https://optica-martinez.vercel.app",
     kaggle: null,
     image: "projects/optica.png",
+    category: "web",
     featured: true,
   },
   {
@@ -222,6 +241,7 @@ export const projects: Project[] = [
     demo: "https://github.com/DiegoFernandoLojanTenesaca/ADBox/releases",
     kaggle: null,
     image: "projects/adbox-banner.png",
+    category: "apps",
     featured: true,
   },
   {
@@ -233,6 +253,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/kiosko.svg",
+    category: "ml",
     featured: false,
   },
   {
@@ -244,6 +265,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/ocr-inventario.svg",
+    category: "ml",
     featured: false,
   },
   {
@@ -255,6 +277,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/crm-energia.svg",
+    category: "saas",
     featured: false,
   },
   {
@@ -266,6 +289,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/acernova.svg",
+    category: "apps",
     featured: false,
   },
   {
@@ -277,6 +301,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/mlhub.png",
+    category: "ml",
     featured: false,
   },
   {
@@ -288,6 +313,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: "https://www.kaggle.com/datasets/diegofernandoljtn/elecciones-presidenciales-de-ecuador-2025-json",
     image: "projects/elecciones.png",
+    category: "ml",
     featured: false,
   },
   {
@@ -299,6 +325,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/vosk.png",
+    category: "ml",
     featured: false,
   },
   {
@@ -310,6 +337,7 @@ export const projects: Project[] = [
     demo: null,
     kaggle: null,
     image: "projects/aisladores.jpg",
+    category: "ml",
     featured: false,
   },
 ];

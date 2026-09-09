@@ -413,3 +413,62 @@ body::before {
     transform: none !important;
   }
 }
+
+/* ===== PROJECT FILTER ===== */
+
+.proj-filters label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8125rem;
+  line-height: 1.2;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.proj-filters label:hover {
+  border-color: var(--color-accent-light);
+  color: var(--color-text);
+}
+
+.proj-count {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  opacity: 0.75;
+}
+
+#proyectos:has(#pf-all:checked) label[for="pf-all"],
+#proyectos:has(#pf-ml:checked) label[for="pf-ml"],
+#proyectos:has(#pf-agents:checked) label[for="pf-agents"],
+#proyectos:has(#pf-saas:checked) label[for="pf-saas"],
+#proyectos:has(#pf-apps:checked) label[for="pf-apps"],
+#proyectos:has(#pf-web:checked) label[for="pf-web"] {
+  border-color: var(--color-accent-light);
+  background: var(--color-accent-soft);
+  color: var(--color-accent-light);
+}
+
+#proyectos:has(#pf-all:focus-visible) label[for="pf-all"],
+#proyectos:has(#pf-ml:focus-visible) label[for="pf-ml"],
+#proyectos:has(#pf-agents:focus-visible) label[for="pf-agents"],
+#proyectos:has(#pf-saas:focus-visible) label[for="pf-saas"],
+#proyectos:has(#pf-apps:focus-visible) label[for="pf-apps"],
+#proyectos:has(#pf-web:focus-visible) label[for="pf-web"] {
+  outline: 2px solid var(--color-accent-light);
+  outline-offset: 2px;
+}
+
+#proyectos:has(#pf-ml:checked) [data-cat]:not([data-cat="ml"]) { display: none; }
+#proyectos:has(#pf-ml:checked) .proj-other:not(:has([data-cat="ml"])) { display: none; }
+#proyectos:has(#pf-agents:checked) [data-cat]:not([data-cat="agents"]) { display: none; }
+#proyectos:has(#pf-agents:checked) .proj-other:not(:has([data-cat="agents"])) { display: none; }
+#proyectos:has(#pf-saas:checked) [data-cat]:not([data-cat="saas"]) { display: none; }
+#proyectos:has(#pf-saas:checked) .proj-other:not(:has([data-cat="saas"])) { display: none; }
+#proyectos:has(#pf-apps:checked) [data-cat]:not([data-cat="apps"]) { display: none; }
+#proyectos:has(#pf-apps:checked) .proj-other:not(:has([data-cat="apps"])) { display: none; }
+#proyectos:has(#pf-web:checked) [data-cat]:not([data-cat="web"]) { display: none; }
+#proyectos:has(#pf-web:checked) .proj-other:not(:has([data-cat="web"])) { display: none; }
