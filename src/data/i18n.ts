@@ -353,6 +353,16 @@ export const translations: Record<string, Record<string, string>> = {
   "nav.certificaciones": { es: "Certificaciones", en: "Certifications" },
 
   // Publications
+  "spot.badge": { es: "Demo en vivo", en: "Live demo" },
+  "spot.lead": {
+    es: "Apuntas la cámara a un animal o una planta y te dice qué es. El modelo se descarga una vez y a partir de ahí corre entero dentro del navegador, en el páramo o en Galápagos, donde no hay señal.",
+    en: "Point your camera at an animal or a plant and it tells you what it is. The model downloads once and from then on runs entirely inside the browser, up in the páramo or out in Galápagos, where there is no signal.",
+  },
+  "spot.fact.size": { es: "el modelo entero", en: "the whole model" },
+  "spot.fact.species": { es: "especies", en: "species" },
+  "spot.fact.requests": { es: "peticiones al servidor", en: "server requests" },
+  "spot.cta": { es: "Probar ahora", en: "Try it now" },
+  "spot.code": { es: "Ver el código", en: "View the code" },
   "pub.title": { es: "Publicaciones", en: "Publications" },
   "pub.subtitle": { es: "Investigación aceptada y publicada en venues con revisión por pares.", en: "Research accepted and published in peer-reviewed venues." },
   "pub.cit2026.title": {

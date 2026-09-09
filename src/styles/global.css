@@ -511,3 +511,38 @@ body::before {
 .timeline-line.visible {
   transform: scaleY(1);
 }
+
+/* ===== READING PROGRESS ===== */
+
+.read-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 60;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  pointer-events: none;
+}
+
+@supports (animation-timeline: scroll()) {
+  .read-progress {
+    animation: read-grow linear both;
+    animation-timeline: scroll(root block);
+  }
+
+  @keyframes read-grow {
+    to {
+      transform: scaleX(1);
+    }
+  }
+}
+
+/* ===== NAVBAR ACTIVE LINK ===== */
+
+.nav-link.is-active {
+  color: var(--color-accent-light);
+  background: var(--color-accent-soft);
+}

@@ -81,6 +81,7 @@ const canonical = new URL(import.meta.env.BASE_URL, Astro.site).href;
     </script>
   </head>
   <body class="bg-bg text-text antialiased">
+    <div class="read-progress" aria-hidden="true"></div>
     <slot />
 
     <!-- Scroll reveal observer -->
@@ -100,6 +101,27 @@ const canonical = new URL(import.meta.env.BASE_URL, Astro.site).href;
       document.querySelectorAll(".reveal, .reveal-stagger, .avatar-gesture, .timeline-line").forEach((el) => {
         observer.observe(el);
       });
+    </script>
+
+
+    <!-- Seccion activa en el navbar -->
+    <script>
+      const links = document.querySelectorAll(".nav-link");
+      const byId = new Map([...links].map((a) => [a.getAttribute("href").slice(1), a]));
+      const sections = [...byId.keys()].map((id) => document.getElementById(id)).filter(Boolean);
+
+      const spy = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            links.forEach((a) => a.classList.remove("is-active"));
+            byId.get(entry.target.id)?.classList.add("is-active");
+          });
+        },
+        { rootMargin: "-45% 0px -50% 0px" }
+      );
+
+      sections.forEach((s) => spy.observe(s));
     </script>
 
     <!-- i18n language switcher -->
