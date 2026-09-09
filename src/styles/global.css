@@ -473,3 +473,30 @@ body::before {
 #proyectos:has(#pf-apps:checked) .proj-other:not(:has([data-cat="apps"])) { display: none; }
 #proyectos:has(#pf-web:checked) [data-cat]:not([data-cat="web"]) { display: none; }
 #proyectos:has(#pf-web:checked) .proj-other:not(:has([data-cat="web"])) { display: none; }
+
+@keyframes proj-card-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+#proyectos:has(#pf-ml:checked) [data-cat="ml"],
+#proyectos:has(#pf-agents:checked) [data-cat="agents"],
+#proyectos:has(#pf-saas:checked) [data-cat="saas"],
+#proyectos:has(#pf-apps:checked) [data-cat="apps"],
+#proyectos:has(#pf-web:checked) [data-cat="web"] {
+  animation: proj-card-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+#proyectos [data-cat]:nth-child(1) { animation-delay: 0ms; }
+#proyectos [data-cat]:nth-child(2) { animation-delay: 45ms; }
+#proyectos [data-cat]:nth-child(3) { animation-delay: 90ms; }
+#proyectos [data-cat]:nth-child(4) { animation-delay: 135ms; }
+#proyectos [data-cat]:nth-child(5) { animation-delay: 180ms; }
+#proyectos [data-cat]:nth-child(6) { animation-delay: 225ms; }
+#proyectos [data-cat]:nth-child(n+7) { animation-delay: 270ms; }

@@ -61,6 +61,42 @@ export const projects: Project[] = [
     featured: false,
   },
   {
+    title: "Claude Cookie Backup",
+    description:
+      "Respalda únicamente la sesión de claude.ai en la carpeta que elijas, y en Google Drive si quieres. Cambias de equipo, viajas o se te daña la computadora y vuelves a entrar en segundos, sin contraseñas ni códigos de verificación. Complemento de Claude Session Guard, que cubre la sesión OAuth de la CLI.",
+    tags: ["Python", "CLI", "Google Drive", "Automatización"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/claude_cookie",
+    demo: null,
+    kaggle: null,
+    image: null,
+    category: "apps",
+    featured: false,
+  },
+  {
+    title: "Detección de Tablas en Imágenes",
+    description:
+      "Detección y clasificación de tablas en documentos escaneados, distinguiendo las que tienen bordes de las que no. Aplicación de YOLOv8s sobre un modelo de detección de tablas publicado en Hugging Face, con el flujo de inferencia y evaluación en notebooks.",
+    tags: ["Python", "YOLOv8", "Computer Vision", "Hugging Face", "Jupyter"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/ClasificacionTablas_Model",
+    demo: null,
+    kaggle: null,
+    image: null,
+    category: "ml",
+    featured: false,
+  },
+  {
+    title: "Lion GYM",
+    description:
+      "Plataforma full stack para descubrir, crear y organizar rutinas de gimnasio. Backend en Django REST con MySQL y autenticación JWT, frontend en Vue 3 con Vite: exploración de ejercicios por nombre y categoría, detalle por slug con grupos musculares y series, y armado de rutinas propias.",
+    tags: ["Django REST", "Vue 3", "Vite", "MySQL", "JWT"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/rutinas-gym-django-vue",
+    demo: null,
+    kaggle: null,
+    image: null,
+    category: "saas",
+    featured: false,
+  },
+  {
     title: "CConnect",
     description:
       "Proyecto en equipo, como colaborador. Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Puente FastAPI sobre el Agent SDK con HTTP/WebSocket, sesiones y edición de archivos en vivo, permisos interactivos, cola de mensajes y acceso remoto seguro por Tailscale. Una sola base Svelte + Tauri compila a Android, escritorio (Windows/Linux/macOS) y web.",

@@ -217,6 +217,18 @@ export const translations: Record<string, Record<string, string>> = {
     es: "Promociones y descuentos bancarios del Ecuador en un solo lugar. Un scraper recorre a diario las páginas públicas de beneficios, normaliza lo que encuentra y lo guarda; el sitio lo muestra y el panel lo administra. Tres tipos de visitante (anónimo, registrado con favoritas y sus bancos, y administrador con estado de fuentes) y un modo local sin Supabase que trabaja contra un JSON para desarrollar la interfaz con datos reales.",
     en: "Ecuadorian bank promotions and discounts in one place. A scraper crawls the public benefit pages daily, normalizes what it finds and stores it; the site displays it and the panel manages it. Three kinds of visitor (anonymous, registered with favourites and their own banks, and admin with source health) plus a local mode without Supabase that runs off a JSON file to build the interface against real data.",
   },
+  "proj.claudecookie.desc": {
+    es: "Respalda únicamente la sesión de claude.ai en la carpeta que elijas, y en Google Drive si quieres. Cambias de equipo, viajas o se te daña la computadora y vuelves a entrar en segundos, sin contraseñas ni códigos de verificación. Complemento de Claude Session Guard, que cubre la sesión OAuth de la CLI.",
+    en: "Backs up only your claude.ai session to the folder you choose, and to Google Drive if you want. Switch machines, travel or break your computer and you are back in seconds, with no passwords and no verification codes. Companion to Claude Session Guard, which covers the CLI's OAuth session.",
+  },
+  "proj.tablas.desc": {
+    es: "Detección y clasificación de tablas en documentos escaneados, distinguiendo las que tienen bordes de las que no. Aplicación de YOLOv8s sobre un modelo de detección de tablas publicado en Hugging Face, con el flujo de inferencia y evaluación en notebooks.",
+    en: "Detection and classification of tables in scanned documents, telling bordered ones from borderless. YOLOv8s applied over a table-detection model published on Hugging Face, with the inference and evaluation flow in notebooks.",
+  },
+  "proj.liongym.desc": {
+    es: "Plataforma full stack para descubrir, crear y organizar rutinas de gimnasio. Backend en Django REST con MySQL y autenticación JWT, frontend en Vue 3 con Vite: exploración de ejercicios por nombre y categoría, detalle por slug con grupos musculares y series, y armado de rutinas propias.",
+    en: "Full stack platform to discover, build and organize gym routines. Django REST backend with MySQL and JWT auth, Vue 3 frontend with Vite: exercise browsing by name and category, slug detail pages with muscle groups and sets, and custom routine building.",
+  },
   "proj.cconnect.desc": {
     es: "Proyecto en equipo, como colaborador. Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Puente FastAPI sobre el Agent SDK con HTTP/WebSocket, sesiones y edición de archivos en vivo, permisos interactivos, cola de mensajes y acceso remoto seguro por Tailscale. Una sola base Svelte + Tauri compila a Android, escritorio (Windows/Linux/macOS) y web.",
     en: "Team project, as a contributor. Mobile, desktop and web client to drive a coding agent running on your PC. FastAPI bridge over the Agent SDK with HTTP/WebSocket, live sessions and file edits, interactive permission prompts, a message queue and secure remote access over Tailscale. A single Svelte + Tauri codebase compiles to Android, desktop (Windows/Linux/macOS) and the web.",
