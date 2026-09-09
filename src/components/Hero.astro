@@ -83,93 +83,88 @@
             <div class="w-3 h-3 rounded-full bg-[#ff5f57]"></div>
             <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
             <div class="w-3 h-3 rounded-full bg-[#28c840]"></div>
-            <span id="terminal-filename" class="ml-3 text-xs text-text-muted font-mono">pipeline.py</span>
+            <span id="terminal-filename" class="ml-3 text-xs text-text-muted font-mono">semantic_search.py</span>
           </div>
 
           <!-- Snippet containers -->
           <div class="relative" style="min-height: 290px;">
-            <!-- Snippet 1: pipeline.py -->
-            <div class="snippet-panel snippet-active p-5 font-mono text-[13px] leading-relaxed" data-file="pipeline.py">
-              <div class="terminal-line tl-1"><span class="text-accent">from</span> langchain.chains <span class="text-accent">import</span> RetrievalQA</div>
+            <div class="snippet-panel snippet-active p-5 font-mono text-[13px] leading-relaxed" data-file="semantic_search.py">
+              <div class="terminal-line tl-1"><span class="text-accent">from</span> pgvector.sqlalchemy <span class="text-accent">import</span> Vector</div>
               <div class="terminal-line tl-2"><span class="text-accent">from</span> fastapi <span class="text-accent">import</span> FastAPI</div>
               <div class="terminal-line tl-3">&nbsp;</div>
               <div class="terminal-line tl-4">app = <span class="text-accent-light">FastAPI</span>(title=<span class="text-[#a3e635]">"Sudial AI"</span>)</div>
               <div class="terminal-line tl-5">&nbsp;</div>
               <div class="terminal-line tl-6"><span class="text-accent">@</span><span class="text-accent-light">app.post</span>(<span class="text-[#a3e635]">"/query"</span>)</div>
               <div class="terminal-line tl-7"><span class="text-accent">async def</span> <span class="text-accent-light">semantic_search</span>(q: <span class="text-accent-light">str</span>):</div>
-              <div class="terminal-line tl-8">    chain = <span class="text-accent-light">RetrievalQA</span>.from_chain_type(</div>
-              <div class="terminal-line tl-9">        llm=<span class="text-text-muted">llm</span>,</div>
-              <div class="terminal-line tl-10">        retriever=<span class="text-text-muted">vectorstore</span>.as_retriever()</div>
-              <div class="terminal-line tl-11">    )</div>
-              <div class="terminal-line tl-12">    <span class="text-accent">return</span> chain.invoke(q)</div>
-              <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
-            </div>
-
-            <!-- Snippet 2: websocket.py -->
-            <div class="snippet-panel p-5 font-mono text-[13px] leading-relaxed" data-file="websocket.py">
-              <div class="terminal-line tl-1"><span class="text-accent">from</span> autobahn.twisted <span class="text-accent">import</span> WebSocketServerProtocol</div>
-              <div class="terminal-line tl-2">&nbsp;</div>
-              <div class="terminal-line tl-3"><span class="text-accent">class</span> <span class="text-accent-light">ChatProtocol</span>(WebSocketServerProtocol):</div>
-              <div class="terminal-line tl-4">&nbsp;</div>
-              <div class="terminal-line tl-5">    <span class="text-accent">def</span> <span class="text-accent-light">onMessage</span>(self, payload, isBinary):</div>
-              <div class="terminal-line tl-6">        data = json.loads(payload)</div>
-              <div class="terminal-line tl-7">        org_id = data[<span class="text-[#a3e635]">"org_id"</span>]</div>
-              <div class="terminal-line tl-8">        message = data[<span class="text-[#a3e635]">"message"</span>]</div>
+              <div class="terminal-line tl-8">&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-accent">return await</span> retriever.<span class="text-accent-light">ainvoke</span>(q)</div>
               <div class="terminal-line tl-9">&nbsp;</div>
-              <div class="terminal-line tl-10">        <span class="text-accent">await</span> self.broadcast(</div>
-              <div class="terminal-line tl-11">            org_id, message</div>
-              <div class="terminal-line tl-12">        )</div>
+              <div class="terminal-line tl-10"><span class="term-prompt">$</span> curl -s /query -d <span class="text-[#a3e635]">&#39;&#123;"q":"factura"&#125;&#39;</span></div>
+              <div class="terminal-line tl-11"><span class="term-out">&rarr; 139.000 conversaciones &middot; BGE-M3 &middot; HNSW</span></div>
+              <div class="terminal-line tl-12"><span class="term-out">&rarr; 18 dominios &middot; 15 tools &middot; &lt; 2 s</span></div>
               <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
             </div>
 
-            <!-- Snippet 3: component.tsx -->
-            <div class="snippet-panel p-5 font-mono text-[13px] leading-relaxed" data-file="ChatView.tsx">
-              <div class="terminal-line tl-1"><span class="text-accent">import</span> &#123; useState &#125; <span class="text-accent">from</span> <span class="text-[#a3e635]">"react"</span></div>
-              <div class="terminal-line tl-2"><span class="text-accent">import</span> &#123; useAuth &#125; <span class="text-accent">from</span> <span class="text-[#a3e635]">"@/contexts/AuthContext"</span></div>
-              <div class="terminal-line tl-3">&nbsp;</div>
-              <div class="terminal-line tl-4"><span class="text-accent">export default function</span> <span class="text-accent-light">ChatView</span>() &#123;</div>
-              <div class="terminal-line tl-5">    <span class="text-accent">const</span> &#123; orgId, user &#125; = <span class="text-accent-light">useAuth</span>()</div>
-              <div class="terminal-line tl-6">    <span class="text-accent">const</span> [msgs, setMsgs] = <span class="text-accent-light">useState</span>([])</div>
-              <div class="terminal-line tl-7">&nbsp;</div>
-              <div class="terminal-line tl-8">    <span class="text-accent">const</span> <span class="text-accent-light">sendMessage</span> = <span class="text-accent">async</span> (text) =&gt; &#123;</div>
-              <div class="terminal-line tl-9">        <span class="text-accent">await</span> apiService.<span class="text-accent-light">post</span>(<span class="text-[#a3e635]">"/messages"</span>, &#123;</div>
-              <div class="terminal-line tl-10">            org_id: orgId, body: text</div>
-              <div class="terminal-line tl-11">        &#125;)</div>
-              <div class="terminal-line tl-12">    &#125;</div>
-              <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
-            </div>
-
-            <!-- Snippet 4: etl_pipeline.py -->
-            <div class="snippet-panel p-5 font-mono text-[13px] leading-relaxed" data-file="embeddings.py">
-              <div class="terminal-line tl-1"><span class="text-accent">from</span> langchain.text_splitter <span class="text-accent">import</span> RecursiveCharacterTextSplitter</div>
-              <div class="terminal-line tl-2"><span class="text-accent">from</span> pgvector.sqlalchemy <span class="text-accent">import</span> Vector</div>
-              <div class="terminal-line tl-3">&nbsp;</div>
-              <div class="terminal-line tl-4"><span class="text-accent">def</span> <span class="text-accent-light">ingest_documents</span>(docs):</div>
-              <div class="terminal-line tl-5">    splitter = <span class="text-accent-light">RecursiveCharacterTextSplitter</span>(</div>
-              <div class="terminal-line tl-6">        chunk_size=<span class="text-text-muted">500</span>,</div>
-              <div class="terminal-line tl-7">        chunk_overlap=<span class="text-text-muted">50</span></div>
-              <div class="terminal-line tl-8">    )</div>
-              <div class="terminal-line tl-9">    chunks = splitter.<span class="text-accent-light">split_documents</span>(docs)</div>
-              <div class="terminal-line tl-10">    embeddings = <span class="text-accent-light">get_embeddings</span>(chunks)</div>
-              <div class="terminal-line tl-11">&nbsp;</div>
-              <div class="terminal-line tl-12">    db.session.<span class="text-accent-light">bulk_save_objects</span>(embeddings)</div>
-              <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
-            </div>
-
-            <!-- Snippet 5: consensus.py (Energy Anomalies) -->
             <div class="snippet-panel p-5 font-mono text-[13px] leading-relaxed" data-file="consensus.py">
               <div class="terminal-line tl-1"><span class="text-accent">from</span> sklearn.ensemble <span class="text-accent">import</span> IsolationForest</div>
               <div class="terminal-line tl-2"><span class="text-accent">from</span> statsmodels.tsa.seasonal <span class="text-accent">import</span> STL</div>
               <div class="terminal-line tl-3">&nbsp;</div>
-              <div class="terminal-line tl-4"><span class="text-accent">def</span> <span class="text-accent-light">detect_anomalies</span>(data, country):</div>
-              <div class="terminal-line tl-5">    if_flags = <span class="text-accent-light">IsolationForest</span>(</div>
-              <div class="terminal-line tl-6">        n_estimators=<span class="text-text-muted">300</span></div>
-              <div class="terminal-line tl-7">    ).fit_predict(data)</div>
-              <div class="terminal-line tl-8">    stl_flags = <span class="text-accent-light">stl_detect</span>(data.hydro)</div>
-              <div class="terminal-line tl-9">    cusum_flags = <span class="text-accent-light">cusum_bilateral</span>(data.hydro)</div>
-              <div class="terminal-line tl-10">&nbsp;</div>
-              <div class="terminal-line tl-11">    consensus = (if_flags + stl_flags + cusum_flags)</div>
-              <div class="terminal-line tl-12">    <span class="text-accent">return</span> consensus >= <span class="text-text-muted">2</span>  <span class="text-text-muted/80"># F1=0.750</span></div>
+              <div class="terminal-line tl-4"><span class="text-accent">def</span> <span class="text-accent-light">detect_anomalies</span>(serie):</div>
+              <div class="terminal-line tl-5">&nbsp;&nbsp;&nbsp;&nbsp;votos = <span class="text-accent-light">isolation_forest</span>(serie)</div>
+              <div class="terminal-line tl-6">&nbsp;&nbsp;&nbsp;&nbsp;votos += <span class="text-accent-light">stl_residual</span>(serie)</div>
+              <div class="terminal-line tl-7">&nbsp;&nbsp;&nbsp;&nbsp;votos += <span class="text-accent-light">cusum_bilateral</span>(serie)</div>
+              <div class="terminal-line tl-8">&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-accent">return</span> votos &gt;= <span class="text-text-muted">2</span></div>
+              <div class="terminal-line tl-9">&nbsp;</div>
+              <div class="terminal-line tl-10"><span class="term-prompt">$</span> python consensus.py --pais EC</div>
+              <div class="terminal-line tl-11"><span class="term-out">&rarr; crisis energ&eacute;tica 2024 detectada</span></div>
+              <div class="terminal-line tl-12"><span class="term-out">&rarr; F1 = 0.750 &middot; consenso de 3 algoritmos</span></div>
+              <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
+            </div>
+
+            <div class="snippet-panel p-5 font-mono text-[13px] leading-relaxed" data-file="stress_svm.py">
+              <div class="terminal-line tl-1"><span class="text-accent">import</span> optuna</div>
+              <div class="terminal-line tl-2"><span class="text-accent">from</span> sklearn.svm <span class="text-accent">import</span> SVC</div>
+              <div class="terminal-line tl-3">&nbsp;</div>
+              <div class="terminal-line tl-4">study = optuna.<span class="text-accent-light">create_study</span>(</div>
+              <div class="terminal-line tl-5">&nbsp;&nbsp;&nbsp;&nbsp;sampler=optuna.samplers.<span class="text-accent-light">TPESampler</span>(),</div>
+              <div class="terminal-line tl-6">&nbsp;&nbsp;&nbsp;&nbsp;direction=<span class="text-[#a3e635]">"maximize"</span></div>
+              <div class="terminal-line tl-7">)</div>
+              <div class="terminal-line tl-8">study.<span class="text-accent-light">optimize</span>(objective, n_trials=<span class="text-text-muted">200</span>)</div>
+              <div class="terminal-line tl-9">&nbsp;</div>
+              <div class="terminal-line tl-10"><span class="term-prompt">$</span> python train.py --emb fasttext</div>
+              <div class="terminal-line tl-11"><span class="term-out">&rarr; detecci&oacute;n de estr&eacute;s &middot; tweets crisis 2024</span></div>
+              <div class="terminal-line tl-12"><span class="term-out">&rarr; aceptado &middot; CIT 2026 &middot; Springer Nature</span></div>
+              <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
+            </div>
+
+            <div class="snippet-panel p-5 font-mono text-[13px] leading-relaxed" data-file="reembed.py">
+              <div class="terminal-line tl-1"><span class="text-accent">from</span> text_embeddings <span class="text-accent">import</span> TEIClient</div>
+              <div class="terminal-line tl-2">&nbsp;</div>
+              <div class="terminal-line tl-3"><span class="text-accent">async def</span> <span class="text-accent-light">reembed</span>(batch):</div>
+              <div class="terminal-line tl-4">&nbsp;&nbsp;&nbsp;&nbsp;vectors = <span class="text-accent">await</span> tei.<span class="text-accent-light">embed</span>(batch, model=<span class="text-[#a3e635]">"BGE-M3"</span>)</div>
+              <div class="terminal-line tl-5">&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-accent">await</span> db.<span class="text-accent-light">copy_records</span>(vectors)</div>
+              <div class="terminal-line tl-6">&nbsp;</div>
+              <div class="terminal-line tl-7"><span class="text-accent">await</span> <span class="text-accent-light">run_workers</span>(concurrency=<span class="text-text-muted">8</span>)</div>
+              <div class="terminal-line tl-8">&nbsp;</div>
+              <div class="terminal-line tl-9"><span class="term-prompt">$</span> python reembed.py --gpu A6000</div>
+              <div class="terminal-line tl-10"><span class="term-out">&rarr; 62.000 conversaciones re-embebidas</span></div>
+              <div class="terminal-line tl-11"><span class="term-out">&rarr; &lt; 1 h &middot; &iacute;ndice HNSW reconstruido</span></div>
+              <div class="terminal-line tl-12">&nbsp;</div>
+              <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
+            </div>
+
+            <div class="snippet-panel p-5 font-mono text-[13px] leading-relaxed" data-file="agent.py">
+              <div class="terminal-line tl-1"><span class="text-accent">from</span> langgraph.graph <span class="text-accent">import</span> StateGraph</div>
+              <div class="terminal-line tl-2">&nbsp;</div>
+              <div class="terminal-line tl-3">graph = <span class="text-accent-light">StateGraph</span>(AgentState)</div>
+              <div class="terminal-line tl-4">graph.<span class="text-accent-light">add_node</span>(<span class="text-[#a3e635]">"router"</span>, clasificar_intencion)</div>
+              <div class="terminal-line tl-5">graph.<span class="text-accent-light">add_node</span>(<span class="text-[#a3e635]">"tools"</span>, ejecutar_herramientas)</div>
+              <div class="terminal-line tl-6">graph.<span class="text-accent-light">add_conditional_edges</span>(<span class="text-[#a3e635]">"router"</span>, decidir)</div>
+              <div class="terminal-line tl-7">&nbsp;</div>
+              <div class="terminal-line tl-8">agente = graph.<span class="text-accent-light">compile</span>(checkpointer=postgres)</div>
+              <div class="terminal-line tl-9">&nbsp;</div>
+              <div class="terminal-line tl-10"><span class="term-prompt">$</span> wauto --canal whatsapp</div>
+              <div class="terminal-line tl-11"><span class="term-out">&rarr; WhatsApp &middot; Telegram &middot; Meta</span></div>
+              <div class="terminal-line tl-12"><span class="term-out">&rarr; 5 planes en producci&oacute;n &middot; respuesta &lt; 2 s</span></div>
               <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
             </div>
           </div>
@@ -288,7 +283,7 @@
   .snippet-active .terminal-line {
     opacity: 0;
     animation: terminal-type 0.25s ease forwards;
-    white-space: nowrap;
+    white-space: pre;
   }
 
   .snippet-active .tl-1  { animation-delay: 0.15s; }
@@ -304,6 +299,14 @@
   .snippet-active .tl-11 { animation-delay: 1.38s; }
   .snippet-active .tl-12 { animation-delay: 1.50s; }
   .snippet-active .tl-13 { animation-delay: 1.62s; }
+
+  .term-out {
+    color: #a3e635;
+  }
+
+  .term-prompt {
+    color: var(--color-accent-light);
+  }
 
   /* Hide lines in non-active panels */
   .snippet-panel:not(.snippet-active) .terminal-line {

@@ -409,7 +409,8 @@ body::before {
 
   .reveal,
   .reveal-stagger > *,
-  .hero-animate {
+  .hero-animate,
+  .snippet-active .terminal-line {
     opacity: 1 !important;
     transform: none !important;
   }
