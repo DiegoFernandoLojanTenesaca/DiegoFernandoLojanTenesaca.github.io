@@ -343,6 +343,7 @@ export const translations: Record<string, Record<string, string>> = {
   "cert.subtitle": { es: "Formación continua en tecnología, datos e inteligencia artificial.", en: "Continuous learning in technology, data and artificial intelligence." },
 
   // Nav - Certifications
+  "proj.tag.filtering": { es: "Filtrando por", en: "Filtering by" },
   "proj.filter.all": { es: "Todos", en: "All" },
   "proj.filter.ml": { es: "Machine Learning & Datos", en: "Machine Learning & Data" },
   "proj.filter.agents": { es: "Agentes & LLM", en: "Agents & LLM" },

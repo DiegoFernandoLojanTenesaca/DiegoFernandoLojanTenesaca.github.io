@@ -91,6 +91,18 @@ const filters = [
       ))}
     </div>
 
+    <div id="tag-active" class="hidden justify-center mb-8" aria-live="polite">
+      <button
+        type="button"
+        id="tag-clear"
+        class="inline-flex items-center gap-2 px-3 py-1.5 text-sm rounded-lg border border-accent-light text-accent-light bg-accent-soft"
+      >
+        <span data-i18n="proj.tag.filtering">Filtrando por</span>
+        <span id="tag-name" class="font-mono font-semibold"></span>
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
     <!-- Featured projects -->
     <div class="reveal-stagger grid md:grid-cols-2 lg:grid-cols-3 gap-6">
       {featured.map((project) => (
@@ -172,9 +184,13 @@ const filters = [
           <!-- Tags -->
           <div class="flex flex-wrap gap-1.5">
             {project.tags.map((tag) => (
-              <span class="px-2 py-0.5 text-[11px] font-mono bg-accent-soft text-accent-light rounded">
+              <button
+                type="button"
+                data-tag={tag}
+                class="proj-tag px-2 py-0.5 text-[11px] font-mono bg-accent-soft text-accent-light rounded"
+              >
                 {tag}
-              </span>
+              </button>
             ))}
           </div>
           </div>
@@ -231,9 +247,13 @@ const filters = [
               </p>
               <div class="flex flex-wrap gap-1">
                 {project.tags.slice(0, 4).map((tag) => (
-                  <span class="px-2 py-0.5 text-[10px] font-mono bg-accent-soft text-accent-light rounded">
+                  <button
+                    type="button"
+                    data-tag={tag}
+                    class="proj-tag px-2 py-0.5 text-[10px] font-mono bg-accent-soft text-accent-light rounded"
+                  >
                     {tag}
-                  </span>
+                  </button>
                 ))}
                 {project.tags.length > 4 && (
                   <span class="px-2 py-0.5 text-[10px] font-mono text-text-muted/80">
@@ -248,4 +268,49 @@ const filters = [
       </div>
     )}
   </div>
+
+  <script>
+    const sec = document.getElementById("proyectos");
+    const cards = [...sec.querySelectorAll("[data-cat]")];
+    const chipBox = document.getElementById("tag-active");
+    const chipName = document.getElementById("tag-name");
+    const otherBlock = sec.querySelector(".proj-other");
+
+    function applyTag(tag) {
+      sec.dataset.tagFilter = tag || "";
+      chipBox.classList.toggle("hidden", !tag);
+      chipBox.classList.toggle("flex", !!tag);
+      if (tag) chipName.textContent = tag;
+
+      cards.forEach((card) => {
+        const match = !tag || [...card.querySelectorAll("[data-tag]")].some((b) => b.dataset.tag === tag);
+        card.classList.toggle("tag-off", !match);
+      });
+
+      sec.querySelectorAll(".proj-tag").forEach((b) => {
+        b.setAttribute("aria-pressed", String(b.dataset.tag === tag));
+      });
+
+      if (otherBlock) {
+        const anyLeft = [...otherBlock.querySelectorAll("[data-cat]")].some((c) => !c.classList.contains("tag-off"));
+        otherBlock.classList.toggle("tag-off", !!tag && !anyLeft);
+      }
+    }
+
+    sec.addEventListener("click", (e) => {
+      const btn = e.target.closest(".proj-tag");
+      if (btn) {
+        const tag = btn.dataset.tag;
+        const next = sec.dataset.tagFilter === tag ? "" : tag;
+        if (next) document.getElementById("pf-all").checked = true;
+        applyTag(next);
+        return;
+      }
+      if (e.target.closest("#tag-clear")) applyTag("");
+    });
+
+    sec.querySelectorAll(".proj-radio").forEach((r) => {
+      r.addEventListener("change", () => applyTag(""));
+    });
+  </script>
 </section>

@@ -546,3 +546,24 @@ body::before {
   color: var(--color-accent-light);
   background: var(--color-accent-soft);
 }
+
+/* ===== TAG FILTER ===== */
+
+.proj-tag {
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.proj-tag:hover {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.proj-tag[aria-pressed="true"] {
+  background: var(--color-accent-light);
+  color: var(--color-bg);
+}
+
+#proyectos .tag-off {
+  display: none !important;
+}
