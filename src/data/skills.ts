@@ -93,8 +93,6 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Kotlin", icon: "kotlin" },
       { name: "Jetpack Compose", icon: "compose" },
-      { name: "Compose Multiplatform", icon: "compose" },
-      { name: "WebAssembly", icon: "wasm" },
       { name: "React Native", icon: "react" },
       { name: "Expo", icon: "expo" },
       { name: "NativeWind", icon: "tailwindcss" },
