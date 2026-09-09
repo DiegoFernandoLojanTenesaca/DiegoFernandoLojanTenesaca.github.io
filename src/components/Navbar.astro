@@ -33,7 +33,7 @@ const links = [
           <a
             href={link.href}
             data-i18n={link.key}
-            class="px-3 py-2 text-sm text-text-muted hover:text-accent transition-colors duration-200 rounded-md hover:bg-accent-soft"
+            class="px-3 py-2 text-sm text-text-muted hover:text-accent-light transition-colors duration-200 rounded-md hover:bg-accent-soft"
           >
             {link.label}
           </a>
@@ -42,7 +42,7 @@ const links = [
 
       <!-- Language toggle + Mobile hamburger -->
       <div class="flex items-center gap-2">
-        <button id="lang-toggle" class="px-2 py-1 text-xs font-mono text-text-muted border border-border rounded hover:border-accent hover:text-accent transition-colors" aria-label="Cambiar idioma">
+        <button id="lang-toggle" class="px-2 py-1 text-xs font-mono text-text-muted border border-border rounded hover:border-accent hover:text-accent-light transition-colors" aria-label="Idioma: ES">
           ES
         </button>
         <label for="mobile-menu" class="md:hidden cursor-pointer p-2 text-text-muted hover:text-accent transition-colors">
@@ -62,14 +62,14 @@ const links = [
         <a
           href={link.href}
           data-i18n={link.key}
-          class="block px-3 py-2 text-sm text-text-muted hover:text-accent hover:bg-accent-soft rounded-md transition-colors"
+          class="block px-3 py-2 text-sm text-text-muted hover:text-accent-light hover:bg-accent-soft rounded-md transition-colors"
           onclick="document.getElementById('mobile-menu').checked = false"
         >
           {link.label}
         </a>
       ))}
       <div class="pt-2 px-3">
-        <button id="lang-toggle-mobile" class="px-2 py-1 text-xs font-mono text-text-muted border border-border rounded hover:border-accent hover:text-accent transition-colors" aria-label="Cambiar idioma">
+        <button id="lang-toggle-mobile" class="px-2 py-1 text-xs font-mono text-text-muted border border-border rounded hover:border-accent hover:text-accent-light transition-colors" aria-label="Idioma: ES">
           ES
         </button>
       </div>

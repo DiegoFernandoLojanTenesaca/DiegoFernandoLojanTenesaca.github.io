@@ -108,6 +108,7 @@ const ogImage = new URL("/portfolio/og-image.png", Astro.site).href;
         // Update toggle buttons
         document.querySelectorAll("#lang-toggle, #lang-toggle-mobile").forEach((btn) => {
           btn.textContent = lang.toUpperCase();
+          btn.setAttribute("aria-label", (lang === "es" ? "Idioma: " : "Language: ") + lang.toUpperCase());
         });
       }
 
