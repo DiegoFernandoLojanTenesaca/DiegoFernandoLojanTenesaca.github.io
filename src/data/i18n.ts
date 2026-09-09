@@ -26,7 +26,6 @@ export const translations: Record<string, Record<string, string>> = {
   "tech.cat.backend": { es: "Backend", en: "Backend" },
   "tech.cat.dataai": { es: "Data & AI", en: "Data & AI" },
   "tech.cat.dbdevops": { es: "Bases de Datos & DevOps", en: "Databases & DevOps" },
-  "tech.cat.realtime": { es: "Tiempo Real", en: "Real Time" },
   "tech.cat.tools": { es: "Herramientas", en: "Tools" },
 
   // About
