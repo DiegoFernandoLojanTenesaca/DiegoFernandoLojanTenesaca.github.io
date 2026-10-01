@@ -157,6 +157,15 @@ export const translations: Record<string, Record<string, string>> = {
     en: "Push notifications, high-performance mobile storage and packaging for Android/iOS",
   },
 
+  // Experience - Xynitra Devs
+  "exp.xy.1": {
+    es: "Plataforma de códigos OTP para cuentas de streaming: recepción de correo con Cloudflare Email Workers, extracción de códigos en tiempo real, Upstash Redis, CAPTCHA y panel de administración con killswitch",
+    en: "OTP code platform for streaming accounts: email intake through Cloudflare Email Workers, real-time code extraction, Upstash Redis, CAPTCHA and an admin panel with a killswitch",
+  },
+  "exp.xy.2": {
+    es: "Definición técnica del estudio y de sus productos junto al equipo fundador",
+    en: "Technical direction of the studio and its products alongside the founding team",
+  },
   // Experience - Freelance
   "exp.fr.1": {
     es: "CRM para consultora de asesoría energética con gestión de clientes, formularios dinámicos, paginación y componentes reutilizables sobre repositorio privado del cliente",
@@ -207,6 +216,14 @@ export const translations: Record<string, Record<string, string>> = {
   "proj.yachaq.desc": {
     es: "Agente sobre el modelo de Riksi: elige qué consultar entre el clasificador, GBIF en vivo y 691 fichas, y declara las herramientas que usó. Corre con 0,2 vCPU y 512 MB.",
     en: "Agent on top of the Riksi model: it picks what to consult among the classifier, live GBIF and 691 species sheets, and states the tools it used. Runs on 0.2 vCPU and 512 MB.",
+  },
+  "proj.xyra.desc": {
+    es: "Companion de League of Legends para PC y Android: se conecta al cliente por WebSocket, lee las cartas con OCR y empareja el celular por QR. Se actualiza solo y verifica cada versión.",
+    en: "League of Legends companion for PC and Android: it connects to the client over WebSocket, reads augment cards with OCR and pairs the phone by QR. It updates itself and verifies every release.",
+  },
+  "proj.ordo.desc": {
+    es: "Ordena Gmail con IA: propone una etiqueta por remitente y la deja como filtro de Gmail, que sigue funcionando con la PC apagada. Claude, Groq, Ollama local o cualquier API compatible con OpenAI.",
+    en: "Organizes Gmail with AI: it proposes a label per sender and turns it into a Gmail filter that keeps working with the computer off. Claude, Groq, local Ollama or any OpenAI-compatible API.",
   },
   "proj.riksiradar.desc": {
     es: "Pipeline que audita a GBIF: clasifica las observaciones sin ver la etiqueta y guarda las dos versiones. Kafka, DuckDB y dbt; de 400 registros, 63 no coinciden.",

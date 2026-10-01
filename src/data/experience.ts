@@ -13,6 +13,15 @@ export interface Experience {
 // aqui, hay que actualizar ese array en el componente.
 export const experiences: Experience[] = [
   {
+    company: "Inti Horizons IA",
+    role: "Ingeniero de IA Aplicada",
+    period: "Oct 2026 - Actualidad",
+    location: "Ecuador / Remoto",
+    description: [],
+    tags: [],
+    current: true,
+  },
+  {
     company: "Indaga Lab",
     role: "Fundador y Desarrollador Principal",
     period: "2025 - Actualidad",
@@ -25,6 +34,18 @@ export const experiences: Experience[] = [
       "Dirección técnica del equipo, definición de producto y modelo de precios, y acreditación de colaboradores",
     ],
     tags: ["Next.js 16", "React 19", "FastAPI", "Supabase", "pgvector", "LangGraph", "MCP", "Kotlin"],
+    current: true,
+  },
+  {
+    company: "Xynitra Devs",
+    role: "Cofundador",
+    period: "Jul 2026 - Actualidad",
+    location: "Quito, Ecuador",
+    description: [
+      "Plataforma de códigos OTP para cuentas de streaming: recepción de correo con Cloudflare Email Workers, extracción de códigos en tiempo real, Upstash Redis, CAPTCHA y panel de administración con killswitch",
+      "Definición técnica del estudio y de sus productos junto al equipo fundador",
+    ],
+    tags: ["Next.js 16", "FastAPI", "Cloudflare Workers", "Upstash Redis"],
     current: true,
   },
   {

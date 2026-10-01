@@ -51,6 +51,30 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Xyra",
+    description:
+      "Companion de League of Legends para PC y Android: se conecta al cliente por WebSocket, lee las cartas con OCR y empareja el celular por QR. Se actualiza solo y verifica cada versión.",
+    tags: ["Rust", "Tauri 2", "Svelte 5", "Kotlin", "WebSocket", "OCR"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/xyra",
+    demo: "https://xyra-app.pages.dev/",
+    kaggle: null,
+    image: "projects/xyra.webp",
+    category: "apps",
+    featured: true,
+  },
+  {
+    title: "Ordo",
+    description:
+      "Ordena Gmail con IA: propone una etiqueta por remitente y la deja como filtro de Gmail, que sigue funcionando con la PC apagada. Claude, Groq, Ollama local o cualquier API compatible con OpenAI.",
+    tags: ["Rust", "Tauri", "Svelte", "Gmail API", "LLMs", "Ollama"],
+    github: "https://github.com/DiegoFernandoLojanTenesaca/ordo-mail",
+    demo: null,
+    kaggle: null,
+    image: "projects/ordo.webp",
+    category: "apps",
+    featured: true,
+  },
+  {
     title: "Yapa",
     description:
       "Promociones bancarias del Ecuador en un solo lugar. Un scraper recorre a diario las páginas públicas de beneficios; favoritas por usuario y filtrado por banco.",
