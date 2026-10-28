@@ -262,7 +262,7 @@ export const projects: Project[] = [
   {
     title: "Sudial AI",
     description:
-      "Microservicio de IA en producción, multi-tenant con 18 dominios. Búsqueda semántica sobre 139.000 conversaciones con BGE-M3 y un agente de 15 herramientas.",
+      "Microservicio de IA en producción, multi-tenant por dominios. Búsqueda semántica sobre el histórico de conversaciones con BGE-M3 y un agente con orquestación de herramientas.",
     tags: ["Python", "FastAPI", "LangChain", "LangGraph", "pgvector", "Docker"],
     github: null,
     demo: null,
@@ -451,6 +451,42 @@ export const projects: Project[] = [
     kaggle: null,
     image: "projects/aisladores.webp",
     category: "ml",
+    featured: false,
+  },
+  {
+    title: "Clave49 / Latitud0",
+    description:
+      "Librería en PHP para los comprobantes electrónicos del SRI del Ecuador, de la clave de acceso a la autorización. Lo que el SRI cambia vive en tres fuentes de verdad: los XSD oficiales con su hash, los catálogos como filas con vigencia y norma, y las reglas de llenado. Así una reforma es una fila nueva y no un cambio de código.",
+    tags: ["PHP", "Laravel", "SRI", "XML", "XSD"],
+    github: null,
+    demo: null,
+    kaggle: null,
+    image: null,
+    category: "saas",
+    featured: false,
+  },
+  {
+    title: "Reajusta",
+    description:
+      "Reajuste de precios de obra pública en Ecuador con el IPCO del INEC: toma las fórmulas polinómicas del contrato y calcula el reajuste por planilla, con los índices oficiales al día.",
+    tags: ["TypeScript", "Next.js", "INEC", "SERCOP"],
+    github: null,
+    demo: null,
+    kaggle: null,
+    image: null,
+    category: "saas",
+    featured: false,
+  },
+  {
+    title: "Perfil de GitHub generado por codigo",
+    description:
+      "Mi README de GitHub, construido por código: tarjetas SVG en estilo terminal que una Action regenera a diario con datos de GitHub y GitLab, un mapa de repositorios agrupado con TF-IDF, SVD, t-SNE y k-means, y un agente que responde preguntas abiertas como Issues, con RAG sobre su propia documentación.",
+    tags: ["Python", "GitHub Actions", "RAG", "scikit-learn", "SVG"],
+    github: null,
+    demo: null,
+    kaggle: null,
+    image: null,
+    category: "agents",
     featured: false,
   },
 ];

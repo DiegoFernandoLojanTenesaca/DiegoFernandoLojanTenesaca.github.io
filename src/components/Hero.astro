@@ -33,13 +33,12 @@
         </h1>
 
         <h2 class="hero-animate hero-delay-3 text-lg sm:text-xl text-text-muted font-light mb-6">
-          Full Stack Developer <span class="text-accent font-normal">|</span> Data & AI Engineer
+          Ingeniero de IA Aplicada <span class="text-accent font-normal">|</span> Full Stack Developer
         </h2>
 
         <p class="hero-animate hero-delay-4 max-w-lg text-text-muted text-base leading-relaxed mb-8" data-i18n="hero.tagline">
-          Trabajo donde el machine learning se topa con el despliegue: modelos que hay que
-          cuantizar, agentes que tienen que caber en el servidor barato y pipelines que
-          alguien revisa el lunes.
+          Llevo la IA a producción y la mantengo ahí. Backend en Laravel, frontend en
+          Angular, modelos que hay que cuantizar y pipelines que alguien revisa el lunes.
         </p>
 
         <div class="hero-animate hero-delay-5 flex flex-col sm:flex-row items-start gap-4">
@@ -84,24 +83,24 @@
             <div class="w-3 h-3 rounded-full bg-[#ff5f57]"></div>
             <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
             <div class="w-3 h-3 rounded-full bg-[#28c840]"></div>
-            <span id="terminal-filename" class="ml-3 text-xs text-text-muted font-mono">semantic_search.py</span>
+            <span id="terminal-filename" class="ml-3 text-xs text-text-muted font-mono">clave_acceso.php</span>
           </div>
 
           <!-- Snippet containers -->
           <div class="relative" style="min-height: 384px;">
-            <div class="snippet-panel snippet-active p-5 font-mono text-[13px] leading-relaxed" data-file="semantic_search.py">
-              <div class="terminal-line tl-1"><span class="text-accent">from</span> pgvector.sqlalchemy <span class="text-accent">import</span> Vector</div>
-              <div class="terminal-line tl-2"><span class="text-accent">from</span> fastapi <span class="text-accent">import</span> FastAPI</div>
+            <div class="snippet-panel snippet-active p-5 font-mono text-[13px] leading-relaxed" data-file="clave_acceso.php">
+              <div class="terminal-line tl-1"><span class="text-accent">use</span> Latitud0\Clave49\ClaveAcceso;</div>
+              <div class="terminal-line tl-2"><span class="text-accent">use</span> Latitud0\Clave49\Catalogos;</div>
               <div class="terminal-line tl-3">&nbsp;</div>
-              <div class="terminal-line tl-4">app = <span class="text-accent-light">FastAPI</span>(title=<span class="text-[#a3e635]">"Sudial AI"</span>)</div>
-              <div class="terminal-line tl-5">&nbsp;</div>
-              <div class="terminal-line tl-6"><span class="text-accent">@</span><span class="text-accent-light">app.post</span>(<span class="text-[#a3e635]">"/query"</span>)</div>
-              <div class="terminal-line tl-7"><span class="text-accent">async def</span> <span class="text-accent-light">semantic_search</span>(q: <span class="text-accent-light">str</span>):</div>
-              <div class="terminal-line tl-8">&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-accent">return await</span> retriever.<span class="text-accent-light">ainvoke</span>(q)</div>
-              <div class="terminal-line tl-9">&nbsp;</div>
-              <div class="terminal-line tl-10"><span class="term-prompt">$</span> curl -s /query -d <span class="text-[#a3e635]">&#39;&#123;"q":"factura"&#125;&#39;</span></div>
-              <div class="terminal-line tl-11"><span class="term-out">&rarr; 139.000 conversaciones &middot; BGE-M3 &middot; HNSW</span></div>
-              <div class="terminal-line tl-12"><span class="term-out">&rarr; 18 dominios &middot; 15 tools &middot; &lt; 2 s</span></div>
+              <div class="terminal-line tl-4">$clave = <span class="text-accent-light">ClaveAcceso</span>::<span class="text-accent-light">para</span>($factura)</div>
+              <div class="terminal-line tl-5">&nbsp;&nbsp;&nbsp;&nbsp;-&gt;<span class="text-accent-light">emitidaEl</span>($fecha)</div>
+              <div class="terminal-line tl-6">&nbsp;&nbsp;&nbsp;&nbsp;-&gt;<span class="text-accent-light">generar</span>();</div>
+              <div class="terminal-line tl-7">&nbsp;</div>
+              <div class="terminal-line tl-8"><span class="text-text-muted">// la fecha de emisi&oacute;n manda: cada</span></div>
+              <div class="terminal-line tl-9"><span class="text-text-muted">// comprobante usa lo vigente ese d&iacute;a</span></div>
+              <div class="terminal-line tl-10">$iva = <span class="text-accent-light">Catalogos</span>::<span class="text-accent-light">tarifa</span>(<span class="text-[#a3e635]">"IVA"</span>, $fecha);</div>
+              <div class="terminal-line tl-11"><span class="term-prompt">$</span> php artisan sri:validar</div>
+              <div class="terminal-line tl-12"><span class="term-out">&rarr; 49 d&iacute;gitos &middot; m&oacute;dulo 11 correcto</span></div>
               <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
             </div>
 
@@ -137,19 +136,19 @@
               <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
             </div>
 
-            <div class="snippet-panel p-5 font-mono text-[13px] leading-relaxed" data-file="reembed.py">
-              <div class="terminal-line tl-1"><span class="text-accent">from</span> text_embeddings <span class="text-accent">import</span> TEIClient</div>
+            <div class="snippet-panel p-5 font-mono text-[13px] leading-relaxed" data-file="riksi.ts">
+              <div class="terminal-line tl-1"><span class="text-accent">import</span> &#123; InferenceSession &#125; <span class="text-accent">from</span> <span class="text-[#a3e635]">"onnxruntime-web"</span>;</div>
               <div class="terminal-line tl-2">&nbsp;</div>
-              <div class="terminal-line tl-3"><span class="text-accent">async def</span> <span class="text-accent-light">reembed</span>(batch):</div>
-              <div class="terminal-line tl-4">&nbsp;&nbsp;&nbsp;&nbsp;vectors = <span class="text-accent">await</span> tei.<span class="text-accent-light">embed</span>(batch, model=<span class="text-[#a3e635]">"BGE-M3"</span>)</div>
-              <div class="terminal-line tl-5">&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-accent">await</span> db.<span class="text-accent-light">copy_records</span>(vectors)</div>
+              <div class="terminal-line tl-3"><span class="text-accent">const</span> sesion = <span class="text-accent">await</span> InferenceSession.<span class="text-accent-light">create</span>(</div>
+              <div class="terminal-line tl-4">&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-[#a3e635]">"/modelo-int8.onnx"</span></div>
+              <div class="terminal-line tl-5">);</div>
               <div class="terminal-line tl-6">&nbsp;</div>
-              <div class="terminal-line tl-7"><span class="text-accent">await</span> <span class="text-accent-light">run_workers</span>(concurrency=<span class="text-text-muted">8</span>)</div>
+              <div class="terminal-line tl-7"><span class="text-accent">const</span> especie = <span class="text-accent">await</span> sesion.<span class="text-accent-light">run</span>(&#123; input: tensor &#125;);</div>
               <div class="terminal-line tl-8">&nbsp;</div>
-              <div class="terminal-line tl-9"><span class="term-prompt">$</span> python reembed.py --gpu A6000</div>
-              <div class="terminal-line tl-10"><span class="term-out">&rarr; 62.000 conversaciones re-embebidas</span></div>
-              <div class="terminal-line tl-11"><span class="term-out">&rarr; &lt; 1 h &middot; &iacute;ndice HNSW reconstruido</span></div>
-              <div class="terminal-line tl-12">&nbsp;</div>
+              <div class="terminal-line tl-9"><span class="text-text-muted">// sin servidor: el modelo vive en el navegador</span></div>
+              <div class="terminal-line tl-10">&nbsp;</div>
+              <div class="terminal-line tl-11"><span class="term-prompt">$</span> npm run build</div>
+              <div class="terminal-line tl-12"><span class="term-out">&rarr; clasificador cuantizado &middot; funciona sin se&ntilde;al</span></div>
               <div class="terminal-line tl-13"><span class="terminal-cursor"></span></div>
             </div>
 

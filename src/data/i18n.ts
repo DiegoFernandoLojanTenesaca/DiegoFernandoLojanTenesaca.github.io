@@ -9,10 +9,10 @@ export const translations: Record<string, Record<string, string>> = {
 
   // Hero
   "hero.greeting": { es: "<developer />", en: "<developer />" },
-  "hero.subtitle": { es: "Full Stack Developer | Data & AI Engineer", en: "Full Stack Developer | Data & AI Engineer" },
+  "hero.subtitle": { es: "Ingeniero de IA Aplicada | Full Stack Developer", en: "Applied AI Engineer | Full Stack Developer" },
   "hero.tagline": {
-    es: "Trabajo donde el machine learning se topa con el despliegue: modelos que hay que cuantizar, agentes que tienen que caber en el servidor barato y pipelines que alguien revisa el lunes.",
-    en: "I work where machine learning meets deployment: models that need quantizing, agents that have to fit on the cheap server, and pipelines someone reviews on Monday.",
+    es: "Llevo la IA a producción y la mantengo ahí. Backend en Laravel, frontend en Angular, modelos que hay que cuantizar y pipelines que alguien revisa el lunes.",
+    en: "I take AI to production and keep it there. Laravel on the back, Angular on the front, models that need quantizing, and pipelines someone reviews on Monday.",
   },
   "hero.cta.projects": { es: "Ver Proyectos", en: "View Projects" },
   "hero.cta.contact": { es: "Contáctame", en: "Contact Me" },
@@ -31,12 +31,12 @@ export const translations: Record<string, Record<string, string>> = {
   // About
   "about.title": { es: "Sobre Mí", en: "About Me" },
   "about.p1": {
-    es: "Ingeniero en Ciencias de la Computación con cuatro años desarrollando software, los dos últimos de forma profesional, y dos enfocados en machine learning, ciencia de datos, análisis de datos y procesamiento del lenguaje natural (PLN). Trabajo en la intersección entre el desarrollo full stack, la ingeniería de Data & AI y la investigación aplicada.",
-    en: "Computer Science Engineer with four years developing software, the last two professionally, and two focused on machine learning, data science, data analysis and natural language processing (NLP). I work at the intersection of full stack development, Data & AI engineering and applied research.",
+    es: "Ingeniero en Ciencias de la Computación con cuatro años desarrollando software, los tres últimos de forma profesional. Trabajo donde se cruzan el desarrollo full stack, la IA aplicada y la investigación.",
+    en: "Computer Science Engineer with four years developing software, the last three professionally. I work where full stack development, applied AI and research meet.",
   },
   "about.p2": {
-    es: "Ahora dedico el tiempo a Indaga Lab, mi propia marca, bajo la que viven productos como Kumbre (construcción) y Wauto, el CRM multicanal con IA que ya está en producción con planes de pago. Antes, en Dataglov S.A.S., formé parte del equipo que sostiene un microservicio de IA multi-tenant con 18 dominios funcionales y búsqueda semántica sobre 139.000 conversaciones vectorizadas. Y antes de eso construí Sudial, una plataforma SaaS multi-tenant con backoffice web y app móvil.",
-    en: "Right now I devote my time to Indaga Lab, my own brand, home to products like Kumbre (construction) and Wauto, an AI-powered multichannel CRM already live with paid plans. Before that, at Dataglov S.A.S., I was part of the team behind a multi-tenant AI microservice with 18 functional domains and semantic search over 139,000 vectorized conversations. And before that I built Sudial, a multi-tenant SaaS platform with a web backoffice and mobile app.",
+    es: "Hoy soy ingeniero de IA aplicada en Inti Horizons IA, sobre una plataforma web en producción: backend en PHP con Laravel, frontend en Angular y MySQL. En paralelo sostengo Indaga Lab, mi marca, con productos como Wauto, el CRM multicanal con IA que ya está en producción con planes de pago, y Clave49, la librería de comprobantes electrónicos del SRI. Antes, en Dataglov S.A.S., formé parte del equipo que sostenía un microservicio de IA multi-tenant con búsqueda semántica sobre el histórico de conversaciones del producto.",
+    en: "Today I am an applied AI engineer at Inti Horizons IA, on a production web platform: a PHP/Laravel backend, an Angular frontend and MySQL. Alongside that I run Indaga Lab, my own brand, with products like Wauto, the AI-powered multichannel CRM already live with paid plans, and Clave49, the library for Ecuador's electronic tax invoicing. Before that, at Dataglov S.A.S., I was part of the team behind a multi-tenant AI microservice with semantic search over the product's conversation history.",
   },
   "about.p3": {
     es: "Últimamente el trabajo se corrió hacia lo nativo y lo multiplataforma: apps Android en Kotlin y una sola base de código que compila a móvil, escritorio y navegador. Lo que construyo para mí lo publico como open source, con releases automatizados para Windows, Linux, macOS y Android.",
@@ -91,24 +91,24 @@ export const translations: Record<string, Record<string, string>> = {
 
   // Experience - Dataglov
   "exp.dg.1": {
-    es: "Desarrollo y mantenimiento de un microservicio de IA con arquitectura DDD y multi-tenencia aislada por esquemas en PostgreSQL, organizado en 18 dominios funcionales servidos por una API REST única",
+    es: "Desarrollo y mantenimiento de un microservicio de IA con arquitectura DDD y multi-tenencia aislada por esquemas en PostgreSQL, organizado por dominios funcionales servidos por una API REST única",
     en: "Development and maintenance of an AI microservice built on DDD with schema-isolated multi-tenancy in PostgreSQL, organized into 18 functional domains behind a single REST API",
   },
   "exp.dg.2": {
-    es: "Búsqueda semántica sobre 139.000 conversaciones vectorizadas con embeddings multilingües BGE-M3 de 1.024 dimensiones e índice HNSW en pgvector",
-    en: "Semantic search over 139,000 vectorized conversations using multilingual BGE-M3 embeddings of 1,024 dimensions and an HNSW index in pgvector",
+    es: "Búsqueda semántica sobre el histórico de conversaciones del producto, con embeddings multilingües BGE-M3 e índice HNSW en pgvector",
+    en: "Semantic search over the product's conversation history, using multilingual BGE-M3 embeddings and an HNSW index in pgvector",
   },
   "exp.dg.3": {
-    es: "Pipelines ETL para ingestión, limpieza y enriquecimiento de grandes volúmenes de conversaciones y pares cliente-agente, con jobs asíncronos y workers en background. Re-embebido de 62.000 conversaciones en menos de una hora sobre GPU NVIDIA A6000 con Text Embeddings Inference",
-    en: "ETL pipelines for ingestion, cleaning and enrichment of large volumes of conversations and customer-agent pairs, with async jobs and background workers. Re-embedded 62,000 conversations in under an hour on an NVIDIA A6000 GPU with Text Embeddings Inference",
+    es: "Pipelines ETL para ingestión, limpieza y enriquecimiento de grandes volúmenes de conversaciones y pares cliente-agente, con jobs asíncronos y workers en background. Re-embebido masivo del histórico sobre GPU con Text Embeddings Inference",
+    en: "ETL pipelines for ingestion, cleaning and enrichment of large volumes of conversations and customer-agent pairs, with async jobs and background workers. Bulk re-embedding of the history on GPU with Text Embeddings Inference",
   },
   "exp.dg.4": {
-    es: "Benchmark propio de motores vectoriales sobre los 139.000 vectores reales, midiendo latencia, recall y memoria, para decidir el motor de producción",
-    en: "In-house benchmark of vector engines across the full 139,000 real vectors, measuring latency, recall and memory, to pick the production engine",
+    es: "Benchmark propio de motores vectoriales sobre los vectores reales de producción, midiendo latencia, recall y memoria, para decidir con datos y no por moda",
+    en: "In-house benchmark of vector engines across the real production vectors, measuring latency, recall and memory, to pick the engine with data rather than by hype",
   },
   "exp.dg.5": {
-    es: "Agente conversacional con 15 herramientas de tool calling, control de bucles, caché normalizado y enmascaramiento de PII",
-    en: "Conversational agent with 15 tool-calling tools, loop control, normalized caching and PII masking",
+    es: "Agente conversacional con tool calling, control de bucles, caché normalizado y enmascaramiento de PII",
+    en: "Conversational agent with tool calling, loop control, normalized caching and PII masking",
   },
   "exp.dg.6": {
     es: "Integración y orquestación de LLMs con LangChain y LangGraph. Servicios complementarios de clasificación zero-shot, OCR con extracción estructurada, transcripción local de audio, traducción offline y moderación de contenido",
@@ -209,6 +209,18 @@ export const translations: Record<string, Record<string, string>> = {
   "proj.subtitle": { es: "Proyectos profesionales, productos propios e investigación", en: "Professional projects, own products and research" },
   "proj.private": { es: "Privado", en: "Private" },
   "proj.other": { es: "Otros proyectos", en: "Other projects" },
+  "proj.clave49.desc": {
+    es: "Librería en PHP para los comprobantes electrónicos del SRI del Ecuador, de la clave de acceso a la autorización. Lo que el SRI cambia vive en tres fuentes de verdad: los XSD oficiales con su hash, los catálogos como filas con vigencia y norma, y las reglas de llenado. Así una reforma es una fila nueva y no un cambio de código.",
+    en: "PHP library for Ecuador's electronic tax invoicing, from the access key to the authorization. Everything the tax authority changes lives in three sources of truth: the official XSDs with their hash, the catalogs as rows with their effective date and legal basis, and the filling rules. A reform becomes a new row, not a code change.",
+  },
+  "proj.reajusta.desc": {
+    es: "Reajuste de precios de obra pública en Ecuador con el IPCO del INEC: toma las fórmulas polinómicas del contrato y calcula el reajuste por planilla, con los índices oficiales al día.",
+    en: "Price adjustment for public works in Ecuador using INEC's IPCO index: it takes the contract's polynomial formulas and computes the adjustment per invoice, with the official indices up to date.",
+  },
+  "proj.githubperfil.desc": {
+    es: "Mi README de GitHub, construido por código: tarjetas SVG en estilo terminal que una Action regenera a diario con datos de GitHub y GitLab, un mapa de repositorios agrupado con TF-IDF, SVD, t-SNE y k-means, y un agente que responde preguntas abiertas como Issues, con RAG sobre su propia documentación.",
+    en: "My GitHub README, built by code: terminal-style SVG cards that an Action regenerates daily from GitHub and GitLab data, a repository map clustered with TF-IDF, SVD, t-SNE and k-means, and an agent that answers open questions as Issues, with RAG over its own documentation.",
+  },
   "proj.riksi.desc": {
     es: "Identifica fauna y flora del Ecuador dentro del navegador, sin cuenta y sin internet. EfficientNet-Lite0 de 3,8 MB cuantizado a 8 bits sobre 100 especies.",
     en: "Identifies Ecuadorian wildlife and plants inside the browser, with no account and no internet. A 3.8 MB EfficientNet-Lite0 quantized to 8 bits over 100 species.",
@@ -222,8 +234,8 @@ export const translations: Record<string, Record<string, string>> = {
     en: "League of Legends companion for PC and Android: it connects to the client over WebSocket, reads augment cards with OCR and pairs the phone by QR. It updates itself and verifies every release.",
   },
   "proj.ordo.desc": {
-    es: "Ordena Gmail con IA: propone una etiqueta por remitente y la deja como filtro de Gmail, que sigue funcionando con la PC apagada. Claude, Groq, Ollama local o cualquier API compatible con OpenAI.",
-    en: "Organizes Gmail with AI: it proposes a label per sender and turns it into a Gmail filter that keeps working with the computer off. Claude, Groq, local Ollama or any OpenAI-compatible API.",
+    es: "App de escritorio que ordena Gmail con IA. Lee solo el nombre, el remitente y el asunto, propone una etiqueta por remitente y la convierte en filtros de Gmail, que siguen funcionando con la computadora apagada. Reorganiza tambien lo ya etiquetado y encuentra las suscripciones que nunca se abren. La IA solo propone: el usuario aprueba cada cambio.",
+    en: "Desktop app that organizes Gmail with AI. It reads only the name, sender and subject, proposes a label per sender and turns it into Gmail filters, which keep working with the computer off. It also reorganizes what was already labelled and finds the subscriptions you never open. The AI only proposes: the user approves every change.",
   },
   "proj.riksiradar.desc": {
     es: "Pipeline que audita a GBIF: clasifica las observaciones sin ver la etiqueta y guarda las dos versiones. Kafka, DuckDB y dbt; de 400 registros, 63 no coinciden.",
@@ -246,8 +258,8 @@ export const translations: Record<string, Record<string, string>> = {
     en: "Platform to discover and build gym routines. Django REST with MySQL and JWT, a Vue 3 frontend with Vite and exercise browsing by category.",
   },
   "proj.cconnect.desc": {
-    es: "Cliente móvil, de escritorio y web para operar un agente de código que corre en tu PC. Una base Svelte + Tauri para Android, escritorio y navegador.",
-    en: "Mobile, desktop and web client to drive a coding agent running on your PC. A single Svelte + Tauri codebase for Android, desktop and the browser.",
+    es: "Cliente de escritorio, web y Android para manejar Claude Code en otra computadora. Una sola base en Svelte y Tauri compila a instalador nativo de Windows, Linux y macOS, a sitio estático y a Android, contra un puente FastAPI sobre el Agent SDK. Se instala con una línea y deja un comando propio, con tres modos de servicio.",
+    en: "Desktop, web and Android client for driving Claude Code on another machine. A single Svelte and Tauri codebase compiles to native installers for Windows, Linux and macOS, to a static site and to Android, against a FastAPI bridge over the Agent SDK. It installs with one line and leaves a command of its own, with three serving modes.",
   },
   "proj.wauto.desc": {
     es: "CRM y automatización de mensajería con IA para WhatsApp, Telegram y Meta. Bandeja multiagente, embudos Kanban y base de conocimiento con recuperación híbrida.",
@@ -270,8 +282,8 @@ export const translations: Record<string, Record<string, string>> = {
     en: "Backs up and keeps the Claude Code OAuth session alive: a snapshot on every token rotation and headless renewal before it expires. Python with no dependencies.",
   },
   "proj.cuadrekit.desc": {
-    es: "Herramientas gratuitas para micronegocios de Ecuador: proformas, recibos, contratos y rol de pagos según el Código del Trabajo. PWA que funciona sin internet.",
-    en: "Free tools for Ecuadorian micro-businesses: quotes, receipts, contracts and payroll under the Labour Code. An installable PWA that works offline.",
+    es: "Más de veinte herramientas gratuitas para micronegocios y freelancers del Ecuador: proformas, recibos, contratos, pagarés, liquidaciones y rol de pagos, con los calculos del Código del Trabajo y el documento armándose en vivo antes de exportarlo. PWA instalable, sin registro ni suscripción, y los datos nunca salen del equipo.",
+    en: "Over twenty free tools for Ecuadorian micro-businesses and freelancers: quotes, receipts, contracts, promissory notes, severance calculations and payroll, with the labour-code maths built in and the document assembling live before export. Installable PWA, no sign-up, no subscription, and the data never leaves the device.",
   },
   "proj.directorio.desc": {
     es: "Plataforma de perfiles con reservas en tiempo real y contenido comunitario anónimo, para 20 países y más de 100 ciudades. PWA instalable mas APK de Android.",
@@ -282,16 +294,16 @@ export const translations: Record<string, Record<string, string>> = {
     en: "3D digital board game about software QA: buy modules, build test coverage and dodge technical debt. Forty squares and local multiplayer.",
   },
   "proj.indagalab.desc": {
-    es: "Mi marca paraguas freelance: portal de servicios técnicos y de IA (consultoría, tesis, sistemas a medida) en indagalab.com y submarca de chatbots empresariales con cotizador IA y backoffice en wauto.indagalab.com.",
-    en: "My umbrella freelance brand: a portal for technical and AI services (consulting, theses, custom systems) at indagalab.com and a sub-brand for business chatbots with AI quoting and admin panel at wauto.indagalab.com.",
+    es: "Plataforma de mi marca: conecta estudiantes y negocios con una red de profesionales independientes que acompañan tesis y artículos o construyen software a medida, y el proyecto se contrata con la marca. Contrato OpenAPI con el cliente y las validaciones generados desde el backend, y cascada de varios proveedores de modelos con respaldo automático.",
+    en: "My brand's platform: it connects students and businesses with a network of independent professionals who support theses and papers or build custom software, with the project contracted through the brand. OpenAPI contract with the client and validations generated from the backend, and a multi-provider model cascade with automatic fallback.",
   },
   "proj.sudial.desc": {
     es: "Plataforma SaaS multi-tenant para chatbots WhatsApp empresariales. Backoffice web, app móvil y backend de mensajería con builder visual de flujos, CRM, citas e inventario.",
     en: "Multi-tenant SaaS platform for business WhatsApp chatbots. Web backoffice, mobile app and messaging backend with visual flow builder, CRM, appointments and inventory.",
   },
   "proj.sudialai.desc": {
-    es: "Microservicio de IA en producción, multi-tenant con 18 dominios. Búsqueda semántica sobre 139.000 conversaciones con BGE-M3 y un agente de 15 herramientas.",
-    en: "Production AI microservice, multi-tenant across 18 domains. Semantic search over 139,000 conversations with BGE-M3 and a 15-tool agent.",
+    es: "Microservicio de IA en producción, multi-tenant por dominios. Búsqueda semántica sobre el histórico de conversaciones con BGE-M3 y un agente con orquestación de herramientas.",
+    en: "Production AI microservice, multi-tenant by domain. Semantic search over the conversation history with BGE-M3 and a tool-orchestrating agent.",
   },
   "proj.kumbre.desc": {
     es: "Herramienta para constructoras que convierte presupuestos PDF del SERCOP a Excel editable, con parsing inteligente, fuzzy matching y catálogo precargado.",

@@ -41,6 +41,9 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Python", icon: "python" },
       { name: "FastAPI", icon: "fastapi" },
+      { name: "PHP", icon: "php" },
+      { name: "Laravel", icon: "laravel" },
+      { name: "Eloquent", icon: "laravel" },
       { name: "Pyramid", icon: "pyramid" },
       { name: "Django", icon: "django" },
       { name: "Node.js", icon: "nodejs" },
@@ -80,6 +83,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "React", icon: "react" },
       { name: "Next.js", icon: "nextjs" },
+      { name: "Angular", icon: "angular" },
       { name: "TypeScript", icon: "typescript" },
       { name: "Tailwind CSS", icon: "tailwindcss" },
       { name: "Astro", icon: "astro" },
