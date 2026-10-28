@@ -274,8 +274,8 @@ export const translations: Record<string, Record<string, string>> = {
     en: "Turns Google-free Android phones into an AI agent operated over Telegram, with embedded Python and several LLM providers with failover.",
   },
   "proj.officego.desc": {
-    es: "Instalador de Microsoft Office con interfaz gráfica. Perfila el equipo, recomienda la edición viable y genera el XML de despliegue. PowerShell/WinForms y Tauri.",
-    en: "Microsoft Office installer with a graphical interface. It profiles the machine, recommends a viable edition and generates the deployment XML. PowerShell/WinForms and Tauri.",
+    es: "Instalador y activador de Microsoft Office para Windows 10 y 11, con interfaz gráfica. Revisa el equipo al abrir, dice qué versión le cabe y descarga directo de los servidores de Microsoft: seis versiones desde 2013 hasta Microsoft 365, más Visio y Project. Portable, un solo archivo y sin dependencias. Con M. Salazar.",
+    en: "Microsoft Office installer and activator for Windows 10 and 11, with a graphical interface. It checks the machine on open, says which version fits and downloads straight from Microsoft's servers: six versions from 2013 to Microsoft 365, plus Visio and Project. Portable, a single file and no dependencies. With M. Salazar.",
   },
   "proj.sessionguard.desc": {
     es: "Respalda y mantiene viva la sesión OAuth de Claude Code: snapshot en cada rotación de token y renovación headless antes de que expire. Python sin dependencias.",

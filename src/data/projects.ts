@@ -176,10 +176,10 @@ export const projects: Project[] = [
   {
     title: "OfficeGo",
     description:
-      "Instalador de Microsoft Office con interfaz gráfica. Perfila el equipo, recomienda la edición viable y genera el XML de despliegue. PowerShell/WinForms y Tauri.",
+      "Instalador y activador de Microsoft Office para Windows 10 y 11, con interfaz gráfica. Revisa el equipo al abrir, dice qué versión le cabe y descarga directo de los servidores de Microsoft: seis versiones desde 2013 hasta Microsoft 365, más Visio y Project. Portable, un solo archivo y sin dependencias. Con M. Salazar.",
     tags: ["PowerShell", "WinForms", "Tauri", "Rust", "C#", "CI"],
     github: "https://github.com/MariaDSalazar/officego",
-    demo: null,
+    demo: "https://officego.pages.dev/",
     kaggle: null,
     image: "projects/officego.webp",
     imageFit: "contain",
