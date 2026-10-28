@@ -39,12 +39,12 @@ export const translations: Record<string, Record<string, string>> = {
     en: "Today I am an applied AI engineer at Inti Horizons IA, on a production web platform: a PHP/Laravel backend, an Angular frontend and MySQL. Alongside that I run Indaga Lab, my own brand, with products like Wauto, the AI-powered multichannel CRM already live with paid plans, and Clave49, the library for Ecuador's electronic tax invoicing. Before that, at Dataglov S.A.S., I was part of the team behind a multi-tenant AI microservice with semantic search over the product's conversation history.",
   },
   "about.p3": {
-    es: "Últimamente el trabajo se corrió hacia lo nativo y lo multiplataforma: apps Android en Kotlin y una sola base de código que compila a móvil, escritorio y navegador. Lo que construyo para mí lo publico como open source, con releases automatizados para Windows, Linux, macOS y Android.",
-    en: "Lately my work has shifted toward native and cross-platform: Android apps in Kotlin and a single codebase that compiles to mobile, desktop and the browser. Whatever I build for myself I publish as open source, with automated releases for Windows, Linux, macOS and Android.",
+    es: "En mis propios proyectos el trabajo se corrió hacia lo nativo y lo multiplataforma: apps Android en Kotlin y una sola base de código que compila a móvil, escritorio y navegador. Lo que construyo para mí lo publico como open source, con releases automatizados para Windows, Linux, macOS y Android.",
+    en: "In my own projects the work has shifted toward native and cross-platform: Android apps in Kotlin and a single codebase that compiles to mobile, desktop and the browser. Whatever I build for myself I publish as open source, with automated releases for Windows, Linux, macOS and Android.",
   },
   "about.p4": {
-    es: "Combino ingeniería de software con análisis de datos e investigación. Desde plataformas SaaS multi-tenant y agentes LLM en producción hasta detección de anomalías con ML y PLN en español, con un artículo aceptado en Springer para el CIT 2026. Investigo, trabajo y entrego.",
-    en: "I combine software engineering with data analysis and research. From multi-tenant SaaS platforms and production LLM agents to ML anomaly detection and Spanish NLP, with a paper accepted at Springer for CIT 2026. I research, build and deliver.",
+    es: "Combino la ingeniería de software con el análisis de datos y la investigación: de plataformas SaaS multi-tenant y agentes LLM en producción a la detección de anomalías con machine learning y el procesamiento de lenguaje en español, con un artículo aceptado en Springer Nature para el CIT 2026.",
+    en: "I combine software engineering with data analysis and research: from multi-tenant SaaS platforms and production LLM agents to anomaly detection with machine learning and Spanish language processing, with a paper accepted at Springer Nature for CIT 2026.",
   },
   "about.edu.title": { es: "Ing. en Ciencias de la Computación", en: "B.S. Computer Science" },
   "about.edu.school": { es: "Universidad Nacional de Loja · Loja, Ecuador", en: "Universidad Nacional de Loja · Loja, Ecuador" },
